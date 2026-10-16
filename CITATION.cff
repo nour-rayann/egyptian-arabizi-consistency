@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this benchmark, please cite it as below."
+title: "Egyptian Arabic, Code-Switching and Arabizi Consistency Benchmark"
+authors:
+  - family-names: "El-Sayed"
+    given-names: "Nouran Mohamed"
+    affiliation: "Ain Shams University"
+date-released: 2026-10-16
+url: "https://github.com/nour-rayann/egyptian-arabizi-consistency"
+license: CC-BY-4.0
