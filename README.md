@@ -1,5 +1,7 @@
 # Egyptian Arabic, Code-Switching and Arabizi Consistency Benchmark
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nour-rayann/egyptian-arabizi-consistency/blob/main/notebooks/qwen3_4b_egyptian_arabic_evaluation.ipynb)
+
 ![Intent and action scores by condition](figures/results_by_condition.png)
 
 A 400-example benchmark that writes the same 100 customer-support requests in four forms of everyday Egyptian communication, used to test whether a language model keeps the same understanding of a request when only its written form changes. It comes with the responses of [Qwen/Qwen3-4B-Instruct-2507](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507) and hand-assigned scores.
