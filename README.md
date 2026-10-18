@@ -58,7 +58,7 @@ To reproduce the tables: `pip install pandas` then `python scripts/summarize.py`
   - **Intent:** did the model identify the user's underlying issue? Restating the meaning correctly but treating the message as text to translate, rather than as a request, scores 1.
   - **Action:** did it propose an appropriate next step for that issue (asking for the order number, giving the right troubleshooting steps, or, for out-of-scope requests, declining and redirecting)?
   - **Unsupported action:** did it make the scenario's forbidden assumption (for example inventing a store policy, or acting as a travel planner)?
-- **Who scored:** first-pass scores were assigned by an LLM judge (Claude, Anthropic) following the rubric above, and are being checked by hand by the author. Each response also has a `response_type` label describing what the model did.
+- **Who scored:** first-pass scores were assigned by an LLM judge (Claude, Anthropic) following the rubric above, and every score was then checked by hand by the author. The Arabic-script rewrites used in the follow-up test were also checked by the author. Each response also has a `response_type` label describing what the model did.
 
 Because there is no system prompt, the model has no way of knowing that it is meant to be a support assistant. On the 15 out-of-scope requests it therefore usually just fulfils the request (recommending restaurants, planning a trip), in every condition. The main table uses the 85 in-scope requests for that reason; the all-100 table is given below it.
 
