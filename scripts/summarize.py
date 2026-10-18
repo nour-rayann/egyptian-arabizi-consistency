@@ -1,4 +1,4 @@
-"""Recompute the results table and the Arabizi failure breakdown from data/results_400.csv.
+"""Recompute every number in the README from the scored data files.
 
 Usage: python scripts/summarize.py
 """
@@ -9,35 +9,37 @@ ROOT = Path(__file__).resolve().parents[1]
 ORDER = ["English", "Egyptian Arabic", "Egyptian Arabic + English", "Arabizi + English"]
 
 df = pd.read_csv(ROOT / "data" / "results_400.csv")
-
-table = (df.groupby("condition")
-           .agg(examples=("example_id", "count"),
-                intent=("intent_score", "mean"),
-                action=("action_score", "mean"),
-                unsupported=("unsupported_action", "sum"))
-           .reindex(ORDER))
-table.loc["Overall"] = [len(df), df.intent_score.mean(), df.action_score.mean(), df.unsupported_action.sum()]
-print("Scores by condition (0 to 2 scale)\n")
-table["examples"] = table["examples"].astype(int)
-table["unsupported"] = table["unsupported"].astype(int)
-print(table.round(3).to_string(), "\n")
+q1 = pd.read_csv(ROOT / "data" / "q1_script_test_results.csv")
 
 
-def failure_group(note: str) -> str:
-    n = note.lower()
-    if any(k in n for k in ("welsh", "portuguese", "garbled", "foreign language")):
-        return "Decided it was another language or garbled text"
-    if any(k in n for k in ("linguist", "translat", "language question")):
-        return "Translated or analyzed it instead of helping"
-    if "mesh" in n:
-        return "Misread 'mesh' (Egyptian for 'not')"
-    if "safety" in n:
-        return "Unwarranted safety refusal"
-    if "success" in n:
-        return "Fully correct"
-    return "Misread other words"
+def table(d):
+    t = (d.groupby("condition")
+          .agg(examples=("example_id", "count"),
+               intent=("intent_score", "mean"),
+               action=("action_score", "mean"),
+               unsupported=("unsupported_action", "sum"))
+          .reindex(ORDER))
+    return t.round(2)
 
 
-arabizi = df[df.condition == "Arabizi + English"]
-print("How the 100 Arabizi responses failed (grouped from evaluator notes)\n")
-print(arabizi.evaluator_notes.map(failure_group).value_counts().to_string())
+inscope = df[df.scope == "in_scope"]
+print("In-scope requests (85 per condition), 0 to 2 scale\n")
+print(table(inscope).to_string(), "\n")
+q1_in = q1[q1.scope == "in_scope"]
+print(f"Arabizi rewritten in Arabic script (85): intent {q1_in.intent_score.mean():.2f}, "
+      f"action {q1_in.action_score.mean():.2f}\n")
+
+print("All 100 requests per condition\n")
+print(table(df).to_string(), "\n")
+print(f"Arabizi rewritten in Arabic script (100): intent {q1.intent_score.mean():.2f}, "
+      f"action {q1.action_score.mean():.2f}\n")
+
+a = df[df.condition == "Arabizi + English"].set_index("scenario_id")
+s = q1.set_index("scenario_id")
+better = (s.intent_score > a.intent_score).sum()
+worse = (s.intent_score < a.intent_score).sum()
+print(f"Script test: intent higher in Arabic script for {better} scenarios, lower for {worse}")
+print(f"Mean tokens: Arabizi {q1.tokens_arabizi.mean():.1f}, Arabic script {q1.tokens_arabic_script.mean():.1f}\n")
+
+print("Response types for the 100 Arabizi + English requests\n")
+print(df[df.condition == "Arabizi + English"].response_type.value_counts().to_string())
