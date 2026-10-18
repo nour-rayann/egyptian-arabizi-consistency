@@ -5,6 +5,7 @@ authors:
   - family-names: "El-Sayed"
     given-names: "Nouran Mohamed"
     affiliation: "Ain Shams University"
-date-released: 2026-10-16
+version: "1.1"
+date-released: 2026-10-18
 url: "https://github.com/nour-rayann/egyptian-arabizi-consistency"
 license: CC-BY-4.0
