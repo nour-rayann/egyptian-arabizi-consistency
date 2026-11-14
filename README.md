@@ -14,7 +14,7 @@ A 400-example benchmark that writes the same 100 customer-support requests in fo
 
 Egyptians often mix Egyptian Arabic and English in one sentence, write Arabic in Latin letters and numbers (Arabizi), and adapt English words into Arabic ("اكنسل" for "cancel"). Standard benchmarks tend to test languages separately with clean, formal text, so they do not show whether a model's understanding of a task survives these changes. In customer support, a small shift in interpretation can lead to the wrong action, an unnecessary question or an unsupported assumption.
 
-The idea grew out of a mentorship with Prof. Ahmed Hassan Yousef and his work on Arabic sentiment analysis and summarization.
+The idea grew out of a mentorship with Prof. Ahmed Hassan Yousef (https://scholar.google.com/citations?hl=en&user=OVwUxWQAAAAJ&view_op=list_works&is_public_preview=1) and his work on Arabic sentiment analysis and summarization.
 
 ## Design
 
