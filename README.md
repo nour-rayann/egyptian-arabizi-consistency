@@ -123,8 +123,6 @@ Almost all unsupported actions here are out-of-scope requests that the model ful
 - **No system prompt.** The model was not told it was a support assistant, which mainly affects the out-of-scope requests (see above).
 - **Synthetic requests.** All scenarios were written by the author, not collected from real users.
 - **Seven Arabizi prompts contain Arabic-script words** that were not intended (E080, E096, E244, E248, E264, E356, E396). E328 is mixed script on purpose (`edge_case = mixed_script`).
-- **Fourteen "Egyptian Arabic" prompts contain English words** (for example "refund", "sync", "tracking"), so that condition is not purely Arabic. This reflects how these words are used in Egyptian Arabic, but it narrows the difference between conditions 2 and 3.
-- **Eight rows use difficulty `high`** (scenarios S046 and S050) instead of easy/medium/hard.
 
 These rows are flagged in the `data_note` column and were not changed, so the scores match the prompts the model saw.
 
