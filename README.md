@@ -6,7 +6,9 @@
 
 A 400-example benchmark that writes the same 100 customer-support requests in four forms of everyday Egyptian communication, used to test whether a language model keeps the same understanding of a request when only its written form changes. It comes with the responses of [Qwen/Qwen3-4B-Instruct-2507](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507), their scores, and a follow-up test that rewrites the Arabizi requests in Arabic script.
 
-**Author:** Nouran Mohamed El-Sayed (Ain Shams University, Cairo) · **Created:** October 2026 · **Results last revised:** 18 October 2026
+**Author:** Nouran Mohamed El-Sayed (Ain Shams University, Cairo) · **Created:** October 2026 · **Results last revised:** 15 November 2026
+
+> **Update (15 November 2026).** Fourteen "Egyptian Arabic" prompts had English words in Latin letters (for example "refund", "sync", "tracking"), so that condition was not purely in Arabic script. They were rewritten with the same English words in Arabic letters (ريفاند، سينك، التراكر), run again with the same model and settings, and scored again. The earlier prompts, answers and scores are kept in the `_v1` columns of `data/results_400.csv`. Egyptian Arabic scores fell (in-scope intent from 1.52 to 1.44, action from 1.26 to 1.15); no other condition changed. The difficulty of scenarios S046 and S050 was corrected from `high` to `medium`, and a missing urgency label (E020) in `data/benchmark_400_prompts.csv` was restored.
 
 > **Correction (18 October 2026).** An earlier version of this repository reported results from a spreadsheet in which most model responses could not be traced to the prompts they sat next to: 219 of the 400 responses were exact copies of another row's response, and many belonged to a different prompt. Those results, including an Arabizi intent score of 0.34 and a failure breakdown dominated by "Welsh or Portuguese" and "AWS App Mesh" readings, are withdrawn. All 400 prompts were run again with the same model and settings, and every response was scored again. The tables below come from that run.
 
@@ -27,6 +29,7 @@ The idea grew out of a mentorship with Prof. Ahmed Hassan Yousef (https://schola
 | Egyptian Arabic + English terms | ممكن تبصلي ليه الـ order stuck؟ |
 | Arabizi + English terms | momken tebosly leh el order stuck? |
 
+- **Scripts:** the Egyptian Arabic condition uses Arabic script only; English loanwords are written in Arabic letters, as Egyptians often write them (الأوردر، ريفاند). The other two Egyptian conditions keep English terms in Latin letters.
 - **Scope:** 85 in-scope operational scenarios (orders, delivery, returns, refunds, payments, promotions, pricing, accounts, account security, subscriptions, app sync, rewards and more) and 15 out-of-scope requests (for example legal, medical or creative requests) that a support assistant should not try to fulfil.
 - **Difficulty:** easy, medium and hard, plus edge cases such as typos, missing punctuation, abbreviations, sarcasm, emotional tone, several issues in one message, letter elongation and mixed script.
 - **Gold labels per scenario:** intended issue (`gold_intent`), urgency, the expected next action, and a forbidden assumption the model must not make (for example "Never request the customer's OTP").
@@ -37,17 +40,24 @@ The idea grew out of a mentorship with Prof. Ahmed Hassan Yousef (https://schola
 data/
   benchmark_400_prompts.csv       the 400 prompts and gold labels
   results_400.csv                 prompts + model responses + scores + response type
+                                  (_v1 columns: earlier versions of the 14 rewritten prompts)
   q1_transliteration_sheet.csv    the 100 Arabizi requests rewritten word for word in Arabic script
   q1_script_test_results.csv      the model's answers to those rewritten requests, with scores
+  arabizi_spelling_variants_draft.csv   alternative Arabizi spellings for a planned test (not yet checked)
 notebooks/
   qwen3_4b_egyptian_arabic_evaluation.ipynb   builds the benchmark, runs the model, summarizes scores
+  extensions.ipynb                code for the planned follow-up experiments (see Next steps)
 scripts/
-  summarize.py                    recomputes every number in this README
+  summarize.py                    recomputes every table in this README
+  stats.py                        confidence intervals and paired significance tests
+  make_annotation_sheet.py        builds a blinded sheet for re-scoring a sample
+  agreement.py                    agreement between two sets of scores (Cohen's kappa)
+  make_spelling_variants.py       builds the spelling-variants draft
 figures/
   results_by_condition.png
 ```
 
-To reproduce the tables: `pip install pandas` then `python scripts/summarize.py`.
+To reproduce the tables: `pip install pandas` then `python scripts/summarize.py`. For the intervals and tests: `pip install pandas numpy scipy` then `python scripts/stats.py`.
 
 ## Evaluation setup
 
@@ -69,23 +79,48 @@ Because there is no system prompt, the model has no way of knowing that it is me
 | Condition | Intent | Action | Unsupported actions |
 |---|---|---|---|
 | English | 1.96 | 1.87 | 1 |
-| Egyptian Arabic | 1.52 | 1.26 | 1 |
+| Egyptian Arabic | 1.44 | 1.15 | 1 |
 | Egyptian Arabic + English | 1.71 | 1.54 | 0 |
 | Arabizi + English | 0.74 | 0.54 | 0 |
 | *Arabizi + English, rewritten in Arabic script* | *1.62* | *1.47* | *0* |
 
-In English the model almost always understood the request. In Egyptian Arabic written in Arabic script it dropped, and adding English terms helped a little. In Arabizi it understood far fewer requests: it got the intent fully right for 15 of the 85, and for 37 it got it completely wrong.
+In English the model almost always understood the request. In Egyptian Arabic written fully in Arabic script it dropped, and keeping the English terms in Latin letters helped: intent rose from 1.44 to 1.71. In Arabizi it understood far fewer requests: it got the intent fully right for 15 of the 85, and for 37 it got it completely wrong.
+
+### How sure are these numbers?
+
+Each scenario appears in every condition, so conditions can be compared scenario by scenario. Intervals are 95% bootstrap intervals over the 85 in-scope scenarios; p-values are Wilcoxon signed-rank tests, Holm-corrected within each score.
+
+| Condition | Intent | Action | Intent fully correct |
+|---|---|---|---|
+| English | 1.96 [1.92, 2.00] | 1.87 [1.78, 1.94] | 96% |
+| Egyptian Arabic | 1.44 [1.27, 1.59] | 1.15 [0.96, 1.33] | 60% |
+| Egyptian Arabic + English | 1.71 [1.58, 1.82] | 1.54 [1.39, 1.68] | 76% |
+| Arabizi + English | 0.74 [0.59, 0.91] | 0.54 [0.39, 0.71] | 18% |
+| *Arabizi + English, rewritten in Arabic script* | *1.62 [1.48, 1.75]* | *1.47 [1.31, 1.62]* | *73%* |
+
+- **Arabizi against its Arabic-script rewrite:** intent +0.88 [+0.71, +1.06], higher in 54 scenarios and lower in 2 (p < 0.001); action +0.93 [+0.74, +1.13] (p < 0.001).
+- **The rewrite against the Egyptian Arabic + English condition:** intent differs by 0.08 [−0.01, +0.19] (p = 0.10), so the remaining gap cannot be told apart from zero.
+- **English against Arabizi:** intent +1.22 [+1.06, +1.38] (p < 0.001). English never scored lower than Arabizi on intent.
+- **Egyptian Arabic against Egyptian Arabic + English:** keeping English terms in Latin letters helped, intent +0.27 [+0.12, +0.44] (p = 0.003), action +0.39 [+0.21, +0.56] (p < 0.001).
 
 ### Is the gap about script or dialect?
 
 Each Arabizi request was rewritten word for word in Arabic script, keeping the English words in Latin letters (`data/q1_transliteration_sheet.csv`), and the model was run again with the same settings. The words and the dialect stayed the same; only the script changed.
 
-- Intent rose from 0.74 to 1.62, and action from 0.54 to 1.47. That closes about 90% of the gap to the Arabic-script condition (1.71 and 1.54).
+- Intent rose from 0.74 to 1.62, and action from 0.54 to 1.47. That closes about 90% of the gap to the Egyptian Arabic + English condition (1.71 and 1.54).
 - The rewritten version scored higher on intent in 62 of the 100 scenarios and lower in 2.
-- For 65 scenarios the rewritten request turned out to be identical to the existing "Egyptian Arabic + English" prompt, and with greedy decoding the model gave exactly the same answer to both. On the other 35, where the wording differs slightly, the result holds: intent 0.80 in Arabizi against 1.46 in Arabic script.
+- For 65 scenarios the rewritten request turned out to be identical to the existing "Egyptian Arabic + English" prompt, and with greedy decoding the model gave exactly the same answer to both. On the other 35, where the wording differs slightly, the result holds: intent 0.80 in Arabizi against 1.46 in Arabic script. On the 27 of these that are in scope, intent rose from 0.63 to 1.33 (p = 0.001).
 - Token counts are almost the same (13.8 tokens on average for Arabizi, 13.4 for Arabic script), so Arabizi is not simply split into more pieces.
 
 In this benchmark, then, most of the Arabizi gap comes from the Latin script rather than from the dialect. Reading the answers suggests why: the model often reads Latin-spelled Egyptian words as words of another language.
+
+### English words written in Arabic letters
+
+The 14 rewritten Egyptian Arabic prompts (see the update above) give a small test in the opposite direction: the same English loanwords, first in Latin letters and then in Arabic letters, with the rest of the sentence unchanged. On the 12 in-scope prompts, intent fell from 1.58 to 1.00 and action from 1.33 to 0.58; intent was lower in 6 prompts and higher in 1.
+
+The model read ريفاند (refund) as a replacement, a product or "Re-Validation" (E082, E086, E286), or could not make sense of it (E114). It read فيتشر (feature) as an app called "Vitshir" (E262), التراكر (tracking) as a GPS tracker (E026) and, in an out-of-scope request, السي في (CV) as a legal document (E362). ريسيت (reset) and سينك (sync) were understood (E166, E242).
+
+With 12 prompts this is an observation rather than a measured effect, but it points the same way as the Arabizi result: each kind of word was understood best in the script it is usually written in, Egyptian words in Arabic letters and English words in Latin letters.
 
 ### What the model did with the 100 Arabizi requests
 
@@ -110,7 +145,7 @@ Arabic script had problems of its own, and some of them appear in every Arabic c
 | Condition | Intent | Action | Unsupported actions |
 |---|---|---|---|
 | English | 1.97 | 1.68 | 11 |
-| Egyptian Arabic | 1.54 | 1.12 | 10 |
+| Egyptian Arabic | 1.46 | 1.03 | 10 |
 | Egyptian Arabic + English | 1.74 | 1.38 | 10 |
 | Arabizi + English | 0.82 | 0.47 | 11 |
 | *Arabizi + English, rewritten in Arabic script* | *1.66* | *1.30* | *11* |
@@ -128,10 +163,14 @@ These rows are flagged in the `data_note` column and were not changed, so the sc
 
 ## Next steps
 
+The code for steps 1 and 2, and for the system-prompt and fix experiments below, is in `notebooks/extensions.ipynb`. No results from it are reported yet.
+
 1. **Scale:** run the same benchmark across model sizes and families, to see whether the script gap shrinks with size.
 2. **Where in the model does the gap appear?** Compare how the model represents the Arabizi and Arabic-script versions of the same request.
-3. **Consistency training:** build paired data in which one request appears in many realistic forms and test whether consistency-based training narrows the gap.
-4. **Automatic judges:** measure how well the LLM judge's first-pass scores agree with the hand-checked scores, especially on Arabizi.
+3. **System prompt:** run the benchmark again with the model told it is a support assistant, to see whether the Arabizi gap remains.
+4. **Simple fixes:** test a one-sentence hint about Arabizi, and asking the model to rewrite Arabizi in Arabic script before answering.
+5. **Consistency training:** build paired data in which one request appears in many realistic forms and test whether consistency-based training narrows the gap.
+6. **Scoring reliability:** re-score a blinded sample and measure agreement with the original scores, and with the LLM judge's first pass.
 
 ## Citation
 
