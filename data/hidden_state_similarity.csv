@@ -1,0 +1,112 @@
+pair,layer,retrieval,matched,mismatched
+Arabizi vs Arabizi in Arabic script,0,0.01,,
+Arabizi vs Arabizi in Arabic script,1,0.17,0.0449748,-0.26254213
+Arabizi vs Arabizi in Arabic script,2,0.28,0.17430185,-0.20458551
+Arabizi vs Arabizi in Arabic script,3,0.21,0.0067191045,-0.24814653
+Arabizi vs Arabizi in Arabic script,4,0.37,0.11878495,-0.19579874
+Arabizi vs Arabizi in Arabic script,5,0.19,0.016859513,-0.22822276
+Arabizi vs Arabizi in Arabic script,6,0.11,-0.06945266,-0.27642828
+Arabizi vs Arabizi in Arabic script,7,0.08,-0.10538851,-0.3068037
+Arabizi vs Arabizi in Arabic script,8,0.09,-0.10295718,-0.31817314
+Arabizi vs Arabizi in Arabic script,9,0.11,-0.039091352,-0.26896587
+Arabizi vs Arabizi in Arabic script,10,0.15,0.038069844,-0.2166048
+Arabizi vs Arabizi in Arabic script,11,0.15,0.050116967,-0.20496388
+Arabizi vs Arabizi in Arabic script,12,0.22,0.12934631,-0.15821373
+Arabizi vs Arabizi in Arabic script,13,0.41,0.2492167,-0.09733538
+Arabizi vs Arabizi in Arabic script,14,0.35,0.2660119,-0.08485278
+Arabizi vs Arabizi in Arabic script,15,0.39,0.27200145,-0.08139468
+Arabizi vs Arabizi in Arabic script,16,0.33,0.2740196,-0.076737076
+Arabizi vs Arabizi in Arabic script,17,0.33,0.28507432,-0.062342208
+Arabizi vs Arabizi in Arabic script,18,0.32,0.3079055,-0.049483687
+Arabizi vs Arabizi in Arabic script,19,0.34,0.3257819,-0.03860146
+Arabizi vs Arabizi in Arabic script,20,0.31,0.32224956,-0.039072778
+Arabizi vs Arabizi in Arabic script,21,0.27,0.3167342,-0.04115698
+Arabizi vs Arabizi in Arabic script,22,0.26,0.30657142,-0.028968059
+Arabizi vs Arabizi in Arabic script,23,0.24,0.28911927,-0.034733824
+Arabizi vs Arabizi in Arabic script,24,0.15,0.24417557,-0.050816618
+Arabizi vs Arabizi in Arabic script,25,0.18,0.21558109,-0.047448736
+Arabizi vs Arabizi in Arabic script,26,0.18,0.21685211,-0.03560453
+Arabizi vs Arabizi in Arabic script,27,0.16,0.18900625,-0.0422785
+Arabizi vs Arabizi in Arabic script,28,0.13,0.18848442,-0.024172628
+Arabizi vs Arabizi in Arabic script,29,0.11,0.17748457,-0.025015995
+Arabizi vs Arabizi in Arabic script,30,0.09,0.14051265,-0.04363015
+Arabizi vs Arabizi in Arabic script,31,0.1,0.09517707,-0.077762194
+Arabizi vs Arabizi in Arabic script,32,0.11,0.08336587,-0.09058062
+Arabizi vs Arabizi in Arabic script,33,0.09,0.06749463,-0.08397289
+Arabizi vs Arabizi in Arabic script,34,0.08,0.054377306,-0.09114401
+Arabizi vs Arabizi in Arabic script,35,0.08,0.04192027,-0.097011074
+Arabizi vs Arabizi in Arabic script,36,0.05,0.053313866,-0.043729402
+English vs Arabic + English,0,0.01,,
+English vs Arabic + English,1,0.05,-0.17870685,-0.37391394
+English vs Arabic + English,2,0.07,-0.09469353,-0.3393478
+English vs Arabic + English,3,0.13,-0.19932827,-0.38837534
+English vs Arabic + English,4,0.1,-0.14264983,-0.3814592
+English vs Arabic + English,5,0.06,-0.2895639,-0.46338886
+English vs Arabic + English,6,0.01,-0.40192136,-0.54617953
+English vs Arabic + English,7,0.01,-0.44176984,-0.57738215
+English vs Arabic + English,8,0.02,-0.42684737,-0.5715484
+English vs Arabic + English,9,0.04,-0.35981518,-0.53061515
+English vs Arabic + English,10,0.07,-0.26213828,-0.46946663
+English vs Arabic + English,11,0.07,-0.25550878,-0.45916045
+English vs Arabic + English,12,0.1,-0.16268593,-0.40172118
+English vs Arabic + English,13,0.16,0.021671982,-0.3009808
+English vs Arabic + English,14,0.15,0.031913165,-0.29229403
+English vs Arabic + English,15,0.14,0.03913383,-0.28053147
+English vs Arabic + English,16,0.14,0.044791926,-0.27497324
+English vs Arabic + English,17,0.18,0.08202237,-0.24977702
+English vs Arabic + English,18,0.2,0.108519934,-0.23625804
+English vs Arabic + English,19,0.23,0.16188318,-0.2035465
+English vs Arabic + English,20,0.27,0.22375154,-0.17355572
+English vs Arabic + English,21,0.3,0.28046328,-0.14899579
+English vs Arabic + English,22,0.28,0.25592026,-0.15157141
+English vs Arabic + English,23,0.31,0.25553194,-0.16050056
+English vs Arabic + English,24,0.26,0.25811285,-0.15762018
+English vs Arabic + English,25,0.18,0.13760932,-0.23500052
+English vs Arabic + English,26,0.15,0.10839549,-0.24701278
+English vs Arabic + English,27,0.13,0.035720453,-0.2808675
+English vs Arabic + English,28,0.09,-0.0478276,-0.32408062
+English vs Arabic + English,29,0.09,-0.06624988,-0.3238262
+English vs Arabic + English,30,0.08,-0.15941495,-0.3782182
+English vs Arabic + English,31,0.07,-0.2593321,-0.42464
+English vs Arabic + English,32,0.06,-0.24536283,-0.3885771
+English vs Arabic + English,33,0.04,-0.32225913,-0.43396893
+English vs Arabic + English,34,0.04,-0.3315694,-0.43334463
+English vs Arabic + English,35,0.04,-0.35008487,-0.43860978
+English vs Arabic + English,36,0.03,-0.52780277,-0.59520954
+Arabizi vs English,0,0.01,,
+Arabizi vs English,1,0.31,0.40388194,0.1709755
+Arabizi vs English,2,0.26,0.39776063,0.11881254
+Arabizi vs English,3,0.12,0.29424953,0.11835458
+Arabizi vs English,4,0.18,0.2585059,0.033263758
+Arabizi vs English,5,0.17,0.16516247,0.019910779
+Arabizi vs English,6,0.15,0.21404396,0.09094214
+Arabizi vs English,7,0.17,0.29238808,0.16815569
+Arabizi vs English,8,0.16,0.3195945,0.18169855
+Arabizi vs English,9,0.13,0.254581,0.10208717
+Arabizi vs English,10,0.16,0.22377114,0.04397911
+Arabizi vs English,11,0.14,0.19836533,0.02888403
+Arabizi vs English,12,0.2,0.17785834,-0.011212717
+Arabizi vs English,13,0.25,0.18544348,-0.053286392
+Arabizi vs English,14,0.25,0.16892372,-0.06850869
+Arabizi vs English,15,0.24,0.14750467,-0.08509782
+Arabizi vs English,16,0.23,0.13579053,-0.08999916
+Arabizi vs English,17,0.2,0.103263,-0.11631915
+Arabizi vs English,18,0.19,0.1025601,-0.121903986
+Arabizi vs English,19,0.2,0.085165285,-0.14509034
+Arabizi vs English,20,0.21,0.06342988,-0.16691202
+Arabizi vs English,21,0.23,0.069587335,-0.16377807
+Arabizi vs English,22,0.14,0.010625184,-0.19810109
+Arabizi vs English,23,0.17,0.0048032934,-0.20162082
+Arabizi vs English,24,0.15,-0.016955487,-0.20626226
+Arabizi vs English,25,0.15,-0.0031798666,-0.17414916
+Arabizi vs English,26,0.13,-0.014861043,-0.17541286
+Arabizi vs English,27,0.11,-0.022156028,-0.16518663
+Arabizi vs English,28,0.08,-0.045564443,-0.17066453
+Arabizi vs English,29,0.09,-0.043071672,-0.16135935
+Arabizi vs English,30,0.1,-0.02654909,-0.12864639
+Arabizi vs English,31,0.07,0.011216721,-0.07028754
+Arabizi vs English,32,0.08,0.0009175691,-0.070689686
+Arabizi vs English,33,0.07,-0.02060249,-0.073412426
+Arabizi vs English,34,0.05,-0.022952823,-0.07053612
+Arabizi vs English,35,0.07,-0.022361321,-0.06646276
+Arabizi vs English,36,0.06,-0.09167869,-0.12657432
