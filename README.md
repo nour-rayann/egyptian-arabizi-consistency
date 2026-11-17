@@ -6,7 +6,9 @@
 
 A 400-example benchmark that writes the same 100 customer-support requests in four forms of everyday Egyptian communication, used to test whether a language model keeps the same understanding of a request when only its written form changes. It comes with the responses of [Qwen/Qwen3-4B-Instruct-2507](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507), their scores, and a follow-up test that rewrites the Arabizi requests in Arabic script.
 
-**Author:** Nouran Mohamed El-Sayed (Ain Shams University, Cairo) · **Created:** October 2026 · **Results last revised:** 15 November 2026
+**Author:** Nouran Mohamed El-Sayed (Ain Shams University, Cairo) · **Created:** October 2026 · **Results last revised:** 17 November 2026
+
+> **Update (17 November 2026).** Added a hidden-state analysis comparing how the model represents the same request in different forms, with a control comparison against pure Egyptian Arabic (see "Inside the model" below). No scores changed.
 
 > **Update (15 November 2026).** Fourteen "Egyptian Arabic" prompts had English words in Latin letters (for example "refund", "sync", "tracking"), so that condition was not purely in Arabic script. They were rewritten with the same English words in Arabic letters (ريفاند، سينك، التراكر), run again with the same model and settings, and scored again. The earlier prompts, answers and scores are kept in the `_v1` columns of `data/results_400.csv`. Egyptian Arabic scores fell (in-scope intent from 1.52 to 1.44, action from 1.26 to 1.15); no other condition changed. The difficulty of scenarios S046 and S050 was corrected from `high` to `medium`, and a missing urgency label (E020) in `data/benchmark_400_prompts.csv` was restored.
 
@@ -43,6 +45,7 @@ data/
                                   (_v1 columns: earlier versions of the 14 rewritten prompts)
   q1_transliteration_sheet.csv    the 100 Arabizi requests rewritten word for word in Arabic script
   q1_script_test_results.csv      the model's answers to those rewritten requests, with scores
+  hidden_state_control.csv        twin-retrieval accuracy and similarity gap per layer, for four pairs of conditions
   arabizi_spelling_variants_draft.csv   alternative Arabizi spellings for a planned test (not yet checked)
 notebooks/
   qwen3_4b_egyptian_arabic_evaluation.ipynb   builds the benchmark, runs the model, summarizes scores
@@ -55,6 +58,7 @@ scripts/
   make_spelling_variants.py       builds the spelling-variants draft
 figures/
   results_by_condition.png
+  hidden_state_control.png
 ```
 
 To reproduce the tables: `pip install pandas` then `python scripts/summarize.py`. For the intervals and tests: `pip install pandas numpy scipy` then `python scripts/stats.py`.
@@ -140,6 +144,25 @@ With 12 prompts this is an observation rather than a measured effect, but it poi
 
 Arabic script had problems of its own, and some of them appear in every Arabic condition. "الأوردر واقف" (the order is stuck) was read as a stock-trading order (E002, E003), "return" as the Python statement (E050, E051), "اتخصم مني" (I was charged) as a discount (E090), and "بطل يشتغل" (stopped working) as a product called "Batal" (E070).
 
+### Inside the model: how close are the different forms of one request?
+
+For every prompt, the hidden state of the last token was taken at each of the model's 36 layers. The states were centred on their mean, and each request was compared, by cosine similarity, with all 100 requests of another condition. A pair counts as found when the most similar request is its own twin (the same scenario). Chance is 1%.
+
+![Twin retrieval and similarity gap by layer](figures/hidden_state_control.png)
+
+| Pair | Best twin retrieval | At last layer |
+|---|---|---|
+| Arabizi vs its Arabic-script rewrite | 38% (layer 13) | 5% |
+| Arabizi vs Egyptian Arabic | 37% (layer 13) | 2% |
+| Arabic-script rewrite vs Egyptian Arabic | 78% (layer 13) | 57% |
+| English vs Egyptian Arabic | 34% (layer 23) | 1% |
+
+- **Shared English words are not the whole link.** The Arabizi and Arabic-script versions share their English words in Latin letters, so a match between them could come from those words alone. Pure Egyptian Arabic shares no Latin-letter words with Arabizi, yet Arabizi found its Egyptian Arabic twin about as often (37% against 38%). In the middle layers, the model partly connects the Egyptian words in an Arabizi message to the same request in Arabic script.
+- **The link fades.** By the last layer Arabizi finds its twin 2% to 5% of the time. The two Arabic-script versions stay close to the end (57%).
+- **It does not predict the answers.** At layer 13, how similar an Arabizi request was to its Egyptian Arabic twin did not track its intent score (Spearman 0.05, p = 0.63).
+
+This describes how close the representations are; it does not show where or why the model misreads Arabizi.
+
 ### All 100 requests per condition
 
 | Condition | Intent | Action | Unsupported actions |
@@ -163,10 +186,10 @@ These rows are flagged in the `data_note` column and were not changed, so the sc
 
 ## Next steps
 
-The code for steps 1 and 2, and for the system-prompt and fix experiments below, is in `notebooks/extensions.ipynb`. No results from it are reported yet.
+The code for steps 1 to 4 is in `notebooks/extensions.ipynb`. Step 2 is reported above, under "Inside the model"; no results from the other steps are reported yet.
 
 1. **Scale:** run the same benchmark across model sizes and families, to see whether the script gap shrinks with size.
-2. **Where in the model does the gap appear?** Compare how the model represents the Arabizi and Arabic-script versions of the same request.
+2. **Where in the model does the gap appear?** Done for Qwen3-4B (see above). Next: repeat it on the other models from step 1.
 3. **System prompt:** run the benchmark again with the model told it is a support assistant, to see whether the Arabizi gap remains.
 4. **Simple fixes:** test a one-sentence hint about Arabizi, and asking the model to rewrite Arabizi in Arabic script before answering.
 5. **Consistency training:** build paired data in which one request appears in many realistic forms and test whether consistency-based training narrows the gap.
