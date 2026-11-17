@@ -46,6 +46,7 @@ data/
   q1_transliteration_sheet.csv    the 100 Arabizi requests rewritten word for word in Arabic script
   q1_script_test_results.csv      the model's answers to those rewritten requests, with scores
   hidden_state_control.csv        twin-retrieval accuracy and similarity gap per layer, for four pairs of conditions
+  hidden_state_similarity.csv     first hidden-state run (Arabizi vs Arabic-script rewrite only)
   arabizi_spelling_variants_draft.csv   alternative Arabizi spellings for a planned test (not yet checked)
 notebooks/
   qwen3_4b_egyptian_arabic_evaluation.ipynb   builds the benchmark, runs the model, summarizes scores
@@ -59,6 +60,7 @@ scripts/
 figures/
   results_by_condition.png
   hidden_state_control.png
+  hidden_state_similarity.png
 ```
 
 To reproduce the tables: `pip install pandas` then `python scripts/summarize.py`. For the intervals and tests: `pip install pandas numpy scipy` then `python scripts/stats.py`.
