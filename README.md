@@ -6,7 +6,9 @@
 
 A 400-example benchmark that writes the same 100 customer-support requests in four forms of everyday Egyptian communication, used to test whether a language model keeps the same understanding of a request when only its written form changes. It comes with the responses of [Qwen/Qwen3-4B-Instruct-2507](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507), their scores, and a follow-up test that rewrites the Arabizi requests in Arabic script.
 
-**Author:** Nouran Mohamed El-Sayed (Ain Shams University, Cairo) · **Created:** October 2026 · **Results last revised:** 17 November 2026
+**Author:** Nouran Mohamed El-Sayed (Ain Shams University, Cairo) · **Created:** October 2026 · **Results last revised:** 20 November 2026
+
+> **Update (20 November 2026).** Added three follow-up runs on Qwen3-4B, all hand-checked: a support-assistant system prompt, an Arabizi hint, and asking the model to rewrite Arabizi in Arabic script before answering (see "Follow-up: does telling the model more fix the gap?" below). The main tables did not change.
 
 > **Update (17 November 2026).** Added a hidden-state analysis comparing how the model represents the same request in different forms, with a control comparison against pure Egyptian Arabic (see "Inside the model" below). No scores changed.
 
@@ -47,6 +49,7 @@ data/
   q1_script_test_results.csv      the model's answers to those rewritten requests, with scores
   hidden_state_control.csv        twin-retrieval accuracy and similarity gap per layer, for four pairs of conditions
   hidden_state_similarity.csv     first hidden-state run (Arabizi vs Arabic-script rewrite only)
+  followup_experiments_scored.csv system prompt, Arabizi hint and transliterate-first runs, with scores
   arabizi_spelling_variants_draft.csv   alternative Arabizi spellings for a planned test (not yet checked)
 notebooks/
   qwen3_4b_egyptian_arabic_evaluation.ipynb   builds the benchmark, runs the model, summarizes scores
@@ -54,6 +57,7 @@ notebooks/
 scripts/
   summarize.py                    recomputes every table in this README
   stats.py                        confidence intervals and paired significance tests
+  followup_stats.py               tables, tests and chart for the follow-up runs
   make_annotation_sheet.py        builds a blinded sheet for re-scoring a sample
   agreement.py                    agreement between two sets of scores (Cohen's kappa)
   make_spelling_variants.py       builds the spelling-variants draft
@@ -61,9 +65,10 @@ figures/
   results_by_condition.png
   hidden_state_control.png
   hidden_state_similarity.png
+  followup_arabizi.png
 ```
 
-To reproduce the tables: `pip install pandas` then `python scripts/summarize.py`. For the intervals and tests: `pip install pandas numpy scipy` then `python scripts/stats.py`.
+To reproduce the tables: `pip install pandas` then `python scripts/summarize.py`. For the intervals and tests: `pip install pandas numpy scipy` then `python scripts/stats.py`. For the follow-up runs: `pip install pandas numpy scipy matplotlib` then `python scripts/followup_stats.py`.
 
 ## Evaluation setup
 
@@ -165,6 +170,36 @@ For every prompt, the hidden state of the last token was taken at each of the mo
 
 This describes how close the representations are; it does not show where or why the model misreads Arabizi.
 
+### Follow-up: does telling the model more fix the gap?
+
+Three follow-up runs on Qwen3-4B, with the same decoding settings and the same scoring (an LLM judge's first pass, then every score checked by hand; 120 of the 600 first-pass scores were changed). Data: `data/followup_experiments_scored.csv`. To reproduce the numbers and the chart: `python scripts/followup_stats.py`.
+
+- **System prompt:** all 400 prompts with the system prompt "You are a customer support assistant for an online store. Help the customer with their request."
+- **Arabizi hint:** the 100 Arabizi prompts with the same system prompt plus one sentence: customers may write in English, Egyptian Arabic, or Egyptian Arabic in Latin letters and numbers (Arabizi, where 3 = ع, 7 = ح, 2 = ء, 5 = خ, 8 = غ), often mixed with English words.
+- **Transliterate first:** the model is first asked to rewrite each Arabizi request in Arabic script, keeping English words as they are, and then answers its own rewrite with the same system prompt.
+
+![Arabizi under different fixes](figures/followup_arabizi.png)
+
+| Setting (85 in-scope requests) | Intent | Action |
+|---|---|---|
+| Arabizi, no system prompt (main table) | 0.74 [0.59, 0.91] | 0.54 [0.39, 0.71] |
+| Arabizi, system prompt | 1.07 [0.91, 1.24] | 0.87 [0.69, 1.05] |
+| Arabizi, system prompt + hint | 1.35 [1.20, 1.49] | 1.04 [0.86, 1.21] |
+| Arabizi, system prompt + model transliterates first | 0.48 [0.33, 0.65] | 0.39 [0.25, 0.54] |
+| *Arabizi rewritten in Arabic script by hand, no system prompt* | *1.62 [1.48, 1.75]* | *1.47 [1.31, 1.62]* |
+| English, system prompt | 1.99 [1.96, 2.00] | 1.91 [1.84, 1.96] |
+| Egyptian Arabic, system prompt | 1.59 [1.44, 1.73] | 1.44 [1.27, 1.59] |
+| Egyptian Arabic + English, system prompt | 1.88 [1.80, 1.95] | 1.76 [1.65, 1.87] |
+
+p-values below are paired Wilcoxon signed-rank tests, Holm-corrected over the 11 comparisons the script makes for each score.
+
+- **The gap survives a system prompt.** The prompt helped every Arabic form a little; Arabizi intent rose from 0.74 to 1.07 (higher in 30 scenarios, lower in 4, p < 0.001) and English did not change (p = 0.32). Arabizi stayed 0.92 below English (lower in 56 scenarios, higher in none, p < 0.001) and 0.81 below Egyptian Arabic + English (p < 0.001). Keeping English terms in Latin letters still helped (Egyptian Arabic 1.59 against 1.88, p = 0.004).
+- **It changed how Arabizi failed, not how often words were misread.** With the system prompt, answers that translated or analyzed the message instead of helping fell from 15 to 1, and readings of support words in a technical sense (such as `return` as Python) disappeared. Misread Egyptian words stayed at 16, and "I didn't understand, please rephrase" rose from 9 to 23.
+- **The hint helps, but less than fixing the script.** On top of the system prompt it raised Arabizi intent from 1.07 to 1.35 (higher in 27, lower in 8, p = 0.004), still below the hand-written Arabic-script version (1.62, p = 0.03).
+- **Transliterating first makes things worse.** Arabizi intent fell from 1.07 to 0.48 (lower in 48 scenarios, higher in 8, p < 0.001). In 79 of the 100 scenarios the model's own rewrite already got the message wrong, and it then answered the wrong message. The same step done correctly by hand gives 1.62, so the script change only helps when the rewrite is right.
+- **A role without rules leads to invented policies.** With the system prompt the model made 18 unsupported claims on in-scope requests, against 2 without it, and 8 of them were in English: a promotion that "ends on December 31, 2024" (E133), "we don't accept cash payments upon delivery" (E105), a 30-day return window (E045). The invented rules were not even consistent across forms of the same request: in English the store accepts no cash on delivery and subscriptions cannot be paused (E105, E221), while in Egyptian Arabic it offers cash on delivery and pausing (E102, E222). With the hint added, the model made 14 such claims on Arabizi requests (against 1 with the system prompt alone), such as "the order limit is 3 items per order" (E076), "the product is available" (E060) and asking the customer to send their verification code (E200).
+- **Out-of-scope requests were still often fulfilled.** The system prompt gave the model a role but no scope, and it still fully carried out between 7 and 11 of the 15 out-of-scope requests in each form, such as planning trips or recommending restaurants.
+
 ### All 100 requests per condition
 
 | Condition | Intent | Action | Unsupported actions |
@@ -180,7 +215,7 @@ Almost all unsupported actions here are out-of-scope requests that the model ful
 ## Known issues and limitations
 
 - **One model, one domain, one annotator.** The scores are evidence from this benchmark only, not a general measure of the model's Arabic ability. The first pass was done by an LLM judge, the hand check is by one person, and no inter-annotator agreement has been measured.
-- **No system prompt.** The model was not told it was a support assistant, which mainly affects the out-of-scope requests (see above).
+- **No system prompt in the main run.** The model was not told it was a support assistant, which mainly affects the out-of-scope requests. The follow-up runs add a short system prompt, but not a store policy or a defined scope.
 - **Synthetic requests.** All scenarios were written by the author, not collected from real users.
 - **Seven Arabizi prompts contain Arabic-script words** that were not intended (E080, E096, E244, E248, E264, E356, E396). E328 is mixed script on purpose (`edge_case = mixed_script`).
 
@@ -188,12 +223,12 @@ These rows are flagged in the `data_note` column and were not changed, so the sc
 
 ## Next steps
 
-The code for steps 1 to 4 is in `notebooks/extensions.ipynb`. Step 2 is reported above, under "Inside the model"; no results from the other steps are reported yet.
+The code for steps 1 to 4 is in `notebooks/extensions.ipynb`. Steps 2, 3 and 4 are reported above; step 1 has been run and is being checked.
 
 1. **Scale:** run the same benchmark across model sizes and families, to see whether the script gap shrinks with size.
 2. **Where in the model does the gap appear?** Done for Qwen3-4B (see above). Next: repeat it on the other models from step 1.
-3. **System prompt:** run the benchmark again with the model told it is a support assistant, to see whether the Arabizi gap remains.
-4. **Simple fixes:** test a one-sentence hint about Arabizi, and asking the model to rewrite Arabizi in Arabic script before answering.
+3. **System prompt:** done (see above). Next: give the model a written store policy and a defined scope, alone and together with the Arabizi hint, to see how much of the gap a well-instructed assistant still shows.
+4. **Simple fixes:** done (see above).
 5. **Consistency training:** build paired data in which one request appears in many realistic forms and test whether consistency-based training narrows the gap.
 6. **Scoring reliability:** re-score a blinded sample and measure agreement with the original scores, and with the LLM judge's first pass.
 
