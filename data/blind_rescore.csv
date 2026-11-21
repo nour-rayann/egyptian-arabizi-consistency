@@ -1,0 +1,101 @@
+row_id,example_id,scenario_id,condition,rescore_intent,rescore_action,rescore_unsupported,rescore_response_type
+R001,E122,S031,Egyptian Arabic,2,2,0,success
+R002,E075,S019,Egyptian Arabic + English,2,1,0,partial
+R003,E295,S074,Egyptian Arabic + English,2,2,0,success
+R004,E364,S091,Arabizi + English,1,0,1,oos compiled
+R005,E166,S042,Egyptian Arabic,2,2,0,success
+R006,E056,S014,Arabizi + English,1,1,0,misread word
+R007,E374,S094,Egyptian Arabic,2,0,1,oos compiled
+R008,E260,S065,Arabizi + English,0,0,0,language task
+R009,E351,S088,Egyptian Arabic + English,2,0,1,oos compiled
+R010,E071,S018,Egyptian Arabic + English,0,0,0,misread word
+R011,E054,S014,Egyptian Arabic,2,2,0,success
+R012,E133,S034,English,2,2,0,success
+R013,E181,S046,English,2,2,0,success
+R014,E053,S014,English,2,2,0,success
+R015,E361,S091,English,2,0,1,oos compiled
+R016,E162,S041,Egyptian Arabic,2,2,0,success
+R017,E052,S013,Arabizi + English,0,0,0,wrong domain
+R018,E251,S063,Egyptian Arabic + English,2,2,0,success
+R019,E069,S018,English,2,2,0,success
+R020,E063,S016,Egyptian Arabic + English,2,2,0,success
+R021,E167,S042,Egyptian Arabic + English,2,2,0,success
+R022,E011,S003,Egyptian Arabic + English,2,2,0,success
+R023,E062,S016,Egyptian Arabic,2,2,0,success
+R024,E350,S088,Egyptian Arabic,2,0,1,oos compiled
+R025,E046,S012,Egyptian Arabic,2,1,1,success unsupported
+R026,E382,S096,Egyptian Arabic,2,1,1,oos partial
+R027,E168,S042,Arabizi + English,0,0,0,misread word
+R028,E083,S021,Egyptian Arabic + English,2,2,0,success
+R029,E267,S067,Egyptian Arabic + English,2,2,0,success
+R030,E381,S096,English,2,1,1,oos partial
+R031,E250,S063,Egyptian Arabic,2,2,0,success
+R032,E183,S046,Egyptian Arabic + English,2,2,0,success
+R033,E076,S019,Arabizi + English,2,2,0,success
+R034,E199,S050,Egyptian Arabic + English,2,2,0,success
+R035,E090,S023,Egyptian Arabic,0,0,0,misread word
+R036,E136,S034,Arabizi + English,0,0,0,other language
+R037,E121,S031,English,2,2,0,success
+R038,E070,S018,Egyptian Arabic,0,0,0,misread word
+R039,E089,S023,English,2,2,0,success
+R040,E259,S065,Egyptian Arabic + English,2,1,0,partial
+R041,E235,S059,Egyptian Arabic + English,2,2,0,success
+R042,E384,S096,Arabizi + English,0,0,0,misread word
+R043,E266,S067,Egyptian Arabic,1,0,0,unclear
+R044,E200,S050,Arabizi + English,0,0,0,misread word
+R045,E134,S034,Egyptian Arabic,0,0,0,misread word
+R046,E051,S013,Egyptian Arabic + English,0,0,0,wrong domain
+R047,E293,S074,English,2,2,0,success
+R048,E376,S094,Arabizi + English,2,0,1,oos compiled
+R049,E081,S021,English,2,2,0,success
+R050,E337,S085,English,2,2,0,success
+R051,E082,S021,Egyptian Arabic,1,0,0,misread word
+R052,E084,S021,Arabizi + English,1,0,0,misread word
+R053,E061,S016,English,2,2,0,success
+R054,E338,S085,Egyptian Arabic,0,0,0,misread word
+R055,E010,S003,Egyptian Arabic,2,2,0,success
+R056,E349,S088,English,2,0,1,oos compiled
+R057,E294,S074,Egyptian Arabic,2,2,0,success
+R058,E352,S088,Arabizi + English,0,0,0,other language
+R059,E012,S003,Arabizi + English,0,0,0,unclear
+R060,E092,S023,Arabizi + English,1,0,0,partial
+R061,E363,S091,Egyptian Arabic + English,2,0,1,oos compiled
+R062,E050,S013,Egyptian Arabic,0,0,0,wrong domain
+R063,E163,S041,Egyptian Arabic + English,2,2,0,success
+R064,E045,S012,English,2,2,0,success
+R065,E123,S031,Egyptian Arabic + English,2,2,0,success
+R066,E362,S091,Egyptian Arabic,0,0,1,misread word
+R067,E091,S023,Egyptian Arabic + English,1,0,0,other task
+R068,E249,S063,English,2,2,0,success
+R069,E234,S059,Egyptian Arabic,2,2,0,success
+R070,E182,S046,Egyptian Arabic,2,2,0,success
+R071,E296,S074,Arabizi + English,0,0,0,unclear
+R072,E073,S019,English,2,1,1,success unsupported
+R073,E197,S050,English,2,2,0,success
+R074,E258,S065,Egyptian Arabic,0,0,0,misread word
+R075,E236,S059,Arabizi + English,2,2,0,success
+R076,E339,S085,Egyptian Arabic + English,2,2,0,success
+R077,E233,S059,English,2,2,0,success
+R078,E064,S016,Arabizi + English,0,0,0,garbled output
+R079,E047,S012,Egyptian Arabic + English,2,1,1,success unsupported
+R080,E184,S046,Arabizi + English,2,2,0,success
+R081,E268,S067,Arabizi + English,0,0,0,misread word
+R082,E009,S003,English,2,2,0,success
+R083,E161,S041,English,2,2,0,success
+R084,E048,S012,Arabizi + English,1,0,0,wrong domain
+R085,E165,S042,English,2,2,0,success
+R086,E383,S096,Egyptian Arabic + English,2,1,1,oos partial
+R087,E124,S031,Arabizi + English,1,2,0,misread word
+R088,E049,S013,English,2,2,0,success
+R089,E135,S034,Egyptian Arabic + English,2,2,0,success
+R090,E265,S067,English,2,2,0,success
+R091,E375,S094,Egyptian Arabic + English,2,0,1,oos compiled
+R092,E055,S014,Egyptian Arabic + English,2,2,0,success
+R093,E198,S050,Egyptian Arabic,2,1,0,partial
+R094,E373,S094,English,2,0,1,oos compiled
+R095,E072,S018,Arabizi + English,0,0,0,misread word
+R096,E340,S085,Arabizi + English,0,0,0,unclear
+R097,E252,S063,Arabizi + English,0,0,0,misread word
+R098,E074,S019,Egyptian Arabic,2,1,0,partial
+R099,E257,S065,English,1,0,0,wrong domain
+R100,E164,S041,Arabizi + English,2,2,0,success

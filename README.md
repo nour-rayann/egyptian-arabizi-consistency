@@ -6,7 +6,9 @@
 
 A 400-example benchmark that writes the same 100 customer-support requests in four forms of everyday Egyptian communication, used to test whether a language model keeps the same understanding of a request when only its written form changes. It comes with the responses of [Qwen/Qwen3-4B-Instruct-2507](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507), their scores, and a follow-up test that rewrites the Arabizi requests in Arabic script.
 
-**Author:** Nouran Mohamed El-Sayed (Ain Shams University, Cairo) · **Created:** October 2026 · **Results last revised:** 20 November 2026
+**Author:** Nouran Mohamed El-Sayed (Ain Shams University, Cairo) · **Created:** October 2026 · **Results last revised:** 21 November 2026
+
+> **Update (21 November 2026).** Added a spelling-variation test (respelled Arabizi did not do better, and slightly worse) and two checks of scoring reliability: a blind self re-score of 100 answers and agreement between the LLM judge's first pass and the hand-checked scores. The main tables did not change.
 
 > **Update (20 November 2026).** Added three follow-up runs on Qwen3-4B, all hand-checked: a support-assistant system prompt, an Arabizi hint, and asking the model to rewrite Arabizi in Arabic script before answering (see "Follow-up: does telling the model more fix the gap?" below). The main tables did not change.
 
@@ -50,7 +52,10 @@ data/
   hidden_state_control.csv        twin-retrieval accuracy and similarity gap per layer, for four pairs of conditions
   hidden_state_similarity.csv     first hidden-state run (Arabizi vs Arabic-script rewrite only)
   followup_experiments_scored.csv system prompt, Arabizi hint and transliterate-first runs, with scores
-  arabizi_spelling_variants_draft.csv   alternative Arabizi spellings for a planned test (not yet checked)
+  arabizi_spelling_variants.csv   respelled Arabizi requests, checked by the author (83 variants)
+  spelling_variants_scored.csv    the model's answers to the respelled requests, with scores
+  blind_rescore.csv               100 answers re-scored blind by the author, with their original IDs
+  followup_llm_first_pass.csv     the LLM judge's first-pass scores for the 600 follow-up answers
 notebooks/
   qwen3_4b_egyptian_arabic_evaluation.ipynb   builds the benchmark, runs the model, summarizes scores
   extensions.ipynb                code for the planned follow-up experiments (see Next steps)
@@ -59,8 +64,10 @@ scripts/
   stats.py                        confidence intervals and paired significance tests
   followup_stats.py               tables, tests and chart for the follow-up runs
   make_annotation_sheet.py        builds a blinded sheet for re-scoring a sample
-  agreement.py                    agreement between two sets of scores (Cohen's kappa)
-  make_spelling_variants.py       builds the spelling-variants draft
+  agreement.py                    agreement with a second annotator (Cohen's kappa)
+  self_agreement.py               blind self re-score and LLM-judge agreement
+  spelling_stats.py               tables and tests for the spelling-variation test
+  make_spelling_variants.py       builds the rule-based spelling variants before checking
 figures/
   results_by_condition.png
   hidden_state_control.png
@@ -200,6 +207,29 @@ p-values below are paired Wilcoxon signed-rank tests, Holm-corrected over the 11
 - **A role without rules leads to invented policies.** With the system prompt the model made 18 unsupported claims on in-scope requests, against 2 without it, and 8 of them were in English: a promotion that "ends on December 31, 2024" (E133), "we don't accept cash payments upon delivery" (E105), a 30-day return window (E045). The invented rules were not even consistent across forms of the same request: in English the store accepts no cash on delivery and subscriptions cannot be paused (E105, E221), while in Egyptian Arabic it offers cash on delivery and pausing (E102, E222). With the hint added, the model made 14 such claims on Arabizi requests (against 1 with the system prompt alone), such as "the order limit is 3 items per order" (E076), "the product is available" (E060) and asking the customer to send their verification code (E200).
 - **Out-of-scope requests were still often fulfilled.** The system prompt gave the model a role but no scope, and it still fully carried out between 7 and 11 of the 15 out-of-scope requests in each form, such as planning trips or recommending restaurants.
 
+### Does the spelling matter? Respelled Arabizi
+
+Arabizi has no standard spelling, so the gap could belong to one way of writing a word rather than to Arabizi itself. Each Arabizi request was respelled by simple rules (dropping the digits, as in 3ayza → ayza, or using more of them, as in mokhtalef → mo5talef), and the author then read every variant, fixed it to something a real person would type, or deleted it. 83 variants of 76 requests remained (`data/arabizi_spelling_variants.csv`). Some kept a few digits, as people often do (`beta3y`), and are labelled `mixed`; four in-scope variants also swap a word the way people naturally would (for example "3and" → "fe"). The model was run with the main benchmark's settings and the answers scored the same way, with every score checked by hand (`data/spelling_variants_scored.csv`; `python scripts/spelling_stats.py`).
+
+| 69 in-scope requests (variants of the same request averaged) | Intent | Action |
+|---|---|---|
+| Original Arabizi spelling | 0.77 [0.59, 0.94] | 0.55 [0.38, 0.74] |
+| Respelled | 0.55 [0.38, 0.73] | 0.34 [0.20, 0.49] |
+| Difference | −0.22 [−0.39, −0.04], p = 0.02 | −0.21 [−0.36, −0.07], p = 0.01 |
+
+(Paired Wilcoxon tests, Holm-corrected over intent and action.)
+
+- **The gap is not tied to one spelling.** Respelling did not help overall; if anything it made things slightly worse. Most requests scored the same (42 of 69 on intent), 19 scored lower and 8 higher. Leaving out the variants that also swap a word gives the same picture (intent −0.19, p = 0.03; action −0.21, p = 0.02).
+- **Dropping the digits accounted for most of the drop** (54 variants: intent 0.83 to 0.63). One possible reason is that the digit spellings (3, 7, 2) are the more common Arabizi forms, so removing them makes Egyptian words even less recognizable. The `mixed` (13) and `more digits` (9) groups are too small to read anything from.
+- **The same failures came back:** misread Egyptian words (28 of 76), "please rephrase" (16), answers in another language (9), including Persian, Hebrew, Bengali, Malagasy and Haitian Creole. "ma weselsh" was read as Welsh again, and a variant of "el order etlgha" (the order was cancelled) was read as an ETL data pipeline.
+
+### How reliable are the scores?
+
+- **Blind self re-score.** 100 answers (25 scenarios in all four conditions, shuffled, original scores hidden) were scored again by the author six days later, from the rubric alone (`data/blind_rescore.csv`). Agreement with the original scores: intent 93% exact, Cohen's kappa 0.85 (quadratic-weighted 0.95); action 85%, kappa 0.74 (0.90); unsupported action 94%, kappa 0.77. Agreement was lowest on Arabizi (intent 84%, kappa 0.73), where answers are most ambiguous. English was 96% exact; kappa is not meaningful there because nearly every English answer scores 2. The re-scores were slightly stricter on action (mean 1.19 against 1.09).
+- **LLM judge against the hand-checked scores.** On the 600 follow-up answers, the judge's first-pass scores agreed with the final hand-checked scores on 92% of intent scores (kappa 0.86) and 92% of action scores (kappa 0.88) (`data/followup_llm_first_pass.csv`). Every score in this repository is the hand-checked one.
+
+To reproduce: `pip install pandas scikit-learn` then `python scripts/self_agreement.py`. This measures one person's consistency, not agreement between different annotators.
+
 ### All 100 requests per condition
 
 | Condition | Intent | Action | Unsupported actions |
@@ -214,7 +244,7 @@ Almost all unsupported actions here are out-of-scope requests that the model ful
 
 ## Known issues and limitations
 
-- **One model, one domain, one annotator.** The scores are evidence from this benchmark only, not a general measure of the model's Arabic ability. The first pass was done by an LLM judge, the hand check is by one person, and no inter-annotator agreement has been measured.
+- **One model, one domain, one annotator.** The scores are evidence from this benchmark only, not a general measure of the model's Arabic ability. The first pass was done by an LLM judge and the hand check is by one person. That person's scoring is consistent (blind re-score, intent kappa 0.85), but agreement between different annotators has not been measured.
 - **No system prompt in the main run.** The model was not told it was a support assistant, which mainly affects the out-of-scope requests. The follow-up runs add a short system prompt, but not a store policy or a defined scope.
 - **Synthetic requests.** All scenarios were written by the author, not collected from real users.
 - **Seven Arabizi prompts contain Arabic-script words** that were not intended (E080, E096, E244, E248, E264, E356, E396). E328 is mixed script on purpose (`edge_case = mixed_script`).
@@ -230,7 +260,7 @@ The code for steps 1 to 4 is in `notebooks/extensions.ipynb`. Steps 2, 3 and 4 a
 3. **System prompt:** done (see above). Next: give the model a written store policy and a defined scope, alone and together with the Arabizi hint, to see how much of the gap a well-instructed assistant still shows.
 4. **Simple fixes:** done (see above).
 5. **Consistency training:** build paired data in which one request appears in many realistic forms and test whether consistency-based training narrows the gap.
-6. **Scoring reliability:** re-score a blinded sample and measure agreement with the original scores, and with the LLM judge's first pass.
+6. **Scoring reliability:** self-agreement and LLM-judge agreement done (see above). Next: a second annotator on the same blind sheet.
 
 ## Citation
 

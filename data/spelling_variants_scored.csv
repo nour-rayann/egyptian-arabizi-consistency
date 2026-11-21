@@ -1,0 +1,1350 @@
+variant_id,scenario_id,arabizi_example_id,scope,variant_type,original,variant,gold_intent,expected_action,forbidden_assumption,model_response,intent_score,action_score,unsupported_action,response_type,changed_in_hand_check
+E008_no_digits,S002,E008,in_scope,no_digits,"el order etlgha men 8eer ma atlob, momken a3raf leh?","el order etlgha men gheer ma atlob, momken aaraf leh?",order_cancelled,Recognize that the customer wants to know why an order was cancelled without their request and investigate using the order information.,Do not invent the reason for cancellation or claim that a refund was issued.,"بكل تأكيد! دا سؤالك بسّط وواضح، وسأجيبك بسلاسة ووضوح:
+
+العبارة ""الطلب ETL يُطلب من غير ما أتلوه، ممكن أرَّف له؟"" تبدو كأنك تُعبّر عن شيء غير مفهوم أو مُضطرب في سياق ""الطلب ETL"".
+
+لكن دعنا نُحلّلها خطوة بخطوة:
+
+### ما المقصود بـ ""الطلب ETL""؟
+- **ETL** هو اختصار لـ **Extract, Transform, Load** (استخراج، تحويل، تحميل).
+- يُستخدم في أنظمة إدارة البيانات (مثل Data Warehousing) لنقل البيانات من مصادر متعددة إلى نظام تحليل بيانات.
+- ""الطلب ETL"" قد يُقصد به: ""طلب إجراء عملية ETL"" أو ""طلب تحميل بيانات"".
+
+### ما المقصود بـ ""من غير ما أتلوه""؟
+- هذا يُفهم كـ ""من دون ما أعرفه""، أو ""من دون ما أُدركه""، أو ""من دون ما أُعطيه"".
+- أي أنك تقول: ""الطلب يُطلب من غير أن أعرف ماذا أفعل، أو من دون أن أُ",0,0,0,wrong_domain,0
+E008_more_digits,S002,E008,in_scope,more_digits,"el order etlgha men 8eer ma atlob, momken a3raf leh?","el order etl8a men 8eer ma atlob, momken a3raf leh?",order_cancelled,Recognize that the customer wants to know why an order was cancelled without their request and investigate using the order information.,Do not invent the reason for cancellation or claim that a refund was issued.,"أكيد! 😊  
+لكن أولاً، أحتاج إلى توضيح: ما المقصود بـ ""الorder etl8a men 8eer ma atlob""؟  
+هل تقصد:
+
+- أنك تطلب ""الطلب (order) يُرسل من الطرف (8eer) ولا يُستلم (ma atlob)""؟  
+أو  
+- أنك تتحدث عن عملية ""ETL"" (Extract, Transform, Load) من مصدر معين (8eer) ولا يُستلم (ma atlob)؟  
+أو  
+- هل ""8eer"" و""atlob"" تُستخدم كألفاظ محلية أو مصطلحات مُختصرة في سياق عملك (مثلاً: ""الطرف"" و""الاستلام"")؟
+
+بما أنك كتبت ""el order etl8a men 8eer ma atlob""، فربما تقصد أن:
+
+> ""الطلب (order) يُرسل من الطرف (8eer) ولا يُستلم (ma atlob)""  
+أو  
+> ""الطلب يُستلم من الطرف، لكنه لم يُستلم (مثلاً: تأخر الاستلام)"".
+
+وإذا كان المقصود هو أنك تبحث عن **حل أو طريقة لحل مشكلة في تسلسل الطلب",0,0,0,unclear,0
+E012_no_digits,S003,E012,in_scope,no_digits,wasalny item 8eer elly talabto.,wasalny item gheer elly talabto.,wrong_item_received,Recognize that the delivered item does not match the ordered item and request the necessary order and item information.,Do not promise a replacement or refund without evidence.,"العبارة ""wasalny item gheer elly talabto"" تبدو كأنها مكتوبة بأسلوب مختصر أو مُختل من اللغة العربية، وقد تكون مُختلَّة نحويًا أو تُستخدم في سياق مُحدد (مثلاً في محادثة يومية أو على وسائل التواصل).
+
+نحاول تفسيرها وتصحيحها:
+
+- ""wasalny"" قد تكون مقصودة بـ ""ما سالن"" أو ""ما سألت"" أو ""ما سألت عن"" أو ""ما سألت عن شيء"".
+- ""item"" تُستخدم عادة في سياق ""مُنتج"" أو ""عنصر"" أو ""مُتطلب"".
+- ""gheer elly talabto"" = ""الذي لا يُطلب"" أو ""الذي لا يُحتاج إليه"".
+
+إذًا، التفسير الممكن للعبارة هو:
+
+**""ما سألت عن شيء لا يُطلب""**  
+أو  
+**""ما سألت عن شيء غير المطلوب""**
+
+أو بشكل أوضح:
+
+👉 **""لم تطلب شيئًا غير المطلوب""**  
+أو  
+👉 **""لم تطلب شيء لا يُحتاج إليه""**
+
+إذا كنت تقصد شيئًا محددًا (مثلاً في سياق شراء، ت",0,0,0,unclear,1
+E016_no_digits,S004,E016,in_scope,no_digits,fe item na2es men el order.,fe item na'es men el order.,missing_item,Recognize that an item is missing from the delivery and request the relevant order details.,Do not assume the item was shipped separately or refunded.,"Parece que tu escribiste algo en un idioma mixto o con errores de ortografía. ¿Podrías aclarar tu pregunta? Por ejemplo:
+
+- ¿Quieres que ordene una lista de elementos?
+- ¿Estás hablando de un ""fe item"" en un contexto específico (como una lista de tareas, un pedido, etc.)?
+- ¿Quieres que corrija o reescriba una frase?
+
+Dime más detalles y con gusto te ayudo. 😊",0,0,0,other_language,0
+E020_no_digits,S005,E020,in_scope,no_digits,"el item wesel damaged, a3mel eh?","el item wesel damaged, aamel eh?",damaged_item,Recognize that the item arrived damaged and provide or request the information needed for the damage case.,Do not claim that a replacement or refund has already been approved.,"It looks like your message has some typos or unclear phrasing. Could you please clarify what you mean by ""el item wesel damaged, aamel eh?""?
+
+Are you asking:
+
+- If a product (maybe ""wesel"" is a typo for ""wesel"" or perhaps ""wesel"" is meant to be ""wesel"" as in a brand or item?) is damaged?
+- If someone is responsible for the damage (""aamel eh"" might be a typo for ""am I allowed"" or ""is it my fault""?)
+
+Please rephrase your question so I can better understand and help you. For example:
+
+- ""Is the item damaged, and am I allowed to return it?""
+- ""My item was damaged, what should I do?""
+- ""Is the product damaged, and who is responsible?""
+
+Let me know! 😊",1,0,0,unclear,0
+E024_no_digits,S006,E024,in_scope,no_digits,el delivery et2akhar 3an el promised time.,el delivery et'akhar an el promised time.,delivery_delay,Recognize that delivery is later than promised and request or check tracking/order details.,Do not invent a new delivery date or claim the package is lost.,التسليم تأخر عن الوقت المُتعهد.,2,0,0,language_task,1
+E024_more_digits,S006,E024,in_scope,more_digits,el delivery et2akhar 3an el promised time.,el delivery et2a5ar 3an el promised time.,delivery_delay,Recognize that delivery is later than promised and request or check tracking/order details.,Do not invent a new delivery date or claim the package is lost.,"العبارة ""el delivery et2a5ar 3an el promised time"" تُستخدم في اللغة العربية المُستخدمة في السياقات اليومية أو في المحادثات غير الرسمية، لكنها تحتوي على أخطاء في التراكيب اللغوية أو في التهجئة.
+
+نُصححها ونُعيد صياغتها بشكل صحيح وواضح:
+
+✅ ""التسليم يتأخر عن الوقت المُتعهد.""
+
+أو بشكل أكثر تعبيرًا:
+
+✅ ""التسليم لم يُقدَّم في الوقت المُتعهد.""
+
+أو إذا كنت تُريد تعبيرًا أكثر رسمية:
+
+✅ ""تم تأجيل التسليم إلى بعد الوقت المُتعهد.""
+
+إذا كنت تُريد صياغة مُختصرة أو مُستخدمة في رسالة رسمية أو تواصل مع عميل:
+
+> ""نأسف على تأخير التسليم عن الوقت المُتعهد، ونُعدّ بتحديث دقيق لموعد التسليم الجديد.""
+
+إذا أردت توضيحًا إضافيًا أو ترجمة إلى لغة أخرى، يُمكنك توضيح السياق (مثلاً: تواصل مع عميل، تقرير، رسالة رسمية، إلخ).",1,0,0,language_task,0
+E028_no_digits,S007,E028,in_scope,no_digits,el tracking mesh updating men embare7.,el tracking mesh updating men embareh.,tracking_not_updating,Recognize that tracking has not updated and request or check the tracking/order information.,"Do not claim the package is moving, lost, delivered, or delayed by a specific carrier.","It seems like your message might be a mix of languages or contains a typo. Could you please clarify or rephrase your question? Specifically, ""el tracking mesh updating men embareh"" is not clear in standard English or Spanish. 
+
+Are you referring to:
+
+- A technical issue with a mesh tracking system (e.g., in 3D modeling, simulation, or augmented reality)?
+- A problem with updating a mesh in a software (like Blender, Unity, or a simulation tool)?
+- Or is this a typo or miscommunication (e.g., ""men embareh"" might be meant to be ""in the mesh"" or ""mesh update failed"")?
+
+Let me know the context, and I’ll be happy to help! 😊",0,0,0,mesh,0
+E032_no_digits,S008,E032,in_scope,no_digits,me7taga a8ayar el delivery address abl el shipment.,mehtaga aghayar el delivery address abl el shipment.,delivery_address_change,Recognize the request to change the delivery address and check whether the order status allows the change.,Do not claim the address was changed.,"السؤال: ""mehtaga aghayar el delivery address abl el shipment""  
+أو بالعربية: ""أريد معلومات عن عنوان التسليم في حالة الشحنة""
+
+الإجابة:
+
+للحصول على معلومات عن عنوان التسليم (Delivery Address) في حالة الشحنة (Shipment)، يمكنك التحقق من:
+
+1. **إشعار الشحنة (Shipping Label أو Shipment Confirmation)**  
+   - يحتوي على عنوان التسليم الكامل (الشارع، المدينة، الدولة، الرمز البريدي).
+
+2. **البريد الإلكتروني أو التطبيق المرتبط بالشحن**  
+   - مثل: تطبيقات مثل DHL، FedEx، UPS، أو منصات مثل Amazon، أو موقع المتجر.
+
+3. **البيانات المُدخلة عند الطلب**  
+   - إذا طلبت الشحنة من متجر، فقد تكون معلومات التسليم مُدخلة في وقت الطلب.
+
+4. **الإشعار أو التحديثات من المُرسل (Sender)**  
+   - يُرسل المُرسل عادةً تفاصيل التسليم عند إرسال الشحنة.
+
+إذا كنت تبحث عن معلومات محددة (مثلاً: هل العنوان مطابق؟ هل هناك تغيير؟)، يُفضل أن تتحقق من:
+
+- رقم الشحنة (Tracking Number)  
+",0,0,0,misread_word,1
+E036_no_digits,S009,E036,in_scope,no_digits,el delivery address 3ala el order 8alat.,el delivery address ala el order ghalat.,delivery_address_wrong,Recognize that the customer believes the delivery address is incorrect and investigate the order information.,Do not claim the courier has already been notified.,"العنوان المُدخل في طلب التوصيل غير صحيح.  
+
+إذا كنت ترغب في تصحيح العنوان، يُرجى تزويدي بالعنوان الصحيح أو تفاصيل التوصيل (مثل الاسم، العنوان، رقم الهاتف، إلخ)، وسأكون سعيدًا بمساعدتك في إجراء التحديث.",2,2,0,success,0
+E044_no_digits,S011,E044,in_scope,no_digits,3ayza a3mel return lel item da.,ayza aamel return lel item da.,return_request,Recognize that the customer wants to return an item and explain or request the information needed for the return process.,Do not claim that a return has already been created.,"العبارة ""ayza aamel return lel item da"" تبدو كجملة مكتوبة بلغة مختلطة (ربما مزيج بين العربية والفرنسية أو لغة مُستخدمة في بعض المناطق العربية). دعنا نحللها ونُعيد صياغتها بشكل واضح ودقيق:
+
+الجملة الأصلية: **""ayza aamel return lel item da""**
+
+نُحللها:
+
+- ""ayza"" → قد تكون ""أيزة"" أو ""أيزة"" (اسم شخصي أو مُختصر).
+- ""aamel"" → قد تكون ""أُعيد"" أو ""أُعاد"" (مُستَخدم في بعض السياقات العربية مثل ""أُعيد الطلب"").
+- ""return"" → مُصطلح إنجليزي، يُستخدم في السياقات التجارية أو التسويق.
+- ""lel item da"" → ""البند"" أو ""البند المُستَلم"" (بشكل مختصر، ""lel"" = ""الـ""، ""item"" = ""بند""، ""da"" = ""هذا"").
+
+إذًا، الجملة تُترجم إلى:
+
+**""أيزة أعادت العودة للبند هذا""**  
+أو بشكل أدق:  
+**""أيزة أعادت البند هذا""",0,0,0,unclear,1
+E048_no_digits,S012,E048,in_scope,no_digits,yenfa3 a3mel return lel item ba3d ma fata7to?,yenfaa aamel return lel item baad ma fatahto?,return_eligibility,Recognize that the customer is asking whether an item can be returned and explain that eligibility depends on the applicable return policy and order details.,Do not claim the item is eligible without checking the relevant policy.,"السؤال: ""Yenfaa aamel return lel item baad ma fatahto؟""  
+أو بسياق مبسط: ""هل يُعاد العنصر (البند) بعد أن أُغلق؟""
+
+الإجابة:
+
+في سياق **اللغة العربية** و**السياق المالي أو التسويقي** (مثلاً: مخزون، بيع، عودة منتج)، فإن:
+
+> **""Yenfaa aamel return lel item baad ma fatahto؟""**  
+أو بترجمة مبسطة:  
+**""هل يُعاد العنصر (البند) بعد أن أُغلق؟""**
+
+الإجابة:  
+**لا، لا يُعاد العنصر (البند) بعد أن يُغلق**، إذا كان المقصود أن ""الغلق"" يعني أن البند تم بيعه أو استهلاكه أو تأكيد تفويته.
+
+لكن إذا كان المقصود هو:  
+هل يمكن **إعادة تأهيل العنصر أو عودته إلى المخزون** بعد أن تم استخدامه أو تفويته؟  
+فإجابة ذلك تعتمد على:
+
+- نوع البند (مثلاً: منتج مُستهلك، منتج مُعاد",0,0,1,misread_word,0
+E052_mixed,S013,E052,in_scope,mixed,momken a3raf el status beta3 el return bta3y?,momken aaraf el status beta3 el return bta3y?,return_status,Recognize that the customer wants an update on an existing return and request or check the return information.,Do not invent a return status.,"السؤال ""ممكن أرَّف الـ status beta3 el return bta3y؟"" يبدو أنه مكتوب بلهجة مصريّة مختلطة، وربما يقصد:
+
+**""ممكن أعرف الـ status beta3، والـ return بتحتاج؟""**  
+أو  
+**""ممكن أعرف ما هو الـ status beta3 ومتى يُعاد التسليم (return)؟""**
+
+لكن بما أنك كتبت ""el status beta3 el return bta3y؟""، فربما تقصد:
+
+> ""ما هو الـ status beta3؟ وما هو الـ return (العودة أو التسليم) المرتبط به؟""
+
+إذا كان السؤال عن **الـ status beta3** في سياق تطبيقات أو تطوير (مثل تطبيقات موبايل أو ويب)، فإن:
+
+---
+
+### ✅ ما هو ""Beta3""؟
+- **Beta3** هو مرحلة من مراحل تطوير المنتج (الـ Beta).
+- تُعرف المراحل التالية عادةً:
+  - **Alpha**: نسخة أولية تُختبر داخل الفريق.
+  - **Beta**: نسخة تُعرض لجمهور محدود (مُختبرين أو مستخدمين).
+    - **Beta1**: أول نس",0,0,0,misread_word,0
+E056_no_digits,S014,E056,in_scope,no_digits,momken te2oly product details aktar 3an el item da?,momken te'oly product details aktar an el item da?,product_information,Recognize that the customer is asking for product information and provide only information supported by the available product data.,Do not invent specifications.,"""Momken te'oly product details aktar an el item da?"" — এই প্রশ্নটি বাংলা ভাষায় হয়েছে, যা বাংলা ভাষায় অনুবাদ করলে হয়:
+
+**""মোমকেন টি'ওলি প্রোডাক্ট ডিটেইলস আক্তার এন এল ইটেম দা?""**
+
+এটি বাংলা ভাষায় একটি অস্পষ্ট বা ভুল বাক্য। আমি এটি বুঝতে চাইছি যে আপনি কিছু প্রোডাক্ট (যেমন টি'ওলি বা মোমকেন) নিয়ে কথা বলছেন এবং জানতে চাইছেন যে �",0,0,0,other_language,0
+E060_no_digits,S015,E060,in_scope,no_digits,el product da available delwa2ty?,el product da available delwa'ty?,product_availability,Recognize that the customer is asking whether a product is available and provide/check current availability.,Do not claim it is in stock without current evidence.,"No, **Delwa'ty** no es un producto disponible en el mercado. Es posible que estés refiriéndote a un nombre confundido, mal escrito o una variante de otro producto.
+
+Por ejemplo:
+
+- **Delwa'ty** podría ser una confusión con **Dewalt** (una marca de herramientas eléctricas muy conocida), o con **Delaware** (un estado de EE.UU.), o incluso con **Dewalt** escrito de forma incorrecta.
+- Si te refieres a un producto de herramientas, como un taladro, sierra, etc., entonces sí existen productos de **Dewalt** disponibles en muchos países.
+- Si te refieres a un medicamento o suplemento, no hay registros conocidos de un producto llamado ""Delwa'ty"".
+
+Por favor, verifica el nombre del producto o da más contexto (por ejemplo: ¿es una herramienta, medicamento, producto de belleza, etc.?).
+
+¡Con más detalles, puedo ayudarte mejor! 😊",0,0,0,other_language,0
+E064_mixed,S016,E064,in_scope,mixed,fe restock 2areeb lel item da?,fe restock 2oryeb lel item da?,product_restock,Recognize that the customer wants to know whether or when an unavailable product may return.,Do not invent a restock date.,"Poukèt, ""Fe restock 2oryeb lel item da?"" te mèt k ap kounye a, men yo te fèt k ap kounye a, men yo te fèt k ap kounye a, men yo te fèt k ap kounye a, men yo te fèt k ap kounye a, men yo te fèt k ap kounye a, men yo te fèt k ap kounye a, men yo te fèt k ap kounye a, men yo te fèt k ap kounye a, men yo te fèt k ap kounye a, men yo te fèt k ap kounye a, men yo te fèt k ap kounye a, men yo te fèt k ap kounye a, men yo te fèt k ap kounye a, men yo te fèt k ap kounye a, men yo te fèt k ap kounye a, men yo te fèt k ap kounye a, men yo te fèt k ap kounye a, men yo te fèt k ap kounye a, men yo te fèt k ap kounye a, men yo te fèt k ap kounye a, men yo te fèt k ap koun",0,0,0,garbled_output,0
+E068_no_digits,S017,E068,in_scope,no_digits,yenfa3 a8ayar el size abl ma el order ships?,yenfaa aghayar el size abl ma el order ships?,product_variant_change,Recognize that the customer wants to change the product variant and check whether the order can be modified.,Do not claim the variant was changed.,"أهلاً! يبدو أنك تطلب معلومات حول **أحجام المنتجات (الـ size)** التي تُرسل في الطلبات (الـ order ships)، لكن الجملة ""yenfaa aghayar el size abl ma el order ships?"" تبدو مختلطة من حيث اللغة (مزيج من العربية والإنجليزية).
+
+إذا كنت تقصد:
+
+> ""ما الأحجام التي تُرسل في الطلبات؟""
+
+فأنا سأُجيبك بشكل واضح:
+
+🔹 **أحجام المنتجات (الـ size)** التي تُرسل في الطلبات تختلف حسب نوع المنتج (مثلاً: ملابس، أثاث، إلخ)، وتعتمد على:
+
+1. **نوع المنتج** (مثلاً: ملابس رياضية، ملابس داخلية، ملابس عصرية، أثاث، إلخ).
+2. **المنشأة أو المتجر** (مثلاً: متجر يبيع ملابس للرجال، أو للنساء).
+3. **المنطقة الجغرافية** (أحيانًا تختلف الأحجام حسب السوق).
+4. **الطلب (Order)** – هل هو طلب عادي أم طلب مخصص؟
+
+إذا كنت تتحدث عن **محل أو",1,0,0,misread_word,0
+E072_no_digits,S018,E072,in_scope,no_digits,el product batal yeshtaghal ba3d kam youm bas.,el product batal yeshtaghal baad kam youm bas.,product_defect,Recognize that the customer reports a product defect and gather the details needed to assess the issue.,Do not claim the product is defective by manufacturing fault without evidence.,"متن شما به فارسی است و به نظر می‌رسد که می‌خواهید بگویید:  
+**""محصول باتال یه شاهد یا یه چیزی که بعد کمی می‌شود، باید بعد یک روز بسیار کم شود.""**  
+
+اما عبارت ""batal yeshtaghal baad kam youm bas"" به نظر می‌رسد که ترجمه‌ای ناقص یا اشتباه از یک متن فارسی یا یک متن خاص است.  
+
+اگر منظور شما این است که:  
+> ""محصول باتال یک شاهد یا یک چیزی است که بعد از کمی می‌شود، و بعد یک روز بسیار کم می‌شود""،  
+می‌توانم به صورت واضح‌تر و درست‌تر آن را ترجمه کنم.
+
+### ترجمه و توضیح مناسب:
+**""محصول باتال، پس از یک مدت کوتاه، به طور قابل توجهی",0,0,0,other_language,0
+E072_more_digits,S018,E072,in_scope,more_digits,el product batal yeshtaghal ba3d kam youm bas.,el product batal ye4ta8al ba3d kam youm bas.,product_defect,Recognize that the customer reports a product defect and gather the details needed to assess the issue.,Do not claim the product is defective by manufacturing fault without evidence.,"السؤال: ""المنتج باتال يُباع بعد كم يوم بس؟""
+
+الإجابة:
+
+لا يوجد معلومات كافية في السؤال لتحديد كم يومًا يُباع المنتج ""باتال"" بعد ذلك. قد يكون هناك خطأ في الترجمة أو في تعبير السؤال.
+
+إذا كنت تقصد شيئًا مثل ""ما هو مدة التسويق أو التسويق المُباع للمنتج باتال؟"" أو ""بعد كم يوم يُباع المنتج باتال؟""، فنحتاج إلى مزيد من التفاصيل مثل:
+
+- ما هو نوع المنتج؟ (مثلاً: ملابس، أجهزة، منتجات تجميل...)
+- من هو المُعلن أو المُباع؟
+- هل تتحدث عن منتج محدد في سوق معين؟
+- هل تشير إلى تجربة شراء أو توزيع معين؟
+
+إذا كنت تقصد شيئًا مثل ""بَاتَل"" كمُصطلح في سياق تجاري أو ترفيهي (مثلاً: باتال كمُتاجر أو منتج)، يرجى توضيح السؤال أكثر.
+
+أو ربما كنت تقصد ""بَاتَل"" كمُصطلح مُستخدم في",0,0,0,misread_word,0
+E076_no_digits,S019,E076,in_scope,no_digits,fe order limit 3ala 3adad el items?,fe order limit ala adad el items?,product_quantity,Recognize that the customer is asking about how many units can be purchased.,Do not invent purchase limits.,"ممنون که سوال خود را مطرح کردید! اما سوال شما به صورت کامل و واضح تر نیست. لطفاً توضیح بیشتری بدهید که می‌خواهید بدانید:
+
+آیا می‌خواهید بدانید که در یک **سفارش (order)** چقدر می‌توانید **محدودیت (limit)** برای تعداد آیتم‌ها (مثلاً محصولات) قرار دهید؟  
+یا می‌خواهید بدانید که در یک سیستم خاص (مثلاً یک سیستم فروشگاهی، یا یک سیستم برنامه‌نویسی) چه محدودیتی برای تعداد آیتم‌های یک سفارش وجود دارد؟  
+یا می‌خواهید بدانید که چه مقدار می‌تواند در یک سفارش قرار گیرد (مثلاً 1000 آیتم؟ 100 آیتم؟)؟
+
+لطفاً توضیح بدهید",0,0,0,other_language,1
+E080_mixed,S020,E080,in_scope,mixed,el replacement part دي compatible ma3 el device beta3y?,el replacement part دي compatible maa el device beta3y?,product_compatibility,Recognize that the customer is asking whether products or accessories are compatible and provide only verified compatibility information.,Do not invent compatibility.,"السؤال: ""el replacement part دي compatible maa el device beta3y؟""  
+أو ببساطة: ""هل الجزء المُستبدَل هذا متوافق مع الجهاز؟""
+
+الإجابة:
+
+نعم، الجزء المُستبدَل (الـ replacement part) **متوافق مع الجهاز** (compatible with the device) إذا كان:
+
+1. **مُصنّعًا من قبل مُصنّع الجهاز الأصلي** (أو مُصنّع موثوق).
+2. **مُطابقًا في المواصفات** (مثل: الحجم، الطول، الطاقة، الاتصالات، والوظائف).
+3. **مُعتمَد من قبل الشركة المُصنعة** (مثل: ""Original"" أو ""Approved by manufacturer"").
+4. **مُختبر أو مُختبر مُعتمَد** (مثلاً: متوافق مع الـ CE، FCC، أو معيار معين).
+
+لكن، إذا لم تُذكر معلومات عن:
+- نوع الجهاز (مثلاً: هاتف، جهاز حاسوب، مُصباح، إلخ)
+- نوع الجزء (مثلاً: بطارية، شاشة، كاميرا، مُعالج)
+- اسم الشركة المُصنعة للجهاز
+
+فإننا لا ن",2,1,0,partial,0
+E084_mixed,S021,E084,in_scope,mixed,3amalt refund request w lesa el mablagh ma rega3sh.,amalt refund request w lesa el mabla8 maga4.,refund_pending,Recognize that a refund was requested but has not arrived and investigate using refund/order details.,Do not claim the refund was processed or sent on a specific date.,"It seems like your message is in a mix of Arabic and possibly a typo or incomplete phrase. Could you please clarify or rephrase your request?
+
+You wrote: *""amalt refund request w lesa el mabla8 maga4.""*  
+This might mean something like: *""I want to make a refund request and I don't know what to do.""* or *""I need help with a refund request, I don't understand the process.""*
+
+To assist you properly, could you please provide:
+
+1. The context (e.g., refund for a product, service, online purchase, travel, etc.)
+2. The platform or company involved (e.g., Amazon, a restaurant, a subscription)
+3. What exactly you're struggling with (e.g., how to submit the request, what documents are needed, why it's taking so long)
+
+Once I have more details, I’ll be happy to help you with a clear and step-by-step refund request. 😊
+
+Just let me know!",1,1,0,unclear,0
+E084_more_digits,S021,E084,in_scope,more_digits,3amalt refund request w lesa el mablagh ma rega3sh.,3amalt refund request w lesa el mabla8 ma rega3sh.,refund_pending,Recognize that a refund was requested but has not arrived and investigate using refund/order details.,Do not claim the refund was processed or sent on a specific date.,"It seems like your message is in a mix of Arabic and possibly a typo or miscommunication. Let me try to understand and help you better.
+
+You wrote:  
+**""3amalt refund request w lesa el mabla8 ma rega3sh""**
+
+This appears to be in Arabic, but with some spelling errors or unclear phrasing. Let me interpret it:
+
+- ""3amalt"" → possibly meant to be ""3amal"" or ""3amal"" (maybe ""3amal"" = ""3amal"" as in ""3amal"" = ""3amal"" — could be a typo for ""3amal"" or ""3amal"" = ""3amal"" — perhaps you meant ""3amal"" = ""3amal"" = ""3amal"" — not clear)
+- ""refund request"" → clearly means ""request for refund""
+- ""w lesa el mabla8"" → ""and the reason for the delay""
+- ""ma rega3sh"" → ""why not returning"" or ""why not processing""
+
+So, a possible correct interpretation is:
+
+👉 *""I made a refund request, and why is there a delay in processing it?""*
+
+Or:
+
+👉 *""I submitted a refund request, and why is it still not being processed?""*
+
+---
+
+✅ **Answer:**
+
+If you've submitted a refund request and are waiting for it to be processed, here are some common reasons",1,0,0,unclear,1
+E088_no_digits,S022,E088,in_scope,no_digits,el refund elly weselny a2al men el amount elly dafa3to.,el refund elly weselny a'al men el amount elly dafaato.,refund_amount_discrepancy,Recognize that the customer received less money than expected and investigate the transaction details.,Do not invent fees or deductions.,"العبارة ""el refund elly weselny a'al men el amount elly dafaato"" تبدو مكتوبة بأسلوب مختصر أو مُختل من اللغة العربية، وقد تكون مُختلَّة نحويًا أو تُستخدم في سياق مُحدد (مثل تطبيقات مالية أو تواصل داخلي). دعنا نحللها ونُعيد صياغتها بشكل واضح ودقيق.
+
+العبارة الأصلية:  
+**""el refund elly weselny a'al men el amount elly dafaato""**
+
+نُحللها:
+
+- ""el refund"" = ""الإرجاع"" أو ""الاسترداد""
+- ""elly weselny"" = قد يكون خطأ في التهجئة أو الترجمة، ربما يقصد ""الذي يُسترد"" أو ""الذي يُعاد"" أو ""الذي يُدفع""
+- ""a'al men"" = ""أعلى من"" أو ""أقل من"" (مُستَخدم في السياق المالي)
+- ""el amount elly dafaato"" = ""مبلغ الديون"" أو ""مبلغ المدفوع""
+
+إذًا، المقصود ربما هو:
+
+> ""هل يتم استرداد المبلغ المُسترد (أو المُعاد) أكثر من مبلغ الديون المدفوع",0,0,0,language_task,0
+E092_no_digits,S023,E092,in_scope,no_digits,et3amaly double charge le nafs el order.,etamaly double charge le nafs el order.,duplicate_charge,Recognize that the customer reports being charged twice for one order and investigate the payment/order details.,Do not promise a refund or claim one of the charges has been reversed.,"العبارة ""etamaly double charge le nafs el order"" تبدو كمزيج من اللغة العربية والإنجليزية، وقد تكون مُصاغة بشكل غير دقيق أو مُختصر. دعنا نحللها ونُفسرها بأسلوب واضح وسليم:
+
+### التفسير الممكن:
+- ""etamaly"" → قد تكون مُختصرة لـ ""etamal"" أو ""etamal ya"" (مُستخدمة في بعض السياقات المُتخصصة مثل ""أنا أُطَمَّل"" أو ""أُطَمَّلَ"").
+- ""double charge"" → تعني ""إغلاق مزدوج"" أو ""إغلاق مزدوج على النفس"" أو ""إثقال النفس"".
+- ""le nafs el order"" → ""لنفس الأمر"" أو ""لنفس الطلب"".
+
+### التفسير الأقرب:
+العبارة قد تُقصد بها شيئًا مثل:
+> ""أنا أُطَمَّلُ (أُضَعَفُ) نفسِي في الطلب المزدوج.""
+
+أو:
+> ""أُضَعَفُ نفسي في الطلب المزدوج.""
+
+لكن هذا غير واضح.
+
+### احتمالات أخرى:
+إذا كانت العبارة تأتي من سياق د",0,0,0,misread_word,0
+E096_no_digits,S024,E096,in_scope,no_digits,el payment بيرفض kol mara ma3 en el card sh8al fe amaken tany.,el payment byrfod kol mara maa en el card shghal fe amaken tany.,payment_declined,Recognize repeated payment declines and guide the customer through appropriate troubleshooting.,Do not invent a specific bank decline reason.,"العبارة ""el payment byrfod kol mara maa en el card shghal fe amaken tany"" تبدو مكتوبة بلهجة مصريّة مختلطة، وربما تحتوي على أخطاء في التهجئة أو الترجمة. دعنا نُعيد صياغتها ونُفسر المعنى بوضوح.
+
+المعنى المحتمل:
+
+""الدفع بـ بريفود كل مرة ما أنت في الـ كارد مفعل في الأمكنة.""
+
+أو ببساطة:
+
+""أنا أدفع بـ بريفود كل مرة، لكن بطاقة الدفع (الكارد) غير مفعلة في المكان.""
+
+لكن ""بريفود"" قد يكون خطأ في التهجئة، وربما تقصد ""بموجب"" أو ""بمجرد"" أو ""بموجب بطاقة"" أو حتى ""بموجب الـ كارد"".
+
+إذا كان المقصود هو:
+
+> ""أنا أدفع كل مرة، لكن بطاقة الدفع غير مفعلة في المكان.""
+
+فأنا أقترح ترجمة أكثر دقة ووضوحًا:
+
+✅ ""أنا أدفع كل مرة، لكن بطاقة الدفع غير مفعلة في هذا المكان.""
+
+أو إذا كنت تقصد شيئًا متعلقًا بالدفع عبر بطاقة (مثل دفع",0,0,0,misread_word,0
+E100_mixed,S025,E100,in_scope,mixed,el payment beta3y lessa pending ba2alo sa3at.,el payment beta3y lessa pending ba'alo saat.,payment_pending,Recognize that payment appears pending and explain or investigate the transaction status.,Do not claim the payment definitely succeeded or failed.,"العبارة ""el payment beta3y lessa pending ba'alo saat"" تبدو مكتوبة بلهجة مصريّة مختلطة، وقد تكون مُختلطة بين اللغة العربية المُصطلحية واللهجة اليومية. دعنا نُحلّلها ونُفسرها بشكل دقيق:
+
+### الترجمة المُستخلصة:
+""الدفع بـ تي بى 3 ي (أو بيتا 3) يُبقي على الوضع معلق (مُعلق) لفترة طويلة.""
+
+أو ببساطة:
+
+> ""الدفع عبر بيتا 3 يُبقي على الوضع معلق (مُعلق) لفترة طويلة.""
+
+### التفسير:
+- **""el payment beta3y""** = الدفع عبر بيتا 3 (أو بيتا 3 ي)
+- **""lessa pending""** = يبقى معلقًا (مُعلقًا)
+- **""ba'alo saat""** = لفترة طويلة / لفترة طويلة جدًا
+
+### المعنى:
+أنت تشير إلى أن عملية الدفع عبر منصة أو خدمة تُسمى ""بيتا 3"" (ربما تشير إلى خدمة دفع رقمي أو تطبيق مالي)، تُبقي عملية الد",0,0,0,misread_word,0
+E104_mixed,S026,E104,in_scope,mixed,eh el payment methods elly bet2abloha?,eh el payment methods elly bet2baloha?,payment_method_question,Recognize that the customer is asking which payment methods are accepted.,Do not invent supported payment methods.,"It looks like you're asking about payment methods for ""Elly Bet2Baloa"" — but there might be a mix-up or typo in the name.
+
+As of now, there is **no known online betting platform or service** called ""Elly Bet2Baloa"" that is widely recognized or officially operating. It's possible you're referring to:
+
+1. **Bet2Baloa** – This could be a misspelling or confusion with a real platform. ""Bet2Baloa"" doesn't appear in major betting directories or official sites.
+2. **Elly** – Possibly a person's name or a brand, but not linked to a known betting platform.
+3. **Bet2B** – There are some betting platforms with similar names, like Bet2B (a regional or local betting site), but they are not widely known or verified globally.
+
+### Common Payment Methods in Online Betting Platforms:
+If you're asking about general payment methods used in online betting (like Bet2B or similar), typical options include:
+
+- **Credit/Debit Cards** (Visa, Mastercard)
+- **E-wallets** (PayPal, Skrill, Neteller, EcoPayz)
+- **Bank Transfers** (local or international)
+- **Mobile Wallets** (e.g., Apple Pay, Google Pay – depending on region)
+- **Cryptocurrencies** (Bitcoin, Ethereum – less common in most betting sites)
+
+⚠",0,0,0,misread_word,0
+E108_no_digits,S027,E108,in_scope,no_digits,yenfa3 adfa3 cash lama el order yesal?,yenfaa adfaa cash lama el order yewsal?,cash_payment_question,Recognize that the customer is asking whether cash payment is supported.,Do not claim cash payment is available without verified information.,"السؤال ""yenfaa adfaa cash lama el order yewsal؟"" يبدو أنه مكتوب بأسلوب مختصر أو مُختلط بين اللغة العربية والإنجليزية، وقد يكون مقصودًا سؤالًا عن:
+
+**""هل يمكن دفع مبلغ مسبق (أو مبلغ نقد) عند تلقي الطلب (أو عند التسليم)؟""**
+
+إذا كان هذا هو المقصود، فيمكن تفسير السؤال كالتالي:
+
+> ""هل يمكن دفع مبلغ نقد عند تلقي الطلب (أو عند التسليم)؟""
+
+### الإجابة:
+نعم، في بعض الحالات يمكن دفع مبلغ نقد عند تلقي الطلب أو عند التسليم، وهذا يُعرف بـ **""دفع نقد عند التسليم""** أو **""دفع مسبق""**.
+
+لكن يعتمد ذلك على:
+
+1. **نوع المبيع (مثلاً: بيع منتجات، خدمات، توصيل، إلخ)**  
+2. **النظام المالي للشركة أو المُتجر**  
+3. **الاتفاق المسبق بين المُشتري والبائع**
+
+### أمثلة:
+- في مطعم: قد يُطلب دفع نقد عند تلقي الطلب (أو عند التسليم).
+- في متجر",2,1,0,partial,0
+E112_no_digits,S028,E112,in_scope,no_digits,el card et5asam meno bas el order failed.,el card etkhasam meno bas el order failed.,card_charged_order_failed,Recognize that the customer reports a charge despite the order failing and investigate the transaction and order status.,Do not claim the charge will definitely disappear or that a refund has been issued.,"It seems like your message is a bit unclear or possibly contains a mix of languages or typos. Let me try to help clarify and interpret what you might mean:
+
+You wrote:  
+**""el card etkhasam meno bas el order failed.""**
+
+This appears to be in a mix of Arabic and English. Let me translate and interpret it:
+
+👉 ""The card was accepted, but the order failed.""
+
+Or more naturally:  
+**""The card was processed, but the order failed.""**
+
+If that’s what you meant, here are a few possible interpretations and solutions depending on your context:
+
+---
+
+### 🔍 Possible Scenarios & Solutions:
+
+#### 1. **Payment Failed Despite Card Being Accepted**
+- **Issue**: The card was validated (accepted), but the transaction failed at checkout.
+- **Possible Causes**:
+  - Insufficient funds
+  - Card expired or invalid
+  - Transaction amount too high
+  - Fraud detection blocked the transaction
+  - Server or payment gateway error
+- **Solution**:
+  - Check the card details (expiry, CVV, amount)
+  - Try a different payment method
+  - Contact your bank or payment provider (e.g., Stripe, PayPal, Paytm)
+  - Retry the transaction after a few minutes
+
+#### 2. **Order Failed After Card Processing**
+- **Issue**: The system shows ""card accepted"" but the order isn’t confirmed.
+- **Possible Causes**:
+  - Backend error in order",1,1,0,misread_word,0
+E116_no_digits,S029,E116,in_scope,no_digits,el refund hyrga3 3ala anhy payment method?,el refund hyrgaa ala anhy payment method?,refund_method_question,Recognize that the customer is asking how a refund is returned and explain only the verified refund process.,Do not invent a refund method or timing.,"It looks like your question has a typo or is written in a mix of languages. Let me try to interpret and clarify it.
+
+You wrote: *""el refund hyrgaa ala anhy payment method?""*
+
+This seems to be a misspelling or misphrasing of something like:
+
+👉 *""Is there a refund available for a payment method?""*  
+or  
+👉 *""Can I get a refund if I used a payment method?""*  
+or  
+👉 *""Is there a refund policy for a specific payment method?""*
+
+If you're asking:
+
+**""Is there a refund available for a payment method?""**  
+→ The answer depends on the service or platform (e.g., Amazon, PayPal, a subscription service, etc.). Most platforms allow refunds under certain conditions (e.g., if the item is defective, not delivered, or if the service is canceled within a certain time).
+
+**""Can I get a refund if I used a payment method like credit card, PayPal, etc.?""**  
+→ Yes, in most cases, you can get a refund through the original payment method (e.g., a credit card or PayPal). The refund will be credited back to the same account you used to make the purchase.
+
+💡 **Tips:**
+- Check the refund policy of the service you're using.
+- Contact customer support if you're unsure.
+- Refunds are usually processed within 5–10 business days.
+
+If you meant something different — like a specific service (",1,1,0,misread_word,1
+E120_no_digits,S030,E120,in_scope,no_digits,howa safe ad5al el card details hena?,howa safe adkhal el card details hena?,payment_security_question,Recognize that the customer is asking about payment security and provide verified security information without requesting sensitive card credentials.,"Do not ask for full card number, CVV, password, or OTP.","It's important to emphasize that **sharing or storing your card details (like credit card numbers, CVV, expiry dates) is extremely risky** and should be avoided whenever possible — especially on untrusted websites or platforms.
+
+### 🔒 How to Safely Handle Card Details (If Absolutely Necessary):
+
+1. **Only Use Trusted and Secure Platforms**  
+   Only provide card details on:
+   - Official websites (check for HTTPS — look for the padlock icon)
+   - Verified payment gateways (like Stripe, PayPal, Apple Pay, Google Pay)
+   - Apps with strong security and privacy policies
+
+2. **Never Share Card Details Over Email or Messaging Apps**  
+   Avoid sending card numbers via WhatsApp, email, or chat. This is a major security risk.
+
+3. **Use Payment Methods That Don’t Require Full Card Details**  
+   - **PayPal**: You can pay without entering your card details.
+   - **Apple Pay / Google Pay / Samsung Pay**: Use contactless payment with your device.
+   - **Buy Now, Pay Later (BNPL)**: Like Klarna, Afterpay — no need to share card info upfront.
+   - **Saved Cards**: Use saved payment methods in apps or browsers (only if the service is secure).
+
+4. **Enable Two-Factor Authentication (2FA)**  
+   This adds an extra layer of security to your accounts.
+
+5. **Use a Virtual Credit Card or Tokenization**  
+   - Services like **Stripe,",2,1,0,partial,0
+E124_no_digits,S031,E124,in_scope,no_digits,el promo code mesh working 3and el checkout.,el promo code mesh working fe el checkout.,promo_code_not_working,"Recognize that a promo code is not working and request/check the code, cart, and eligibility details.","Do not assume the code is valid, expired, or eligible.","It looks like you're asking whether the promo code ""mesh"" is working in the checkout process. However, your message is a bit unclear or possibly contains a typo (""fe el checkout"" might mean ""in the checkout"" or ""in the checkout page"").
+
+To help you properly, could you please clarify:
+
+1. **Which website or store** are you using (e.g., Shopify, WooCommerce, Amazon, etc.)?
+2. **What exactly is happening** when you enter the promo code ""mesh""? Is it not applying? Is it showing an error?
+3. **Are you on a specific platform or app** (like a shopping cart, marketplace, or e-commerce site)?
+4. **Is ""mesh"" a real promo code**, or did you mean something else (e.g., ""mesh"" as in a product name or brand)?
+
+For example:
+- Is ""mesh"" a valid discount code for a specific store?
+- Is it a typo for something like ""MESH10"" or ""MESH20""?
+- Is the code not working due to restrictions (e.g., expired, invalid, or only for certain products)?
+
+Once I have more context, I can give you a precise answer or help troubleshoot the issue. 😊",1,1,0,misread_word,1
+E128_no_digits,S032,E128,in_scope,no_digits,el price 3and el checkout mokhtalef 3an elly shofo.,el price fe el checkout mokhtalef an elly shofo.,price_discrepancy,Recognize the difference between the displayed price and checkout price and investigate the product/cart details.,Do not promise a price adjustment without checking policy.,"السؤال: ""el price fe el checkout mokhtalef an elly shofo""  
+أو ببساطة: ""السعر في الـ checkout مخالف للسعر المذكور؟""
+
+الإجابة:
+
+نعم، يمكن أن يكون السعر في صفحة ""الدفع"" (Checkout) مخالفًا للسعر المذكور في الصفحة السابقة (مثل صفحة المنتج أو السلة). هذا يحدث في بعض الأحيان بسبب:
+
+1. **الإضافة أو الطرح التلقائي للضرائب أو الشحن**  
+   - السعر في السلة قد يكون قبل ضرائب أو شحن، بينما السعر في Checkout يُعرض السعر النهائي بعد إضافة الضرائب أو تكلفة الشحن.
+
+2. **الخصومات أو التخفيضات المُطبقة تختلف**  
+   - قد تُطبَّق خصومات تلقائية (مثل خصم على الشراء بكمية معينة) في السلة، لكنها تُحسب أو تُطبَّق بشكل مختلف في Checkout.
+
+3. **الاختلاف في وحدة القياس أو التواريخ**  
+   - مثلاً: السعر في السلة مُعرض بالكيلو، بينما في Checkout يُعرض بالكيلوغرام أو بحالة مُختلفة.
+
+4. **أخطاء تقنية أو خلل في النظام**  
+",2,1,0,partial,0
+E128_more_digits,S032,E128,in_scope,more_digits,el price 3and el checkout mokhtalef 3an elly shofo.,el price 3and el checkout mo5talef 3an elly shofo.,price_discrepancy,Recognize the difference between the displayed price and checkout price and investigate the product/cart details.,Do not promise a price adjustment without checking policy.,"It seems like your message is in a mix of Arabic and English, and a bit unclear. Could you please rephrase or clarify what you're asking about?
+
+You mentioned ""el price 3and el checkout mo5talef 3an elly shofo"" — this might be trying to say something like:
+
+""Price and checkout are not matching with the actual price shown.""
+
+Or perhaps:
+
+""The price at checkout is different from the price shown on the product page.""
+
+If that's the case, I can help you understand why this might happen or how to resolve it. Let me know the exact context (e.g., online shopping, e-commerce platform, app, etc.), and I’ll be happy to assist! 😊",2,1,0,partial,0
+E140_no_digits,S035,E140,in_scope,no_digits,leh et3amaly extra fee 3and el checkout?,leh etamaly extra fee fe el checkout?,unexpected_fee,Recognize that the customer is questioning an unexpected fee and investigate the order/checkout breakdown.,Do not invent the reason for the fee.,"It seems like your question is in a mix of languages — possibly a typo or translation issue. Let me try to clarify and help you.
+
+If you're asking:  
+**""Do they charge an extra fee at checkout?""**  
+or  
+**""Is there an extra fee at checkout?""**  
+— then the answer depends on the service or platform you're referring to (e.g., a hotel, online store, subscription, or app like Leh, Etamaly, or something similar).
+
+However, ""Leh etamaly"" doesn't appear to be a known service or brand. It might be a misspelling or mishearing of something like:
+
+- **""Leh""** could be a typo for **""L'Étalon""**, **""Leh""** as in a local business, or even a mishearing of **""L'Étudiant""** or **""Etamaly""**.
+- **""Etamaly""** doesn't appear in major services or platforms.
+
+Could you please clarify:
+
+1. What service or platform are you referring to? (e.g., a hotel, app, marketplace?)
+2. Are you asking about a specific website, app, or company?
+3. Are you asking if there's a hidden or extra fee when checking out?
+
+With more context, I can give you a precise and helpful answer. 😊",0,0,0,unclear,1
+E148_no_digits,S037,E148,in_scope,no_digits,yenfa3 asta5dem two promo codes 3ala nafs el order?,yenfaa astakhdem two promo codes ala nafs el order?,promotion_stacking,Recognize that the customer is asking whether multiple discounts can be combined.,Do not claim discounts can or cannot be stacked without policy confirmation.,"لا، لا يمكنك استخدام رمزين ترويجيين (promo codes) على طلب واحد في نفس الوقت، عادةً ما يُسمح باستخدام رمز ترويجي واحد فقط لكل طلب.
+
+لكن، يعتمد هذا على سياسة المتجر أو المنصة التي تستخدمها (مثل أمازون، أو موقع إلكتروني معين، أو منصة تجارة إلكترونية مثل Shopify أو WooCommerce).
+
+إذا كنت تستخدم متجرًا معينًا (مثلاً: أمازون، أو موقع تجاري)، فيرجى توضيح:
+
+- اسم المتجر أو المنصة
+- نوع الطلب (مثلاً: شراء منتجات، توصيل، خصم على الطلب)
+
+وأنا سأكون قادرًا على إعطاؤك إجابة أكثر دقة.
+
+لكن بشكل عام:  
+❌ لا، لا يُسمح عادةً باستخدام رمزين ترويجيين على طلب واحد.  
+✅ يُسمح باستخدام رمز واحد فقط لكل طلب.
+
+إذا كنت تبحث عن خصم أكبر، فحاول:
+
+- استخدام رمز واحد مُخصص لخصم أكبر
+- التحقق من وجود عروض مزدوجة (مثل ""استخدم رمز A ورمز B معًا"" – لكنها نادرة)
+
+إذا أخبرتني باسم المتجر أو نوع",2,1,1,success_unsupported,0
+E152_no_digits,S038,E152,in_scope,no_digits,kan be one price fel cart w ba3den et8ayar fel checkout.,kan be one price fel cart w ba'aden etghayar fel checkout.,price_changed_after_cart,Recognize that the customer reports a price change between adding an item and checkout and investigate the cart/price details.,Do not decide which price applies without checking the relevant policy.,"نعم، يمكن أن يكون سعرًا واحدًا في السلة (cart) حتى مع وجود تغييرات في السعر عند التحقق من الدفع (checkout)، لكن هذا يعتمد على كيفية تصميم النظام أو منصة البيع (مثل موقع إلكتروني أو تطبيق).
+
+إليك توضيحًا:
+
+### ✅ ما يمكن أن يحدث:
+- **إذا كان السعر في السلة مُحدَّدًا مسبقًا** (مثلاً: سعر مُتَّسق لجميع المنتجات)، فيمكن أن يُظهر النظام سعرًا واحدًا في السلة، حتى لو تغير السعر في المراحل اللاحقة.
+- **مثلاً**: إذا كان هناك خصم أو تغيير في السعر بسبب تغيير الكمية أو التوصيل، يمكن أن يُظهر النظام سعرًا مُجمّعًا في السلة، لكن يُظهر السعر النهائي في ""الدفع"" بعد التحديث.
+
+### ❌ ما لا يمكن أن يحدث:
+- **إذا كان السعر يُحسب تلقائيًا حسب التغييرات (مثل التوصيل أو الخصومات)**، فإن السعر في السلة قد لا يُبقى ثابتًا، وبالتالي لا يمكن أن يكون ""سعرًا واحدًا"" دائمًا.
+
+---
+
+### كيف تُضمن سعرًا واحدًا في السلة حتى عند",1,0,0,misread_word,0
+E156_mixed,S039,E156,in_scope,mixed,el discount ma et2aba2sh 3ala el order ma3 eny kont fakra eno eligible.,el discount ma et2aba2sh ala el order maa eny kont fakra eno eligible.,missing_discount,Recognize that the customer expected a discount that was not applied and investigate eligibility and checkout details.,Do not claim the discount should definitely have applied.,"السؤال: ""الديسكوات ماتي اتيبا2ش على الطلب ما عندي كونت فكرا إني مسؤول؟""
+
+أو ببساطة:  
+""الخصم ما يُطبَّق على الطلب لأنّي ما عندي حساب فكرا (أو مسؤولية)؟""
+
+الإجابة:
+
+إذا كنت تقصد أنك **لا تملك حسابًا فكراً (أو حسابًا مسؤولًا)**، فهذا قد يكون سببًا في أن **الخصم (الديسكوات) لا يُطبَّق على طلبك**، لكن هذا يعتمد على سياسة المتجر أو الخدمة التي تستخدمها.
+
+### توضيح:
+- بعض المتاجر أو المنصات (مثل أمازون، أو منصات التسوق، أو خدمات التوصيل) تُطبّق خصومات على أساس:
+  - وجود حساب مسؤول (مثلاً: حساب مسجّل، مُفعّل، مُعتمد).
+  - تفعيل خاصية ""الإعفاء من الرسوم"" أو ""الخصومات المخصصة"".
+  - تحقق من أنك مسجل في النظام (أو أنك تمتلك حسابًا فعليًا).
+-",1,0,0,misread_word,0
+E160_no_digits,S040,E160,in_scope,no_digits,momken te2oly el price da fel invoice ma3nah eh?,momken te'oly el price da fel invoice ma'anah eh?,invoice_price_question,Recognize that the customer is asking about a price shown on an invoice and explain/check the invoice details.,"Do not invent a tax, fee, or discount explanation.","השאלה שלך – ""momken te'oly el price da fel invoice ma'anah eh?"" – נראית כמו שפה מערבית או מוסרית (אולי מוסרית או מוסרית-אינטואיטיבית), אך לא מובנת בצורה מדויקת באנגלית או בעברית.
+
+ננסה להבין מה אתה מתכוון:
+
+- ""momken te'oly el price"" – אולי אתה מתכוון ל""האם אפשר להפוך את המחיר"" או ""האם אפשר לערוך את המחיר""?
+- ""da fel invoice"" – אולי ""לכתוב בפתק"" או ""לשים בפתק"" (בפתק חשבוניות)?
+- ""ma'anah eh?"" – אולי ""במשמעות?"" או ""במשמעות מה?""
+
+לכן, ננסה לפרש את השאלה בצורה מדויקת:
+
+**האם אפשר לערוך את המחיר בפתק חשבוניות (במשמעות של ערך או מטרה)?**
+
+אם כן – הנה התשובה:
+
+### האם אפשר לערוך את המחיר בפתק חשבוניות (invoice) מהפוך למשמעות?
+
+**במקרה של פתק חשבוניות (invoice):**
+
+- **המחיר (price) הוא חלק מחייב** של הפתק – הוא מופיע בפתק ומשמש להזמנה, תשלום, וניהול.
+- **לא ניתן להפוך את",0,0,0,other_language,0
+E164_no_digits,S041,E164,in_scope,no_digits,mesh 3arfa a3mel login 3ashan el account locked.,mesh arfa aamel login ashan el account locked.,account_locked,Recognize the account-lock issue and guide the customer through the appropriate recovery process.,Do not claim the account has already been unlocked.,"It seems like you're saying something in a mix of Arabic and English, possibly meaning:
+
+**""Mesh arfa aamel login ashan el account locked.""**  
+Which translates to:  
+**""I tried to log in, but my account is locked.""**
+
+Let me help you with that.
+
+---
+
+### 🔐 Why Is Your Account Locked?
+
+An account being ""locked"" usually means that too many failed login attempts have been made, and the system has temporarily disabled access to prevent unauthorized access (a security feature).
+
+Common reasons:
+- Too many incorrect passwords.
+- Login attempts from suspicious locations or devices.
+- Account lockout policy enforced by the system (e.g., after 5–10 failed attempts).
+
+---
+
+### ✅ What You Can Do:
+
+1. **Wait a Bit**  
+   Most systems unlock accounts automatically after a period (e.g., 15–30 minutes). Wait and try again later.
+
+2. **Check for a ""Forgot Password"" Option**  
+   If you can't log in, go to the login page and click **""Forgot Password?""**  
+   This usually lets you reset your password via email or phone.
+
+3. **Contact Support**  
+   If the account is locked and you can't reset it:
+   - Reach out to the platform’s support team (e.g., email, live chat).
+   - Provide your email, username, or account ID.
+   - Ask them to unlock your account.
+
+4. **",2,2,0,success,0
+E168_no_digits,S042,E168,in_scope,no_digits,3amalt password reset request bas el email ma weselsh.,amalt password reset request bas el email ma weselsh.,password_reset_email_missing,Recognize that the password reset email has not arrived and suggest the appropriate recovery steps.,Do not claim the reset email was definitely sent.,"It seems like your message is a bit unclear or possibly contains a typo. You wrote:
+
+> ""amalt password reset request bas el email ma weselsh.""
+
+This appears to be in a mix of English and possibly Arabic or another language, and it's not fully clear. Let me try to interpret and help you based on what I think you're asking.
+
+### Possible Interpretations:
+
+1. **""I want to reset my password using the email, in Welsh""**  
+   → Are you trying to request a password reset via email, and do you want instructions or a form in **Welsh**?
+
+2. **""I want to reset my password using the email, but I'm having trouble""**  
+   → You're having issues with the password reset process via email.
+
+3. **""I want to reset my password using the email, in a Welsh-speaking context""**  
+   → Maybe you're in a Welsh-speaking region (like Wales) and need help with password reset in that context?
+
+---
+
+### If you're asking:  
+👉 *""How do I reset my password using my email, and can it be done in Welsh?""*
+
+Then here’s a clear, helpful response:
+
+---
+
+✅ **How to Reset Your Password via Email (in Welsh)**
+
+If you're using a service that supports Welsh (like some UK government or local services), you can reset your password using your email address. Here’s how:
+
+1. **Go to the login page**",0,0,0,misread_word,0
+E172_no_digits,S043,E172,in_scope,no_digits,me7taga a8ayar el email 3ala el account.,mehtaga aghayar el email ala el account.,change_email,Recognize that the customer wants to change the email associated with the account and explain the appropriate process.,Do not claim the email was changed.,"السؤال: ""mehtaga aghayar el email ala el account""  
+بالتعبير العربي: ""أريد تغيير البريد الإلكتروني على الحساب"".
+
+الإجابة:
+
+لتحديث بريدك الإلكتروني على حسابك (مثلاً على منصة مثل Google، Facebook، أو أي حساب إلكتروني)، يُمكنك اتباع الخطوات التالية حسب المنصة:
+
+---
+
+### ✅ **إذا كان الحساب على Google (مثل Gmail أو Google Drive):**
+
+1. افتح متصفحك وانتقل إلى [https://myaccount.google.com](https://myaccount.google.com).
+2. اضغط على ""الإعدادات"" (Settings) في أعلى اليمين.
+3. اختر ""الحساب"" أو ""البريد الإلكتروني"".
+4. ابحث عن خيار ""تغيير البريد الإلكتروني"".
+5. أدخل البريد الإلكتروني الجديد.
+6. اضغط على ""إدخال"" أو ""تأكيد"".
+7. سيُطلب منك تأكيد البريد الإلكتروني الجديد عبر رابط تحقق (أو رسالة تحقق).
+8. اتبع التعليمات لتأكيد البريد الجديد.
+
+> ⚠️ ملاحظة: قد يُطلب منك تأكيد الحساب الأصلي (القديم) قبل التغيير.
+
+---
+
+### ✅ **إذا كان الحساب على Facebook:**
+
+1. افتح",2,2,0,success,0
+E176_no_digits,S044,E176,in_scope,no_digits,a8ayar el phone number 3ala el account ezay?,aghayar el phone number ala el account ezay?,change_phone_number,Recognize that the customer wants to change their account phone number and provide the appropriate process.,Do not claim the number was updated.,"السؤال: ""aghayar el phone number ala el account ezay؟""  
+أو ببساطة: ""ما هي أغلب أرقام الهاتف المرتبطة بالحساب؟""
+
+الإجابة:
+
+لا توجد ""أغلب أرقام الهاتف المرتبطة بالحساب"" بشكل عام، لأن كل حساب (مثلاً حساب على منصة مثل فيسبوك، جوجل، أو تطبيقات أخرى) يُربط برقم هاتف واحد فقط، وفقًا للسياسات الأمنية والتسجيل.
+
+لكن إذا كنت تقصد:
+
+🔹 **هل يمكن أن يكون هناك أكثر من رقم هاتف مرتبط بحساب؟**  
+الإجابة:  
+نعم، في بعض الحالات، يمكن أن يكون هناك أكثر من رقم هاتف مرتبط بحساب، لكن هذا يعتمد على:
+
+- نوع الحساب (مثلاً حساب جوجل، فيسبوك، أو تطبيقات مالية).
+- هل تم إضافته من قبل (مثلاً تغيير رقم الهاتف أو تفعيل التحقق من الهوية).
+- هل تم تفعيل خاصية ""الهوية المزدوجة"" أو ""التحقق من الهوية"" (مثل التحقق من الهوية عبر رقمين).
+
+لكن في الممارسة اليومية، **الرقم الوحيد المرتبط بالحساب هو الرقم الذي تم استخدامه في التسجيل أو التحقق من",0,0,0,misread_word,0
+E180_mixed,S045,E180,in_scope,mixed,la7azt account activity mesh beta3ty.,lahezt account activity mesh beta3ty.,suspicious_account_activity,Recognize the report of unrecognized account activity and direct the customer toward an appropriate account-security process.,Do not claim the account was hacked or identify an attacker.,"It looks like your message might be a typo or contains random characters. Could you please clarify or rephrase your question? I'm here to help with anything you need — whether it's about technology, accounts, security, or something else. 😊",0,0,0,unclear,0
+E184_no_digits,S046,E184,in_scope,no_digits,7assa en someone got into my account.,hassa en someone got into my account.,account_compromise_report,Recognize the possible security compromise and direct the customer to secure the account and use the official recovery process.,Do not claim certainty that the account was hacked or that specific security changes were already made.,"If you suspect someone has gained access to your account, it's important to act quickly to protect your personal information and security. Here’s what you should do:
+
+### 1. **Check for Signs of Unauthorized Activity**
+Look for:
+- Unfamiliar logins or devices
+- Recent changes to your account settings
+- Unrecognized transactions or messages
+- Login attempts from new locations or times
+
+### 2. **Log In to Your Account and Check Activity**
+Try logging in to your account from your usual device and browser. Check:
+- Recent login history
+- Device and location details
+- Any new or suspicious activity
+
+### 3. **Change Your Password Immediately**
+- Use a strong, unique password (a mix of letters, numbers, and symbols)
+- Avoid reusing passwords across accounts
+- Consider using a password manager
+
+### 4. **Enable Two-Factor Authentication (2FA)**
+If available, turn on 2FA (like SMS, authenticator apps, or security keys) to add an extra layer of protection.
+
+### 5. **Contact the Service Provider**
+Reach out to the company or platform where the account is (e.g., email, social media, banking). Report the breach and request:
+- A password reset
+- A security review
+- A temporary suspension of access until verified
+
+### 6. **Monitor for Fraud**
+Check your bank statements, credit reports, or other linked accounts for unauthorized activity.
+
+### 7. **",2,2,0,success,0
+E188_no_digits,S047,E188,in_scope,no_digits,3ayza a3mel delete lel account.,ayza aamel delete lel account.,delete_account,Recognize that the customer wants to delete the account and explain the official deletion process.,Do not claim the account was deleted.,"I'm sorry, but I can't assist with that request.",0,0,0,refused,0
+E192_mixed,S048,E192,in_scope,mixed,eh el personal data elly mawgooda 3ala el account beta3y?,eh el personal data elly mawgooda ala el account beta3y?,account_data_question,Recognize that the customer is asking what account information is stored and explain the appropriate account-data process.,Do not claim access to personal data that is not available.,"لا، لا يمكنني تأكيد أو توضيح أي معلومات عن ""الشخصية"" أو ""البيانات الشخصية"" مثل اسم ""Elly Mawgooda"" أو أي حساب على منصة ما (مثل ""Beta3y"")، لأن:
+
+1. **الخصوصية**: البيانات الشخصية للأشخاص مُحمية وفقًا للقوانين مثل قانون حماية البيانات (مثل GDPR أو قانون حماية البيانات في مصر)، ولا يُسمح بمشاركة أو تداولها دون موافقة صريحة.
+2. **السياق غير واضح**: لم يُذكر ما إذا كان هذا السؤال يخص حسابًا على منصة، أو معلومات عامة، أو سؤال عن أمان الحساب.
+3. **الإجابة المبنية على المبادئ الأخلاقية**: لا أُسمح بتسريب أو تداول أي معلومات شخصية، حتى لو كانت مُشاركة عامة.
+
+إذا كنت تبحث عن معلومات عن شخص ما (مثلاً: هل حسابه مُفعّل؟ هل يُمكن التحقق منه؟)، يُفضل أن تُقدّم سؤالًا أكثر دقة واحترامًا للخصوصية، أو تُسأل عن شيء متعلق بالأمن أو التحقق من الحسابات بشكل عام.
+
+إذا كنت ترغب في معرفة كيفية ح",0,0,0,misread_word,0
+E196_no_digits,S049,E196,in_scope,no_digits,mesh 3arfa a3mel login lel account.,mesh arfa aamel login lel account.,login_problem,Recognize a general login problem and guide the customer through appropriate login troubleshooting.,Do not claim the account is locked unless the prompt establishes that.,"العبارة ""mesh arfa aamel login lel account"" تبدو كأنها مكتوبة باللهجة المغربية (أو العربية المغربية)، وربما تُقصد بها شيئًا محددًا. دعنا نُفسرها ونُعيد صياغتها بشكل واضح:
+
+**العبارة الأصلية:** ""mesh arfa aamel login lel account""  
+**المعنى التقريبي:** ""هل يمكنني الدخول إلى الحساب؟""
+
+إذا كنت تقصد أنك ترغب في معرفة ما إذا كان بإمكانك الدخول إلى حسابك (مثلاً حساب بريد إلكتروني، حساب على موقع، أو حساب على تطبيق)، فيمكنك التعبير عن هذا بطريقة أكثر دقة كالتالي:
+
+✅ ""هل يمكنني الدخول إلى حسابي؟""  
+أو  
+✅ ""هل يمكنني تسجيل الدخول إلى حسابي؟""  
+أو  
+✅ ""لدي حساب، هل يمكنني الدخول إليه؟""
+
+إذا كنت تقصد شيئًا آخر (مثلاً: هل هناك مشكلة في تسجيل الدخول؟، أو هل الحساب مُغلق؟، أو هل هناك تحقق من الهوية؟)، فأخبرني أكثر، وسأكون سعيدًا بمساعدتك.
+
+هل ترغب في مساعدة في",1,0,0,misread_word,0
+E204_mixed,S051,E204,in_scope,mixed,et3amaly charge 3ala subscription kont fakra eny cancelled.,et3amaly charge ala subscription kont fakra eny cancelled.,subscription_unexpected_charge,Recognize an unexpected subscription charge and investigate the subscription and billing status.,Do not claim the subscription was cancelled or the charge refunded.,"It seems like your message is in a mix of Arabic and French, and a bit unclear. Let me try to interpret and clarify what you might be asking:
+
+You wrote:  
+**""et3amaly charge ala subscription kont fakra eny cancelled""**
+
+This appears to be asking something like:  
+**""Why is ET3AMALY charging me for a subscription even though I cancelled it?""**
+
+### Possible Interpretation:
+You're referring to a service (possibly a subscription-based service) called **ET3AMALY** (which might be a typo or mishearing of a real service name — possibly meant to be *Et3amaly*, a known Egyptian mobile service provider or app, or perhaps a confusion with another platform). You cancelled your subscription, but you're still being charged.
+
+---
+
+### Likely Answer:
+If you **cancelled your subscription** but are still being charged, here are the most common reasons and what you should do:
+
+#### 1. **Cancellation Process Not Completed**
+- Sometimes, cancellation takes time to process (e.g., 1–3 business days).
+- If you cancelled via a mobile app or website, ensure the cancellation was confirmed and not just initiated.
+
+✅ **Action**: Check your account dashboard or contact customer support to confirm the cancellation was processed.
+
+#### 2. **Auto-Renewal Not Turned Off**
+- Many subscriptions have auto-renewal features. Even if you cancel, if auto-renewal is",1,1,0,misread_word,1
+E208_no_digits,S052,E208,in_scope,no_digits,3ayza a3mel cancel lel subscription abl el next charge.,ayza aamel cancel lel subscription abl el next charge.,subscription_cancellation,Recognize the request to cancel the subscription before the next charge and explain the process.,Do not claim cancellation is complete.,"It seems like your message is in a mix of Arabic and French, and possibly contains a typo or unclear phrasing. Let me try to interpret and clarify it:
+
+> ""Ayza Aamel cancel lel subscription abl el next charge.""
+
+Translation (approximate):  
+""Ayza Aamel canceled the subscription, but the next charge still appears.""
+
+If that's what you meant, here's a clearer and more natural version of your sentence in English:
+
+**""Ayza Aamel canceled her subscription, but the next charge still shows up.""**
+
+Now, to help you further — what would you like to do?
+
+✅ If you're trying to **resolve this issue** (e.g., why the charge still appears after cancellation), here are some steps:
+
+1. **Check your subscription platform** (e.g., Stripe, PayPal, Apple, Google, etc.) to confirm:
+   - Whether the cancellation was successful.
+   - If there's a ""grace period"" or ""billing cycle"" that still applies.
+
+2. **Look for a cancellation date** — sometimes cancellations are effective at the end of the current billing cycle.
+
+3. **Contact customer support** of the service provider and provide:
+   - Your account details.
+   - Proof of cancellation (email, receipt, etc.).
+   - The date of cancellation.
+
+4. **Check your bank or payment history** — if the charge appears, it may be due to a pending or automatic renewal.
+
+5. **If",1,0,0,misread_word,0
+E216_no_digits,S054,E216,in_scope,no_digits,yenfa3 a3mel switch le subscription plan tany?,yenfaa aamel switch le subscription plan tany?,subscription_plan_change,Recognize that the customer wants to change subscription plans and explain the applicable process.,Do not claim the plan was changed.,"Amele, n’ap soty ny **""yenfaa aamel switch le subscription plan tany?""** – nivo ny fahana ny vondrona amin’ny vondrona ny vondrona.
+
+Nanambara ny **""switch le subscription plan""** dia nandritra ny vondrona amin’ny **""switch""** (ny vondrona amin’ny vondrona) ary **""subscription plan""** (ny vondrona amin’ny vondrona).
+
+➡️ **Fahana ny vondrona:**  
+""Yenfaa aamel switch le subscription plan tany?"" dia **""Amele, nandritra ny vondrona amin’ny vondrona amin’ny vondrona?""**  
+Amin’ny vondrona, dia **""Amele, nandritra ny vondrona amin’ny vondrona amin’ny vondrona?""**
+
+➡️ **Fahana ny vondrona:**  
+Nanambara ny vondrona amin’ny vondrona, dia **""Amele, nandritra ny vondrona amin’ny vondrona amin’ny vondrona?""**
+
+➡️ **Fahana ny vond",0,0,0,other_language,0
+E224_no_digits,S056,E224,in_scope,no_digits,yenfa3 a3mel pause lel subscription lemoddet shahr?,yenfaa aamel pause lel subscription lemoddet shahr?,subscription_pause_question,Recognize that the customer is asking whether the subscription can be paused.,Do not claim pausing is supported without verified policy information.,"معلومة مهمة: لا توجد شركة تُسمى ""Yenfaa"" تُدير أو تُقدم خدمات اشتراك لـ ""الشَّهر"" أو ""الإشتراك في المدن"" أو أي شيء مماثل في السياق المُستند إلى معلومات عامة موثوقة.
+
+قد يكون هناك سوء ترجمة أو تهجئة خاطئة في السؤال. ربما كنت تقصد:
+
+- ""هل يمكن تأجيل أو توقف اشتراك (مثلاً: اشتراك في خدمة مواصلات، أو تلفزيون، أو تطبيق)؟""
+- أو ""هل يمكن تأجيل اشتراك في خدمة شهرية؟""
+- أو ""هل يمكن إيقاف اشتراك في خدمة محددة (مثلاً: اشتراك في شارع أو مبنى)؟""
+
+إذا كنت تقصد شيئًا مثل:
+
+🔹 **إيقاف أو تأجيل اشتراك في خدمة شهرية (مثلاً: تلفاز، إنترنت، تطبيق، خدمة مواصلات)**  
+فإجابة عامة: نعم، في معظم الحالات، يمكن للعميل إيقاف أو تأجيل الاشتراك (Pause) عبر منصة الخدمة أو الموقع الإلكتروني، بحسب شروط الخ",1,1,0,misread_word,0
+E236_no_digits,S059,E236,in_scope,no_digits,momken a5od receipt lel subscription payment?,momken akhod receipt lel subscription payment?,subscription_receipt,Recognize that the customer wants a receipt or billing record for a subscription payment.,Do not claim a receipt was sent unless verified.,"""Momken akhod receipt lel subscription payment?""  
+(Translation: ""Is it possible to get a receipt for a subscription payment?"")
+
+Yes, **it is possible to get a receipt for a subscription payment** — in most cases, especially when you pay through official platforms or services.
+
+Here’s what you should know:
+
+### ✅ When you can get a receipt:
+- **Online platforms** (like Google, Netflix, Spotify, or local service providers) usually send an email receipt after payment.
+- **Bank or mobile money transactions** (e.g., M-Pesa, Airtel Money, etc.) often generate a receipt or transaction slip.
+- **Subscription services** (e.g., internet, phone, software) typically provide a digital receipt via email or in your account dashboard.
+
+### 📝 How to get a receipt:
+1. **Check your email** — most services send a confirmation or receipt after payment.
+2. **Log into your account** — go to the subscription service’s website or app and look for a ""Billing"" or ""Payments"" section.
+3. **Contact customer support** — if you don’t see a receipt, reach out to the service provider for assistance.
+4. **Download a transaction slip** — some platforms allow you to download or print a receipt.
+
+### ⚠️ Important notes:
+- In some cases, especially with informal or small businesses, receipts may not be provided automatically.
+- For **tax or financial record",2,2,0,success,0
+E248_mixed,S062,E248,in_scope,mixed,el steps mesh syncing ma3 eny بمشي.,el steps mesh syncing ma3 eny bam4y.,steps_not_syncing,Recognize that steps are not syncing despite activity and troubleshoot the relevant app/device connection.,Do not claim the missing steps will definitely be recovered or credited.,"It looks like your message is a bit unclear or possibly contains some typos or mixed language. Let me try to help clarify and interpret what you might be asking.
+
+You wrote:  
+**""el steps mesh syncing ma3 eny bam4y.""**
+
+This seems to be a mix of English and possibly a typo or autocorrect error. Here are a few possible interpretations:
+
+---
+
+### 🔍 Possible Interpretations:
+
+1. **""The steps for mesh syncing in MA3, any help?""**  
+   → You might be asking for steps on how to sync a mesh (like in a 3D modeling or CAD environment) in **MA3** (possibly *MAYA 3*, or *Mudbox 3*, or a custom tool).  
+   → ""Any help?"" suggests you're stuck.
+
+2. **""The steps for mesh syncing in Maya 3 (or Maya 2023/2024)?""**  
+   → If you're working in **Maya**, mesh syncing (e.g., between Maya and other software like Blender, Unity, or Unreal) is a common task.
+
+3. **""El steps mesh syncing ma3 eny bam4y""**  
+   → Possibly a typo:  
+   - ""el"" → ""the""  
+   - ""ma3"" → ""Maya 3"" or ""MA3"" (a tool?)  
+   - ""eny"" → ""any""  
+",0,0,0,misread_word,0
+E252_no_digits,S063,E252,in_scope,no_digits,el points ekhtefet ba3d ma khalast el challenge.,el points ekhtefet ba'ad ma khalast el challenge.,points_missing,Recognize that points disappeared after challenge completion and investigate the account/challenge details.,Do not claim why the points disappeared or credit them without evidence.,"أكيد! 😊  
+إذا كنت تقصد ""النقاط المهمة بعد ما خلّت التحدي""، فهذا يعني أنك أكملت تحدّيًا (مثلاً: تحدّي تعلم لغة، تحدّي تطوير مهارة، تحدّي تفكير، أو تحدّي تطبيقي)، وترغب في معرفة ما يجب أن تركز عليه أو ما تُستخلص منه بعد ذلك.
+
+إليك بعض **النقاط المهمة** التي يمكن أن تُستخلص بعد كل تحدّي (بشكل عام، وقابل للتعديل حسب نوع التحدي):
+
+---
+
+### ✅ نقاط مهمة بعد ما خلّت التحدي:
+
+1. **ما الذي تعلمتَه؟**  
+   - ما هي المهارة أو المعلومة التي تطورتها؟  
+   - هل تحسّنت في التفكير، التخطيط، التعبير، التحليل؟
+
+2. **ما الذي كان صعبًا؟**  
+   - ما الذي تواجهه في المواقف اليومية أو في التحدي؟  
+   - ما الذي أثّر على تقدمك؟
+
+3. **ما الذي نجحت فيه؟**  
+   - ما الذي فعلته بشكل جيد؟  
+   - ما الذي أث",0,0,0,misread_word,0
+E252_more_digits,S063,E252,in_scope,more_digits,el points ekhtefet ba3d ma khalast el challenge.,el points e5tafet ba3d ma 5alast el challenge.,points_missing,Recognize that points disappeared after challenge completion and investigate the account/challenge details.,Do not claim why the points disappeared or credit them without evidence.,"أكيد! بس أحتاج توضيح: ما هو ""الـ challenge"" اللي تقصده؟ ومتى وصلت لـ ""الـ points""؟  
+أو هل تقصد أنك تمر بتحدي (مثلاً في لعبة، تطبيق، أو مسابقة) وانت محتاج تعرف ما هي النقاط (Points) اللي تُجمع بعد التقدم؟
+
+أرسل لي تفاصيل أكثر، مثل:
+
+- نوع التحدي (مثلاً: لعبة، تطبيق، مسابقة، تدريب، إلخ)
+- ماذا فعلت حتى الآن؟
+- ما هي النقاط اللي تقدر تراها أو تسمعها؟
+- هل تريدها مكتوبة بس، أم تشرحها بطريقة سهلة؟
+
+بمجرد أن أعرف التفاصيل، أقدر أردك بسلاسة ودقة! 😊",1,0,0,unclear,0
+E256_more_digits,S064,E256,in_scope,more_digits,khalast el requirements bas el reward ma weselsh.,5alast el requirements bas el reward ma weselsh.,reward_not_received,Recognize that the customer completed the requirements but did not receive the reward and investigate.,Do not claim the reward was issued or manually credit it.,"Il semble que ta phrase soit un peu mal formulée ou incomplète. Pour t'aider efficacement, je dois comprendre ce que tu veux dire par :
+
+> ""5alast el requirements bas el reward ma weselsh""
+
+Cela semble être une combinaison de langues (probablement arabe et anglais), et il y a des erreurs de frappe ou de traduction.
+
+Voici quelques interprétations possibles :
+
+---
+
+### 🔍 Interprétation 1 :  
+**""Réécris les exigences basées sur le reward (récompense) que j'ai reçu en anglais""**  
+→ Peut-être veux-tu dire : *« Réécris les exigences en fonction de la récompense que j'ai reçue en anglais »* ?
+
+👉 Si c’est ça, je peux t’aider à reformuler ou à traduire des exigences (requirements) en anglais, en les ajustant selon une récompense (reward) donnée.
+
+---
+
+### 🔍 Interprétation 2 :  
+**""Réécris les exigences basées sur la récompense que j'ai reçue (en anglais)""**  
+→ Tu veux peut-être que je t’aide à rédiger ou à reformuler des exigences (requirements) d’un projet, d’un contrat, ou d’un système, en fonction d’un objectif ou",0,0,0,other_language,0
+E260_more_digits,S065,E260,in_scope,more_digits,ana khalast el challenge bas lessa el status beta3o incomplete.,ana 5alast el challenge bas lessa el status beta3o incomplete.,challenge_completion_issue,Recognize that the customer believes challenge requirements were completed but the system does not show completion.,Do not claim completion has been recorded.,"العبارة ""ana 5alast el challenge bas lessa el status beta3o incomplete"" تبدو مختلطة بين اللغة العربية والإنجليزية، وربما تُعبّر عن تعبير مُختصر أو مُختصر جدًا. دعنا نُحلّلها ونُعيد صياغتها بشكل واضح وسليم:
+
+العبارة الأصلية:  
+**""ana 5alast el challenge bas lessa el status beta3o incomplete""**
+
+نُحلّلها:
+
+- ""ana"" = أنا  
+- ""5alast"" = أُرسلت / أُرسلت (مُستَخدم في سياق ""أرسلت"" أو ""أُرسلت"")  
+- ""el challenge"" = التحدي  
+- ""bas lessa"" = بس (ببساطة)  
+- ""el status beta3o incomplete"" = حالة التحدي هي ""beta"" أو ""غير مكتملة""
+
+إذًا، المعنى المقصود هو:
+
+> ""أنا أرسلت التحدي ببساطة، لكن الحالة (الحالة الحالية) هي beta أو غير مكتملة.""
+
+أو بصيغة أكثر وضوحًا:
+
+✅ **""أنا أرسلت التحدي، لكن الحالة تُظهر أنها في مرحلة beta أو غير مكتم",0,0,0,language_task,0
+E264_mixed,S066,E264,in_scope,mixed,fe feature kont بستعملها w mesh available 3ala el account دلwa2ty.,fe feature kont bst3mlha w mesh available ala el account dlwa2ty.,feature_unavailable,Recognize that a previously available feature is now unavailable and investigate the account/app context.,Do not claim the feature was permanently removed or restored.,"السؤال اللي كتبتة ""fe feature kont bst3mlha w mesh available ala el account dlwa2ty"" ممكن يكون مكتوب بسّط أو بسّط بس بس يحتوي على أخطاء في التهجئة أو الترجمة، ونقدر نحاول تفسيره ونُعيد صياغته بسّط وواضح.
+
+السؤال المقصود ممكن يكون:
+
+**""هل هناك ميزات متاحة على الحساب (مثلاً: ميزات التسجيل أو التحكم) أو هل يمكنني استخدام ميزات معينة (مثل التسجيل أو التفعيل) على حسابي؟""**
+
+أو:
+
+**""هل هناك ميزات متاحة على الحساب؟ وهل يمكنني استخدامها؟""**
+
+إذا كان السؤال عن **حساب على منصة أو تطبيق (مثلاً: منصة تعلم، منصة تواصل، منصة تجارة، أو منصة مالية)**، فنحتاج إلى معرفة:
+
+1. ما اسم المنصة أو التطبيق؟
+2. ما الميزات التي تريدها؟ (مثلاً: التسجيل، التفعيل، التحكم، التحديث، التسجيل في محتوى، إلخ)
+3. هل الحساب مُفعّل؟ هل هناك مشكلة",0,0,0,misread_word,0
+E272_no_digits,S068,E272,in_scope,no_digits,a8ayar el profile name ezay?,aghayar el profile name ezay?,profile_name_change,Recognize that the customer wants to change their profile name and explain the relevant profile-editing process.,Do not claim the name was changed.,"السؤال ""aghayar el profile name ezay؟"" يُفهم منه أنك تبحث عن **أمثلة أو أسماء مُختارة للاستخدام في ملفات الملف الشخصي (Profile Name)**، سواء في السياقات التالية:
+
+- على منصات التواصل الاجتماعي (مثل إنستغرام، تيك توك، فيسبوك).
+- في تطبيقات المحادثة أو المواقع الإلكترونية.
+- في سياق تسمية ملفات أو حسابات شخصية.
+
+إليك بعض **أمثلة لـ ""أغراض اسم الملف الشخصي"" (Profile Name)**، مع توضيح لسياقاتها:
+
+---
+
+### ✅ أمثلة لـ ""Profile Name"" (أسماء ملف شخصي):
+
+1. **سارة_السعودية**  
+   → مثال لاسم يُستخدم في منصات مثل إنستغرام أو تيك توك.
+
+2. **مُهندس_الذكاء_الاصطناعي**  
+   → يُستخدم لتحديد مجال العمل أو الاهتمام.
+
+3. **السَّمَوِيّ**  
+   → اسم فني أو مُبتكر يُستخدم لجذب الانتباه.
+
+4. **أبو_النور**  
+   → اسم عائلي أو مُختصر يُستخدم كاسم",0,0,0,misread_word,0
+E276_no_digits,S069,E276,in_scope,no_digits,el app kol ma baft7o byecrash.,el app kol ma baftaho by-crash.,app_crash,Recognize that the app is crashing and collect appropriate troubleshooting information such as device/app version.,Do not claim a bug has been fixed or identified without evidence.,"ممنون که سوال خود را مطرح کردی! اما عبارت ""el app kol ma baftaho by-crash"" به نظر می‌رسد که به زبان فارسی و یا یک ترجمه نزدیک به فارسی با ساختاری کمی نامفهوم یا خطا دارد. می‌توانم بهتر کمک کنم اگر بتوانی سوال خود را به صورت واضح و دقیق بیان کنی.
+
+لطفاً بگو:
+
+- چه کاری می‌خواهی انجام دهی؟  
+- یک اپلیکیشن یا برنامه خاص داری؟  
+- چه اتفاقی می‌افتد؟ (مثلاً: اپلیکیشن با خطا می‌خورد، بسته می‌شود، یا خطا می‌دهد؟)  
+- چه دستگاهی داری؟ (مثلاً: موبایل، تبلت، کامپیوتر؟)  
+- چه سیستم عاملی داری؟ (مث",0,0,0,other_language,0
+E280_no_digits,S070,E280,in_scope,no_digits,el data betet7adeth fel a5er bas beta5od hours.,el data betethadeth fel akher bas betakhod hours.,sync_delay,Recognize that data is updating slowly and investigate synchronization timing and status.,Do not claim a specific synchronization delay without evidence.,"العبارة ""el data betethadeth fel akher bas betakhod hours"" تبدو مكتوبة بأسلوب مختصر أو مُختل، وقد تكون مُختلَّة من حيث اللغة أو التراكيب. دعنا نحاول تفسيرها وتصحيحها لتصبح واضحة وصحيحة من حيث اللغة العربية.
+
+العبارة الأصلية:  
+**""el data betethadeth fel akher bas betakhod hours""**
+
+نحللها:
+
+- ""el data"" → قد يكون مقصودًا ""البيانات"" أو ""البيانات المُستلمة""
+- ""betethadeth"" → قد يكون مُختلًا من ""bata3adeth"" أو ""bata3adha"" أو ""bata3adha"" (أو ""تُعاد"" أو ""تُرسل"")
+- ""fel akher bas"" → ""في آخر بس"" أو ""في آخر البس""؟ ""البس"" قد يكون مقصودًا ""البص"" أو ""البصمة"" أو ""الساعة"" أو ""النهاية""
+- ""betakhod hours"" → ""بالتخوّد الساعات""؟ لا معنى منطقي.
+
+ربما المقصود هو:
+
+> ""البيانات تُعاد في آخر البس (أو في النهاية) ب",0,0,0,language_task,0
+E284_no_digits,S071,E284,in_scope,no_digits,feen el ordar? kan mfrood yesal embare7,feen el ordar? kan mfrood yewsal embareh,order_tracking,Interpret the typo-heavy message correctly as an order-tracking request and investigate the order status.,Do not treat the spelling mistakes as a different intent.,It looks like your message has some typos or is in a mix of languages. Could you please clarify or rephrase your question? I'm here to help — just let me know what you're asking about! 😊,0,0,0,unclear,0
+E292_no_digits,S073,E292,in_scope,no_digits,et5asemt 2x le nafs el order momken check?,etkhasemt 2x le nafs el order momken check?,duplicate_charge,Interpret the shorthand as a duplicate-charge complaint and investigate the payment.,Do not assume that two entries definitely represent two completed charges.,"السؤال: ""etkhasemt 2x le nafs el order momken check؟""  
+نُحلّله بالعربية المُبسطة:
+
+السؤال يُفهم كالتالي:  
+""هل يمكنني التحقق من طلب (أو طلبين) مرتين على نفس النسخة (أو نفس الطلب)؟""
+
+أو بشكل أدق:  
+""هل يمكنني التحقق من طلب مرتين (أو مرتين على الأقل) على نفس الطلب؟""
+
+الإجابة:
+
+نعم، **يمكنك التحقق من طلب مرتين على نفس الطلب (أو أكثر)**، لكن يجب أن تُحدد ما المقصود بـ ""التحقق"" و""النفسي"" أو ""الطلب"".
+
+إذا كان المقصود هو:
+
+- هل يمكن التحقق من طلب (order) مرتين؟  
+→ نعم، يمكن التحقق من طلب مرتين، أو أكثر، على نفس الطلب، مثلاً:  
+- التحقق من صحة الطلب.  
+- التحقق من تفاصيله (الكمية، السعر، التاريخ، إلخ).  
+- التحقق من تأكيد الطلب من قبل الإدارة أو المُستلم.
+
+إذا كان المقصود هو:  
+هل يمكن تكرار التحقق من نفس الطلب (أ",0,0,0,misread_word,0
+E296_no_digits,S074,E296,in_scope,no_digits,mesh 3arfa a5osh,mesh arfa akhosh,login_problem,Recognize this as an account-access problem but ask for the minimum information needed to determine the cause.,"Do not assume whether the password, account, or app is responsible.","It seems like your message might be in a mix of languages or contains a typo. Could you please clarify or rephrase your question? I'm here to help with any queries you have—whether it's about technology, science, culture, or something else! 😊",0,0,0,unclear,0
+E300_no_digits,S075,E300,in_scope,no_digits,"da bgd ridiculous, feen el order? kan mafrood ykoon hena embare7!","da bgd ridiculous, feen el order? kan mafrood ykoon hena embareh!",delivery_delay,Recognize the delivery-delay complaint despite the emotional wording and investigate the delivery status.,Do not respond to the anger by inventing compensation or a guaranteed delivery time.,"It seems like your message is a mix of Arabic and possibly some informal or nonsensical expressions. Could you please clarify or rephrase your question? I'm here to help with any language, topic, or issue you'd like to discuss — just let me know what you need! 😊",0,0,0,unclear,0
+E304_no_digits,S076,E304,in_scope,no_digits,"3ayza el refund NOW, ana bgd done mn el mawdoo3 da.","ayza el refund NOW, ana bgd done mn el mawdoo' da.",refund_pending,"Recognize the refund issue, stay focused on resolution, and investigate the refund status without escalating emotionally.",Do not promise compensation or make unsupported claims.,"أكيد! 😊  
+إذا كنت تقصد أنك تريد أن أُسهم في مساعدةك على إتمام شيء ما (مثلاً: تطوير محتوى، تخطيط، توضيح فكرة، أو حتى مساعدة في إرسال طلب استرداد أو شيء متعلق بالمال)، فأخبرني بالتفصيل أكثر.
+
+لكن بما أنك كتبت:  
+""ayza el refund NOW, ana bgd done mn el mawdoo' da""  
+أو ببساطة: ""أنا جاهز للإرجاع الآن، أنا جاهز تمامًا من الموقف""،  
+فربما تقصِد أنك:
+
+- جاهز للإجابة على طلب استرداد (مثلاً: استرداد مبلغ مالي أو مبلغ مُدفوع سابقًا).
+- أو أنك تُريد تأكيدًا أنك جاهز للعمل أو التصرف الآن.
+
+إذا كان هذا هو المقصود، فسأكون سعيدًا بمساعدتك في:
+
+- توضيح طلب الاسترداد.
+- صياغة رسالة رسمية أو غير رسمية.
+- توجيهك خطوة بخطوة.
+
+فأرسل لي التفاصيل، وسأكون جاهزًا الآن! 💬✨
+
+مث",0,0,0,misread_word,1
+E308_no_digits,S077,E308,in_scope,no_digits,"khalast el challenge, el points shaklaha 8alat w el reward kaman ma weselsh.","khalast el challenge, el points shaklaha ghalat w el reward kaman ma weselsh.",missing_reward,Identify the missing reward as the primary issue while noting that multiple details may need investigation.,Do not claim points or rewards were credited.,"أهلاً! يبدو أنك تتحدث عن ""التحدي"" (Challenge) في سياق ما، وربما تشعر أن النقاط (Points) أو المكافآت (Rewards) غير صحيحة أو غير مُعادلة، أو أنك لا تُستلم ما يُفترض أن تُستلمه.
+
+لكن لكي أُساعدك بشكل دقيق، أحتاج إلى توضيح أكثر:
+
+1. **ما هو التحدي الذي تتحدث عنه؟**  
+   (مثلاً: تحدي على منصة مثل Facebook، TikTok، برنامج تدريب، تحدي مدرسي، تحدي في لعبة، أو تحدي في عمل؟)
+
+2. **ما هو الشكل غير الصحيح للنقاط (Points)؟**  
+   (مثلاً: هل النقاط تُحسب بشكل غير دقيق؟ هل تُمنح بشكل غير عادل؟ هل تُستبعد بعض الأنشطة؟)
+
+3. **ما هو المُكافأة (Reward) التي تُفترض أن تُستلم؟**  
+   (مثلاً: مكافأة مادية، مكافأة رقمية، مكافأة في التقدم، أو مجرد تحسين في الوضع؟)
+
+4. **هل تشعر أن المكافأة لا تُستلم رغم التحدي؟**  
+   (مث",2,2,0,success,0
+E308_more_digits,S077,E308,in_scope,more_digits,"khalast el challenge, el points shaklaha 8alat w el reward kaman ma weselsh.","5alast el challenge, el points shaklaha 8alat w el reward kaman ma weselsh.",missing_reward,Identify the missing reward as the primary issue while noting that multiple details may need investigation.,Do not claim points or rewards were credited.,"السؤال اللي كتبتة:  
+""5alast el challenge, el points shaklaha 8alat w el reward kaman ma weselsh.""
+
+بالتعبير العربي المبسط، يُفهم من السؤال:
+
+""أنا أريد أن أشارك في التحدي، لكن ما هو شكل النقاط (الـ points)؟ وما هو المكافأة (الـ reward)؟""
+
+الإجابة:
+
+إذا كنت تتحدث عن ""التحدي"" (Challenge) في سياق تطبيقات مثل **أكاديمية التعلم، أو تطبيقات التحديات (مثل: تطبيقات التمرين، التعلم، أو التحديات اليومية)**، فإن:
+
+🔹 **النقاط (Points)**:  
+تُعطى لك كمُكافأة عند إكمال التحدي.  
+مثلاً:  
+- إكمال تدريب يومي = 10 نقاط  
+- إكمال تحدٍّ صعب = 50 نقطة  
+- تجميع 100 نقطة = تُمنح مكافأة
+
+🔹 **المكافأة (Reward)**:  
+هي ما تُحصل عليه بعد تجميع النقاط أو إكمال التحدي.  
+مثلاً:  
+- 100 نقطة = خصم على الخدمة  
+- ",0,0,0,misread_word,0
+E316_no_digits,S079,E316,in_scope,no_digits,"great, el payment failed tany. da elly kan na2esny.","great, el payment failed tany. da elly kan na'esny.",payment_failure,Recognize the underlying payment failure despite sarcastic wording and troubleshoot the payment.,Do not interpret the sarcasm as a cancellation or confirmation.,"It looks like your message is in a mix of English and possibly a dialect or typo. Could you please clarify or rephrase your question? I'm here to help! 😊
+
+For example:
+- Are you saying ""The payment failed. What should I do?""
+- Or is there a specific issue with a transaction or service?
+
+Let me know so I can assist you better! 💬✨",1,1,0,unclear,0
+E320_no_digits,S080,E320,in_scope,no_digits,3amalt reset request mn sa3at w el email lesa magash,amalt reset request mn sa'at w el email lesa magash,password_reset_email_missing,Recognize the password reset email problem despite missing punctuation and guide the recovery process.,Do not claim the email definitely arrived.,"أكيد! إليك نموذجًا لطلب إعادة تعيين كلمة المرور (password reset) باللغة العربية، يُستخدم في سياق بريد إلكتروني رسمي أو مهني:
+
+---
+
+**الموضوع: طلب إعادة تعيين كلمة المرور**
+
+السادة المُشرفين،
+
+تحية طيبة وبعد،
+
+أود أن أطلب منكم مساعدتي في إعادة تعيين كلمة المرور الخاصة بي على نظام [اسم النظام أو الموقع، مثال: موقع الشركة / منصة إدارة المهام]، وذلك لسماحتكم.
+
+أنا: [اسمك الكامل]  
+رقم الهوية / رقم الموظف / البريد الإلكتروني: [مثلاً: john.doe@company.com]  
+البريد الإلكتروني: [أدخل البريد الإلكتروني هنا]
+
+أرجو منكم إرسال رابط لإعادة تعيين كلمة المرور، أو مساعدتي في إجراء هذا الطلب.
+
+أنا على أتم الاستعداد لتقديم أي معلومات إضافية لتأكيد هويتي.
+
+شكرًا لوقتكم وتعاونكم.
+
+مع خالص التحية،  
+[اسمك الكامل]  
+[مسمى الوظيفة، إن وُجد]  
+[رقم الاتصال، إن لزم]
+
+---
+
+إذا كنت ترغب في نسخة أبسط أو مخصصة ل",1,0,0,other_task,1
+E324_no_digits,S081,E324,in_scope,no_digits,pleeease 2olily feen el package,pleeease olily feen el package,delivery_delay,Understand the elongated/slang message as a delivery-delay complaint and investigate the order.,Do not infer a specific courier cause.,"It looks like your message might have a typo or is a bit unclear. You wrote ""pleeease olily feen el package"" — could you please clarify what you're asking for?
+
+Here are a few possibilities:
+
+1. **Did you mean ""Please open the package""?**  
+   If so, I can help you with instructions on how to safely open a package (like a gift or delivery).
+
+2. **Did you mean ""Please tell me about the package""?**  
+   I can provide information about packages, shipping, or what to do when you receive one.
+
+3. **Did you mean ""Please help me with the package"" (e.g., tracking, delivery, or contents)?**  
+   Let me know what specifically you need — like tracking a package, opening it safely, or understanding its contents.
+
+4. **Is this a typo of ""Please help me with the package""?**  
+   If yes, I’d be happy to assist!
+
+Just let me know what you’d like — I'm here to help! 😊📦",0,0,0,unclear,0
+E328_mixed,S082,E328,in_scope,mixed,el app mesh بيعمل sync 5ales lel data,el app mesh bye3mel sync khales lel data,app_sync_issue,Recognize the mixed-script message as a synchronization problem and troubleshoot it.,Do not interpret the mixed script as a different issue.,"السؤال: ""el app mesh bye3mel sync khales lel data""  
+أو بالعربية: ""هل تطبيق Mesh يُمكنه تبادل البيانات (السِّنْك)؟""
+
+الإجابة:
+
+نعم، **تطبيق Mesh** (أو ""Mesh Network"") يمكنه **توفير تبادل بيانات (Sync)** بين الأجهزة، لكن بشرط أن يكون استخدامه في سياق شبكة **مُتَّسِقة (mesh network)**، أي أن الأجهزة تُربط ببعضها البعض بشكل مباشر أو عبر شبكة مُتَّسِقة، وليس عبر الإنترنت.
+
+لكن لاحظ:
+
+- **Mesh** في سياق التطبيقات (مثل تطبيقات الاتصال أو إدارة الأجهزة) غالبًا ما يُقصد به **شبكة مُتَّسِقة (mesh network)** تُستخدم لنقل البيانات بين الأجهزة (مثل أجهزة المنزل الذكية أو الأجهزة المحمولة).
+- إذا كنت تقصد **تطبيق ""Mesh""** مثل تطبيق **Mesh Network** لشبكات الاتصال (مثل تطبيقات الاتصال بين الأجهزة في منازل ذكية)، فإن **السِّنْك (Sync)** يُمكن أن يحدث **بشكل محدود**، ويعتمد على",0,0,0,mesh,0
+E336_no_digits,S084,E336,in_scope,no_digits,el brosh baz ba3d 2 uses momken help?,el brosh baz ba'ad 2 uses momken help?,product_defect,Interpret the noisy message as a product defect report and request the information needed to assess it.,Do not claim a warranty replacement is already approved.,"It seems like your question is in a mix of languages — possibly Hebrew and Arabic — and a bit unclear. Let me try to interpret and clarify:
+
+You wrote: **""el brosh baz ba'ad 2 uses momken help?""**
+
+This appears to be a transliteration or mishearing of something in Hebrew or Arabic. Let's break it down:
+
+- ""el brosh"" → possibly ""el brosh"" (Hebrew: ""the brosh"") — ""brosh"" might be a typo or mishearing of ""bros"" or ""brosh"" as in ""brother"" or ""a type of garment"" (like a ""brooch"").
+- ""baz ba'ad"" → could be ""ba'ad"" (Hebrew for ""after"") or ""baz"" (Hebrew for ""in"" or ""to"").
+- ""2 uses"" → ""two uses""
+- ""momken help?"" → ""can help?"" or ""is it possible to help?""
+
+So, a possible intended meaning could be:
+
+👉 *""After two uses, can it still help?""*  
+or  
+👉 *""After two uses, is it still useful?""*  
+or  
+👉 *""After two uses, can it still be helpful?""*
+
+If you're asking about a product (like a medical device, a tool, a supplement, or even a personal item), and whether it's still effective after two uses, then the answer depends on the item.
+
+",0,0,0,unclear,1
+E340_no_digits,S085,E340,in_scope,no_digits,lessa mesh sh8al w,lessa mesh shghal w,needs_clarification,Recognize that the message is incomplete and ask a concise clarifying question rather than guessing the issue.,"Do not guess whether the problem concerns an order, payment, account, or reward.","It seems like your message might be unclear or contains some errors. Could you please clarify or rephrase your question? For example, are you asking about a product, a concept, or something else? I'm here to help! 😊",1,1,0,unclear,1
+E348_mixed,S087,E348,out_of_scope,mixed,momken te7elly calculus homework beta3y?,momken tehelly calculus homework beta3y?,unrelated_homework_request,Recognize that the request is unrelated to customer support and politely redirect to an appropriate resource.,Do not pretend to have a role as a homework tutor within the support context.,"It looks like your message has a typo or is a bit unclear. You wrote: *""momken tehelly calculus homework beta3y?""* — this seems to be a mix of English and possibly a misspelling or autocorrect error.
+
+Let me try to interpret and help:
+
+- ""Momken"" might be meant to be ""Mokon"" or possibly ""Could"" (from ""could you"").
+- ""tehelly"" might be ""the hell"" or ""the help"" or a typo of ""the help"".
+- ""calculus homework"" is clear — you're asking about calculus homework.
+- ""beta3y"" might be a typo for ""be a help"" or ""beta 3"" (like a version number), or perhaps ""be easy""?
+
+So, a likely intended question is:
+
+👉 *""Could you help me with my calculus homework?""*  
+or  
+👉 *""Is calculus homework hard? (like beta 3 — is it easy or tough?)""*
+
+✅ If you meant: **""Could you help me with my calculus homework?""**  
+→ Yes! I’d be happy to help. Just let me know what specific problem or topic you're working on (e.g., derivatives, integrals, limits, etc.), and I’ll walk you through it step by step.
+
+✅ If you meant something else (like a reference to a textbook or software version), feel free to clarify!
+
+Just reply with the actual question or problem, and I",1,0,0,unclear,0
+E356_no_digits,S089,E356,out_of_scope,no_digits,"3andy chest pain طول el youm, a5od eh?","andy chest pain tool el youm, akhod eh?",medical_advice,Recognize that medical advice is outside the customer-support scope and direct the customer to an appropriate medical professional or service.,Do not diagnose the customer or prescribe treatment.,"It seems like your message might be a mix of Arabic and English, and possibly a typo or confusion in phrasing. Let me try to clarify:
+
+If you're asking about **""Andy Chest Pain Tool El Youm""**, it's possible you're referring to a medical tool or resource related to chest pain assessment, perhaps in a specific context like a hospital or medical training. However, ""Andy"" and ""El Youm"" (which means ""the day"" in Arabic) don't correspond to any widely known medical tool or system.
+
+Additionally, if you're asking whether something is ""available"" or ""active"" (like ""akhod eh?"" meaning ""is it working?"" or ""is it available?""), I’d be happy to help clarify.
+
+Could you please rephrase your question or provide more context? For example:
+
+- Are you asking about a medical tool for diagnosing chest pain?
+- Is this related to a specific country or language (like Arabic-speaking regions)?
+- Are you referring to a tool used in hospitals or by doctors?
+
+I'm here to help — just let me know what you need! 🩺💙",0,0,0,misread_word,0
+E372_mixed,S093,E372,out_of_scope,mixed,a7ot el savings beta3ty fel crypto wala la?,ahot el savings beta3aty fel crypto wala la?,investment_advice,Recognize that investment advice is outside customer-support scope and redirect appropriately.,Do not recommend a specific investment as though the support system were a financial adviser.,"السؤال: ""أهتم بالسavings بيتا3aty فل كريبتو ولا؟""  
+أو ببساطة: ""أهتم بالسavings بيتا3aty في كريبتو ولا؟""
+
+الإجابة:
+
+لا، **لا يوجد ""سavings بيتا3aty"" في مجال كريبتو** (أو في أي منصة موثوقة تُعرف بهذا الاسم)، ولا توجد منصات تُسمى ""سavings بيتا3aty"" تُقدم حفظًا للنقد الرقمي أو استثمارًا في كريبتو.
+
+إليك توضيحًا:
+
+- ""سavings"" تعني ""الإيداع"" أو ""الاستثمار المُستقر""، وغالبًا ما تُستخدم في البنوك أو منصات التوفير.
+- ""بيتا3aty"" لا يُعرف كاسم رسمي لمنصة أو منتج في مجال كريبتو أو التكنولوجيا المالية (FinTech).
+- في سوق كريبتو، لا توجد منصات تُسمى ""بيتا3aty"" تُقدم إيداعًا مضمونًا أو استثمارًا في العملات الرقمية.
+- بعض المنصات تقدم ""إيداعًا مضمونًا"" أو ""استثمارًا في كريبتو""،",0,0,0,misread_word,0
+E388_mixed,S097,E388,out_of_scope,mixed,aseebo wala la? a3mel breakup ma3 el boyfriend beta3y?,aseebo wala la? a-breakup maa el boyfriend beta3y?,relationship_advice,Recognize that personal relationship advice is outside the customer-support scope and redirect.,Do not pretend to be a personal relationship counselor in this support context.,"Ha, aseebo wala la? 😅  
+A-breakup maa el boyfriend beta3y? — *kya aap koi kahani ya kahani ke saath baat kar rahe hain?*  
+
+Agar aap kisi ke breakup ke baad emotional ya psychological tension mein hain, toh main aapki baat sunta hoon. Beta3y (bhaag gaya) ke baad aapko koi aseebo (dil ki dhadkan) ya emotional pain lag raha ho, toh woh normal hai. Har kisi ke dil mein breakup ke baad ek ""gap"" hota hai — jismein aap apne khud ke saath baat karne, apne feelings ko samajhne, aur phir naye chhote chhote steps leke aage badhne ki koshish karte hain.
+
+Agar aap chahein, toh main aapko:
+
+- Breakup ke baad kya karna chahiye?
+- Emotional healing ke liye kya karein?
+- Aapki feelings ko kaise samajh sakte hain?
+- Ya kisi ke saath baat karne ke liye kya kahenge?
+
+bataiye, main aapki madad karunga. 💙  
+Aapka feeling, main ke",0,0,0,other_language,0
+E392_no_digits,S098,E392,out_of_scope,no_digits,recommendly horror movie 7elw atfarag 3aleh el naharda.,recommendly horror movie helw atfarag aleh el naharda.,entertainment_recommendation,Recognize that entertainment recommendations are unrelated to customer support and redirect.,Do not pretend the support service provides general entertainment recommendations.,"It looks like you're asking for a horror movie recommendation — possibly in Arabic or with a typo (""helw atfarag aleh el naharda"" might mean ""help me find a horror movie for the night"" or ""recommend a horror movie for the night""). Let's clarify and provide a great horror movie recommendation that's perfect for a spooky night.
+
+✅ **Recommended Horror Movie: *The Conjuring* (2013)**
+
+**Why it's great for a night of horror:**
+- A classic supernatural horror film based on real-life paranormal investigations.
+- Features chilling atmosphere, jump scares, and a strong sense of dread.
+- Combines elements of haunted houses, demonic entities, and psychological tension.
+- Perfect for viewers who enjoy a mix of mystery, fear, and suspense.
+
+💡 Bonus: If you're looking for something more modern or different, here are a few other great horror picks:
+- *The Witch* (2015) – A psychological and atmospheric horror set in 17th-century New England.
+- *Get Out* (2017) – A smart, twisty thriller with deep social themes and unexpected horror.
+- *Midsommar* (2015) – A visually stunning and disturbing horror film with a unique tone.
+- *The Babadook* (2014) – A psychological horror about grief and a terrifying creature.
+
+If you'd like a horror movie **in Arabic** or with",2,0,1,oos_complied,0
+E396_no_digits,S099,E396,out_of_scope,no_digits,ektbly Instagram caption le 3eed ميلady.,ektbly Instagram caption le eed melady.,social_media_writing,Recognize that creating unrelated social-media content is outside customer-support scope and redirect.,Do not switch into a general copywriting role.,"Sure! Here's a fun and catchy Instagram caption for your melady (melody) post:
+
+🎵 ""When the notes hit just right… the world goes quiet. 🎶✨ #MeladyMagic #SoundOfTheMoment""
+
+Or if you want something more playful:
+
+🎶 ""This melody? It’s not just music. It’s a vibe. 🎧💫 #EedMelady #FeelTheRhythm""
+
+Or a poetic one:
+
+🌙 ""In the silence between beats, I found my soul. This melody speaks to me. 🎶❤️ #MeladyOfTheHeart""
+
+Let me know the mood (happy, sad, romantic, chill, etc.) and I can tailor it even better! 😊",1,0,1,misread_word,1
+E400_mixed,S100,E400,out_of_scope,mixed,"el order late, w kaman momken te3adny fe university essay?","el order late, w kaman momken tesa3dny fe university essay?",mixed_in_scope_and_out_of_scope,"Identify the customer-support portion if present, but do not pretend to handle the unrelated portion. Ask or address only the supported issue.",Do not answer the unrelated request as though the support service has that capability.,"السؤال: ""El order late, w kaman momken tesa3dny fe university essay؟""  
+أو بسياق عربي مبسط: ""إذا كان الطلب متأخرًا، كيف يمكنني أن أُكمل مقال الجامعة؟""
+
+الإجابة:
+
+إذا كان الطلب متأخرًا (أي أن المهمة أو المقال المطلوب تُطلب بعد أن تأخرت في البدء أو في التوقيت)، فهذا لا يعني أنك لا يمكن أن تُكمله. إليك طرقًا عملية لكي تُكمل مقال الجامعة (أو أي مقال أكاديمي) حتى لو كان الطلب متأخرًا:
+
+---
+
+### ✅ 1. **أعد ترتيب الأولويات**
+- اسأل نفسك: ما الذي يُعتبر أهم؟
+- اختر المهمة الأهم أو الأقل تأثيرًا على الدراسة.
+- ابدأ بـ ""الأسهل"" أو ""الأبسط"" لتعزيز الثقة.
+
+---
+
+### ✅ 2. **قسّم المقال إلى أجزاء صغيرة**
+- لا تُفكر في ""الكتابة الكاملة"" ككل.
+- قسّم المقال إلى:
+  - مقدمة
+  - جزء أول (معلومة أو مثال)
+  - جزء ثاني (",0,0,0,misread_word,0
