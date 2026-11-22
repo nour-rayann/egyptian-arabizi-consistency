@@ -6,7 +6,9 @@
 
 A 400-example benchmark that writes the same 100 customer-support requests in four forms of everyday Egyptian communication, used to test whether a language model keeps the same understanding of a request when only its written form changes. It comes with the responses of [Qwen/Qwen3-4B-Instruct-2507](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507), their scores, and a follow-up test that rewrites the Arabizi requests in Arabic script.
 
-**Author:** Nouran Mohamed El-Sayed (Ain Shams University, Cairo) · **Created:** October 2026 · **Results last revised:** 21 November 2026
+**Author:** Nouran Mohamed El-Sayed (Ain Shams University, Cairo) · **Created:** October 2026 · **Results last revised:** 22 November 2026
+
+> **Update (22 November 2026).** Added a second model: Qwen3-1.7B on the 85 in-scope requests in English, Arabizi and the Arabic-script rewrite, with every score checked by hand (see "Other models: does size matter?" below). The main tables did not change.
 
 > **Update (21 November 2026).** Added a spelling-variation test (respelled Arabizi did not do better, and slightly worse) and two checks of scoring reliability: a blind self re-score of 100 answers and agreement between the LLM judge's first pass and the hand-checked scores. The main tables did not change.
 
@@ -56,6 +58,7 @@ data/
   spelling_variants_scored.csv    the model's answers to the respelled requests, with scores
   blind_rescore.csv               100 answers re-scored blind by the author, with their original IDs
   followup_llm_first_pass.csv     the LLM judge's first-pass scores for the 600 follow-up answers
+  more_models_scored.csv          other models' answers to the in-scope requests, with scores (Qwen3-1.7B so far)
 notebooks/
   qwen3_4b_egyptian_arabic_evaluation.ipynb   builds the benchmark, runs the model, summarizes scores
   extensions.ipynb                code for the planned follow-up experiments (see Next steps)
@@ -67,6 +70,7 @@ scripts/
   agreement.py                    agreement with a second annotator (Cohen's kappa)
   self_agreement.py               blind self re-score and LLM-judge agreement
   spelling_stats.py               tables and tests for the spelling-variation test
+  model_stats.py                  other models compared with Qwen3-4B
   make_spelling_variants.py       builds the rule-based spelling variants before checking
 figures/
   results_by_condition.png
@@ -230,6 +234,24 @@ Arabizi has no standard spelling, so the gap could belong to one way of writing 
 
 To reproduce: `pip install pandas scikit-learn` then `python scripts/self_agreement.py`. This measures one person's consistency, not agreement between different annotators.
 
+### Other models: does size matter?
+
+The 85 in-scope requests were run on a smaller model from the same family, [Qwen/Qwen3-1.7B](https://huggingface.co/Qwen/Qwen3-1.7B), in English, Arabizi + English and the Arabic-script rewrite, with the main benchmark's settings (no system prompt, greedy decoding, 300 new tokens). The first pass was done by the LLM judge and every score was then checked by hand (`data/more_models_scored.csv`; `python scripts/model_stats.py`).
+
+| 85 in-scope requests | Qwen3-1.7B intent | Qwen3-4B intent | Qwen3-1.7B action | Qwen3-4B action |
+|---|---|---|---|---|
+| English | 1.93 [1.87, 1.98] | 1.96 [1.92, 2.00] | 1.71 [1.59, 1.81] | 1.87 [1.78, 1.95] |
+| Arabizi + English | 0.27 [0.15, 0.40] | 0.74 [0.59, 0.91] | 0.22 [0.12, 0.33] | 0.54 [0.39, 0.71] |
+| Arabizi, rewritten in Arabic script | 1.07 [0.89, 1.25] | 1.62 [1.47, 1.76] | 0.74 [0.58, 0.92] | 1.47 [1.31, 1.62] |
+
+(Paired Wilcoxon tests against Qwen3-4B on the same requests, Holm-corrected over the six comparisons.)
+
+- **English intent barely changes with size; Arabizi does.** English intent is about the same in both models (p = 0.26), while Arabizi intent is almost three times lower in the smaller model (lower in 38 requests, higher in 5, p < 0.001). English action is a little lower in the smaller model (p = 0.02).
+- **The script still matters most.** In the smaller model, rewriting the same requests in Arabic script raises intent from 0.27 to 1.07, but it is still well below Qwen3-4B on the same rewrite (lower in 43 requests, p < 0.001).
+- **The same failures, more often.** Of the 85 Arabizi requests, Qwen3-1.7B asked the customer to rephrase in 30, misread an Egyptian word in 23 and answered in another language in 13; it fully succeeded in 3. In Arabic script, misread words were still the main failure (26).
+
+Qwen3-1.7B comes from the first Qwen3 release, while Qwen3-4B-Instruct-2507 is a later instruction-tuned update, so the two differ in more than size. Qwen3-8B and ALLaM-7B have also been run and will be added once their scores are checked.
+
 ### All 100 requests per condition
 
 | Condition | Intent | Action | Unsupported actions |
@@ -244,7 +266,7 @@ Almost all unsupported actions here are out-of-scope requests that the model ful
 
 ## Known issues and limitations
 
-- **One model, one domain, one annotator.** The scores are evidence from this benchmark only, not a general measure of the model's Arabic ability. The first pass was done by an LLM judge and the hand check is by one person. That person's scoring is consistent (blind re-score, intent kappa 0.85), but agreement between different annotators has not been measured.
+- **Few models, one domain, one annotator.** Most results are from Qwen3-4B, with Qwen3-1.7B as a second model. The scores are evidence from this benchmark only, not a general measure of any model's Arabic ability. The first pass was done by an LLM judge and the hand check is by one person. That person's scoring is consistent (blind re-score, intent kappa 0.85), but agreement between different annotators has not been measured.
 - **No system prompt in the main run.** The model was not told it was a support assistant, which mainly affects the out-of-scope requests. The follow-up runs add a short system prompt, but not a store policy or a defined scope.
 - **Synthetic requests.** All scenarios were written by the author, not collected from real users.
 - **Seven Arabizi prompts contain Arabic-script words** that were not intended (E080, E096, E244, E248, E264, E356, E396). E328 is mixed script on purpose (`edge_case = mixed_script`).
@@ -253,9 +275,9 @@ These rows are flagged in the `data_note` column and were not changed, so the sc
 
 ## Next steps
 
-The code for steps 1 to 4 is in `notebooks/extensions.ipynb`. Steps 2, 3 and 4 are reported above; step 1 has been run and is being checked.
+The code for steps 1 to 4 is in `notebooks/extensions.ipynb`. Steps 2, 3 and 4 are reported above; step 1 is reported for Qwen3-1.7B, and the other models are being checked.
 
-1. **Scale:** run the same benchmark across model sizes and families, to see whether the script gap shrinks with size.
+1. **Scale:** Qwen3-1.7B done (see above). Next: Qwen3-8B and ALLaM-7B, which have been run and are being checked.
 2. **Where in the model does the gap appear?** Done for Qwen3-4B (see above). Next: repeat it on the other models from step 1.
 3. **System prompt:** done (see above). Next: give the model a written store policy and a defined scope, alone and together with the Arabizi hint, to see how much of the gap a well-instructed assistant still shows.
 4. **Simple fixes:** done (see above).
