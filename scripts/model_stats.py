@@ -6,6 +6,7 @@ data/results_400.csv (English, Arabizi + English) and data/q1_script_test_result
 Usage: python scripts/model_stats.py      Needs: pip install pandas numpy scipy
 """
 from pathlib import Path
+import re
 import sys
 import numpy as np
 import pandas as pd
@@ -49,5 +50,7 @@ for model, g in other.groupby("model"):
     for r, pa in zip(rows, holm([r[-1] for r in rows])):
         print(f"  {r[0]:24s} {r[1]:12s} {model.split('/')[-1]} {r[2]}  4B {r[3]}  higher {r[4]}, lower {r[5]}, p = {pa:.2g} (Holm over 6)")
     print("  Unsupported actions:", g.groupby("condition").unsupported_action.sum().to_dict())
+    saudi = g.model_response.str.contains(r"سعود|saudi", flags=re.I, regex=True)
+    print("  Answers that bring in Saudi Arabia:", g[saudi].groupby("condition").size().to_dict())
     print("  What it did:")
     print(pd.crosstab(g.response_type, g.condition)[CONDS].to_string())
