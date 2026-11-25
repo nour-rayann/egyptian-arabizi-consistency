@@ -1,5 +1,5 @@
-scenario_id,arabizi_example_id,scope,arabizi,arabic_script_exact,arabic_plus_english_original,identical_to_arabic_english_prompt,transliteration_note,response_arabic_script,intent_score,action_score,unsupported_action,response_type,tokens_arabizi,tokens_arabic_script
-S001,E004,in_scope,momken tebosly leh el order stuck?,ممكن تبصلي ليه الـ order stuck؟,ممكن تبصلي ليه الـ order stuck؟,True,,"أكيد! ""الـ order stuck"" (الطلب متجمد أو مُجمد) هو مشكلة شائعة في أنظمة التداول أو التسويق أو حتى في تطبيقات الدفع، ويعني أن الطلب لم يُنفذ أو لم يُعالج بعد، رغم أن كل شيء بدا مُكتملًا من حيث التفاصيل.
+scenario_id,arabizi_example_id,scope,condition,arabizi,arabic_script_exact,arabic_plus_english_original,identical_to_arabic_english_prompt,transliteration_note,response_arabic_script,intent_score,action_score,unsupported_action,response_type,tokens_arabizi,tokens_arabic_script
+S001,E004,in_scope,"Arabizi, Arabic script",momken tebosly leh el order stuck?,ممكن تبصلي ليه الـ order stuck؟,ممكن تبصلي ليه الـ order stuck؟,True,,"أكيد! ""الـ order stuck"" (الطلب متجمد أو مُجمد) هو مشكلة شائعة في أنظمة التداول أو التسويق أو حتى في تطبيقات الدفع، ويعني أن الطلب لم يُنفذ أو لم يُعالج بعد، رغم أن كل شيء بدا مُكتملًا من حيث التفاصيل.
 
 لكن لكي أُجيبك بدقة، أحتاج إلى معرفة **أين** تحدث هذه المشكلة؟ هل تتحدث عن:
 
@@ -16,7 +16,7 @@ S001,E004,in_scope,momken tebosly leh el order stuck?,ممكن تبصلي ليه
 
 | السبب | التوضيح |
 |------",1,1,0,wrong_domain,11,13
-S002,E008,in_scope,"el order etlgha men 8eer ma atlob, momken a3raf leh?",الـ order اتلغى من غير ما أطلب، ممكن أعرف ليه؟,الـ order اتلغى من غير ما أطلب، ممكن أعرف ليه؟,True,,"أهلاً! بالطبع، يمكنني مساعدتك في فهم سبب إلغاء الـ **order** (الطلب) من قبل النظام أو المُتجر، لكن أولاً، أحتاج إلى توضيح بعض الأمور لكي أُجيبك بدقة:
+S002,E008,in_scope,"Arabizi, Arabic script","el order etlgha men 8eer ma atlob, momken a3raf leh?",الـ order اتلغى من غير ما أطلب، ممكن أعرف ليه؟,الـ order اتلغى من غير ما أطلب، ممكن أعرف ليه؟,True,,"أهلاً! بالطبع، يمكنني مساعدتك في فهم سبب إلغاء الـ **order** (الطلب) من قبل النظام أو المُتجر، لكن أولاً، أحتاج إلى توضيح بعض الأمور لكي أُجيبك بدقة:
 
 1. **من أين تم إرسال الطلب؟**  
    هل هو من متجر إلكتروني (مثل: أمازون، سوق، تطبيق توصيل، إلخ)؟ أم من تطبيق خدمة توصيل أو تطبيق تجاري خاص؟
@@ -28,7 +28,7 @@ S002,E008,in_scope,"el order etlgha men 8eer ma atlob, momken a3raf leh?",الـ
    هل وردت رسالة توضح سبب الإلغاء؟ مثل: ""الطلب تلقائيًا بسبب عدم التأكيد""، أو ""الطلب تجاوز الحد الأقصى للإلغاء""، أو ""تم إلغاؤه بسبب تغير في الحالة المالية للعميل""؟
 
 4. **هل تستخدم خدمة توصيل أو تط",2,2,0,success,22,20
-S003,E012,in_scope,wasalny item 8eer elly talabto.,وصلني item غير اللي طلبته.,وصلني item غير اللي طلبته.,True,,"أهلاً! يسعدني مساعدتك.  
+S003,E012,in_scope,"Arabizi, Arabic script",wasalny item 8eer elly talabto.,وصلني item غير اللي طلبته.,وصلني item غير اللي طلبته.,True,,"أهلاً! يسعدني مساعدتك.  
 أرجو أن تُخبرني بالتفصيل عن ما حدث:  
 - ما هو المنتج الذي طلبتَه؟  
 - ما هو المنتج الذي وصل لك؟  
@@ -36,7 +36,7 @@ S003,E012,in_scope,wasalny item 8eer elly talabto.,وصلني item غير الل
 - هل ترغب في استبداله، أو إرجاعه، أو تبديل معلوماته؟  
 
 سأكون سعيداً بمساعدتك في إيجاد الحل الأنسب حسب سياسة التسليم أو شروط العميل.",2,2,0,success,13,9
-S004,E016,in_scope,fe item na2es men el order.,في item ناقص من الـ order.,في item ناقص من الـ order.,True,,"العبارة ""في item ناقص من الـ order"" يمكن ترجمتها أو توضيحها بشكل أفضل حسب السياق، لكنها تبدو غير مكتملة أو غير واضحة من حيث المعنى. إليك تفسيرًا واقتراحات لتحسينها:
+S004,E016,in_scope,"Arabizi, Arabic script",fe item na2es men el order.,في item ناقص من الـ order.,في item ناقص من الـ order.,True,,"العبارة ""في item ناقص من الـ order"" يمكن ترجمتها أو توضيحها بشكل أفضل حسب السياق، لكنها تبدو غير مكتملة أو غير واضحة من حيث المعنى. إليك تفسيرًا واقتراحات لتحسينها:
 
 ### التفسير:
 ""في item ناقص من الـ order"" تعني أن هناك عنصرًا (أو منتجًا) مُستَخلَصًا في طلب (order) لكنه مفقود أو غير مُدرج.
@@ -55,7 +55,7 @@ S004,E016,in_scope,fe item na2es men el order.,في item ناقص من الـ or
 
 3. **إذا كنت تُبلغ عن خطأ في التسليم أو التسجيل:**  
    → ""تم ت",1,0,0,language_task,9,10
-S005,E020,in_scope,"el item wesel damaged, a3mel eh?",الـ item وصل damaged، أعمل إيه؟,الـ item وصل damaged، أعمل إيه؟,True,,"إذا وصلت الـ **item (البضاعة)** مُضرَّة (damaged)، فهناك خطوات يمكنك اتباعها لحل المشكلة بشكل صحيح وضمان أن تُعاد لك أو تُحلّل المُشكلة بسرعة. إليك ما يجب أن تفعله خطوة بخطوة:
+S005,E020,in_scope,"Arabizi, Arabic script","el item wesel damaged, a3mel eh?",الـ item وصل damaged، أعمل إيه؟,الـ item وصل damaged، أعمل إيه؟,True,,"إذا وصلت الـ **item (البضاعة)** مُضرَّة (damaged)، فهناك خطوات يمكنك اتباعها لحل المشكلة بشكل صحيح وضمان أن تُعاد لك أو تُحلّل المُشكلة بسرعة. إليك ما يجب أن تفعله خطوة بخطوة:
 
 ---
 
@@ -78,7 +78,7 @@ S005,E020,in_scope,"el item wesel damaged, a3mel eh?",الـ item وصل damaged
 - أخبرهم:
   - أن البضاعة وصلت مُضرَّة.
   - أرسل لهم ص",2,2,0,success,11,12
-S006,E024,in_scope,el delivery et2akhar 3an el promised time.,الـ delivery اتأخر عن الـ promised time.,الـ delivery اتأخر عن الـ promised time.,True,,"الـ delivery اتأخر عن الـ promised time.  
+S006,E024,in_scope,"Arabizi, Arabic script",el delivery et2akhar 3an el promised time.,الـ delivery اتأخر عن الـ promised time.,الـ delivery اتأخر عن الـ promised time.,True,,"الـ delivery اتأخر عن الـ promised time.  
 أو بأسلوب أكثر دقة واحترافية:
 
 ""تم تأجيل التسليم عن وقت التسليم المُعلن.""
@@ -92,7 +92,7 @@ S006,E024,in_scope,el delivery et2akhar 3an el promised time.,الـ delivery ا
 ""يُلاحظ تأخر التسليم عن الوقت المُتعهد، مما قد يؤثر على سير العمليات.""
 
 هل ترغب في صياغة بأسلوب رسمي، مهني، أو مختصر؟",1,0,0,language_task,13,12
-S007,E028,in_scope,el tracking mesh updating men embare7.,الـ tracking مش updating من امبارح.,الـ tracking مش updating من امبارح.,True,,"أهلاً! يبدو أنك تشير إلى أن ""الـ tracking"" (مُراقبة التحديثات أو حالة الشحن) لم يُحدث أي تغيير منذ صباح اليوم.
+S007,E028,in_scope,"Arabizi, Arabic script",el tracking mesh updating men embare7.,الـ tracking مش updating من امبارح.,الـ tracking مش updating من امبارح.,True,,"أهلاً! يبدو أنك تشير إلى أن ""الـ tracking"" (مُراقبة التحديثات أو حالة الشحن) لم يُحدث أي تغيير منذ صباح اليوم.
 
 لكن لكي أتمكن من مساعدتك بشكل دقيق، أحتاج إلى معرفة:
 
@@ -112,7 +112,7 @@ S007,E028,in_scope,el tracking mesh updating men embare7.,الـ tracking مش u
 
 - التحقق من السبب (مثلاً: تأخير في النظام، مشكلة في الاتصال، أو خطأ في رقم التتبع).  
 - إ",2,2,0,success,9,11
-S008,E032,in_scope,me7taga a8ayar el delivery address abl el shipment.,محتاجة أغير الـ delivery address قبل الـ shipment.,محتاجة أغير الـ delivery address قبل الـ shipment.,True,,"بالطبع! إليك طريقة تعبيرك بشكل أكثر احترافية وواضح في سياق تبادل معلومات مع شركة شحن أو مورد:
+S008,E032,in_scope,"Arabizi, Arabic script",me7taga a8ayar el delivery address abl el shipment.,محتاجة أغير الـ delivery address قبل الـ shipment.,محتاجة أغير الـ delivery address قبل الـ shipment.,True,,"بالطبع! إليك طريقة تعبيرك بشكل أكثر احترافية وواضح في سياق تبادل معلومات مع شركة شحن أو مورد:
 
 ---
 
@@ -139,7 +139,7 @@ S008,E032,in_scope,me7taga a8ayar el delivery address abl el shipment.,محتا�
 أتمنى منكم التكرم بالرد على هذا الطلب في أسرع وقت ممكن.
 
 مع خالص التح",1,1,0,language_task,14,14
-S009,E036,in_scope,el delivery address 3ala el order 8alat.,الـ delivery address على الـ order غلط.,الـ delivery address اللي على الـ order غلط.,False,,"بالطبع! إليك طريقة لصياغة الجملة بشكل أكثر دقة واحترافية:
+S009,E036,in_scope,"Arabizi, Arabic script",el delivery address 3ala el order 8alat.,الـ delivery address على الـ order غلط.,الـ delivery address اللي على الـ order غلط.,False,,"بالطبع! إليك طريقة لصياغة الجملة بشكل أكثر دقة واحترافية:
 
 ""العنوان المُدخل في تفاصيل التسليم للطلب غير صحيح.""
 
@@ -152,7 +152,7 @@ S009,E036,in_scope,el delivery address 3ala el order 8alat.,الـ delivery addr
 ""أرجو التحقق من عنوان التسليم المرتبط بطلب الشراء [رقم الطلب]، حيث يُظهر أن العنوان غير دقيق، ويُرجى تصحيحه فورًا.""
 
 إذا أخبرتني بسياق معين (مثلاً: إرسال رسالة إلى فريق الدعم، أو تغيير في النظام، أو تواصل مع العميل)، يمكنني تخصيص الجملة أكثر.",1,1,0,language_task,13,11
-S010,E040,in_scope,el tracking says delivered bas ana ma estalamtsh el package.,الـ tracking says delivered بس أنا ما استلمتش الـ package.,الـ tracking says delivered بس أنا ما استلمتش الـ package.,True,,"هذا أمر شائع جدًا، ويعني أن الـ **tracking** (مُتابعة الشحن) يُظهر أن الـ **package (البند) وصل إلى المُستلم أو إلى المُستودع المُحدد**، لكنك ما تزال **ما استلمتِه**.
+S010,E040,in_scope,"Arabizi, Arabic script",el tracking says delivered bas ana ma estalamtsh el package.,الـ tracking says delivered بس أنا ما استلمتش الـ package.,الـ tracking says delivered بس أنا ما استلمتش الـ package.,True,,"هذا أمر شائع جدًا، ويعني أن الـ **tracking** (مُتابعة الشحن) يُظهر أن الـ **package (البند) وصل إلى المُستلم أو إلى المُستودع المُحدد**، لكنك ما تزال **ما استلمتِه**.
 
 هناك عدة احتمالات وحلول:
 
@@ -167,7 +167,7 @@ S010,E040,in_scope,el tracking says delivered bas ana ma estalamtsh el package.,
 
 3. **البند وصل إلى مكتب التوصيل، لكنه مُستلم من قبل شخص آخر (مثلاً: عائلة أو صديق)**  
    - بعض الشركات تُرسل البند إلى ""مكتب الت",2,1,0,partial,14,16
-S011,E044,in_scope,3ayza a3mel return lel item da.,عايزة أعمل return للـ item ده.,عايزة أعمل return للـ item ده.,True,,"أكيد! عايزين أعمل return للـ item؟  
+S011,E044,in_scope,"Arabizi, Arabic script",3ayza a3mel return lel item da.,عايزة أعمل return للـ item ده.,عايزة أعمل return للـ item ده.,True,,"أكيد! عايزين أعمل return للـ item؟  
 أولًا، يبقى محتاج توضح لي:
 
 1. **ما هو ""الـ item"" اللي تقصده؟**  
@@ -184,7 +184,7 @@ S011,E044,in_scope,3ayza a3mel return lel item da.,عايزة أعمل return ل
 
 بمجرد أن توضح لي التفاصيل، أقدر أساعدك بسلاسة ودقة على طريقة عمل الـ return. 😊  
 أكيد تقدر تبدأ من أي مكان!",1,1,0,wrong_domain,12,12
-S012,E048,in_scope,yenfa3 a3mel return lel item ba3d ma fata7to?,ينفع أعمل return للـ item بعد ما فتحته؟,ينفع أعمل return للـ item بعد ما فتحته؟,True,,"سؤالك: ""ينفع أعمل return للـ item بعد ما فتحته؟""  
+S012,E048,in_scope,"Arabizi, Arabic script",yenfa3 a3mel return lel item ba3d ma fata7to?,ينفع أعمل return للـ item بعد ما فتحته؟,ينفع أعمل return للـ item بعد ما فتحته؟,True,,"سؤالك: ""ينفع أعمل return للـ item بعد ما فتحته؟""  
 يعني: هل يُسمح بعمل **إعادة بيع (Return)** للمنتج (Item) بعد أن تم **فتحه**؟
 
 الإجابة تعتمد على **نوع المنتج** و**السياسة المعمول بها في المتجر أو النظام** (مثلاً: متجر إلكتروني، متجر فعلي، متجر تجزئة، متجر تجاري، إلخ)، لكن بشكل عام:
@@ -200,7 +200,7 @@ S012,E048,in_scope,yenfa3 a3mel return lel item ba3d ma fata7to?,ينفع أعم
    - بعض المتاجر تسمح بالعودة حتى لو تم فتحه، لكن بشرط أن يكون:
      - لا توجد تلف أو تلف مادي.
      - لا توجد تغي",2,2,0,success,19,14
-S013,E052,in_scope,momken a3raf el status beta3 el return bta3y?,ممكن أعرف الـ status بتاع الـ return بتاعي؟,ممكن تشوفي status بتاع الـ return بتاعي؟,False,,"أكيد! لكن أحتاج أن توضح لي أكثر عن ""الـ status بتاع الـ return بتاعي"" 😊
+S013,E052,in_scope,"Arabizi, Arabic script",momken a3raf el status beta3 el return bta3y?,ممكن أعرف الـ status بتاع الـ return بتاعي؟,ممكن تشوفي status بتاع الـ return بتاعي؟,False,,"أكيد! لكن أحتاج أن توضح لي أكثر عن ""الـ status بتاع الـ return بتاعي"" 😊
 
 أي أنك تقصدين:
 
@@ -222,7 +222,7 @@ S013,E052,in_scope,momken a3raf el status beta3 el return bta3y?,ممكن أعر
 - في **دالة برمجية**، قد يكون الـ return يمثل حالة معينة (مثلاً: True/False، أو ""success""/""error"").
 
 إذا توضّحت لي أكثر، أ",0,0,0,wrong_domain,16,16
-S014,E056,in_scope,momken te2oly product details aktar 3an el item da?,ممكن تقولي product details أكتر عن الـ item ده؟,ممكن تقولي product details أكتر عن الـ item ده؟,True,,"أكيد! لكنّي بحاجة لاسم أو وصف للـ ""item"" اللي تقصده، لأنّك قلت ""الـ item ده""، وليست هناك معلومات عن أي منتج محدد في سؤالك.
+S014,E056,in_scope,"Arabizi, Arabic script",momken te2oly product details aktar 3an el item da?,ممكن تقولي product details أكتر عن الـ item ده؟,ممكن تقولي product details أكتر عن الـ item ده؟,True,,"أكيد! لكنّي بحاجة لاسم أو وصف للـ ""item"" اللي تقصده، لأنّك قلت ""الـ item ده""، وليست هناك معلومات عن أي منتج محدد في سؤالك.
 
 مثلاً: هل هو منتج إلكتروني؟ ملابس؟ مطبخ؟ موضة؟ أو شيء آخر؟
 
@@ -245,7 +245,7 @@ S014,E056,in_scope,momken te2oly product details aktar 3an el item da?,ممكن 
 - مقارنة مع منتجات مشابهة  
 
 فأرسل لي تفاصيل الـ item، وسأكون سعيدًا بمساعدتك! 😊",2,2,0,success,16,17
-S015,E060,in_scope,el product da available delwa2ty?,الـ product ده available دلوقتي؟,الـ product ده available دلوقتي؟,True,,"أهلاً! لكنني لسنا أعرف ما هو ""الـ product"" الذي تقصده، لأنك لم تُذكر تفاصيل عن المنتج (مثل اسمه، نوعه، أو من أين يُباع).  
+S015,E060,in_scope,"Arabizi, Arabic script",el product da available delwa2ty?,الـ product ده available دلوقتي؟,الـ product ده available دلوقتي؟,True,,"أهلاً! لكنني لسنا أعرف ما هو ""الـ product"" الذي تقصده، لأنك لم تُذكر تفاصيل عن المنتج (مثل اسمه، نوعه، أو من أين يُباع).  
 
 إذا كنت تقصد منتجًا معينًا (مثلاً: هاتف، جهاز، منتج إلكتروني، أو منتج تجاري)، يرجى تزويدي بـ:
 
@@ -256,7 +256,7 @@ S015,E060,in_scope,el product da available delwa2ty?,الـ product ده availab
 وأنا سأكون قادرًا على مساعدتك في التحقق من توافر المنتج حالياً أو معرفة متى يُطرح أو يُتوفر.
 
 أرسل لي التفاصيل وسأجيبك بسرعة! 😊",2,2,0,success,9,11
-S016,E064,in_scope,fe restock 2areeb lel item da?,في restock قريب للـ item ده؟,في restock قريب للـ item ده؟,True,,"السؤال: ""في restock قريب للـ item ده؟""  
+S016,E064,in_scope,"Arabizi, Arabic script",fe restock 2areeb lel item da?,في restock قريب للـ item ده؟,في restock قريب للـ item ده؟,True,,"السؤال: ""في restock قريب للـ item ده؟""  
 أو ببساطة: ""هل هناك restock قريب للمنتج ده؟""
 
 الإجابة:  
@@ -274,7 +274,7 @@ S016,E064,in_scope,fe restock 2areeb lel item da?,في restock قريب للـ i
 إذا أخبرتني باسم المنتج أو رابطه، يمكنني مساعدتك بشكل أدق.
 
 هل يمكنك تزوي",2,2,0,success,12,10
-S017,E068,in_scope,yenfa3 a8ayar el size abl ma el order ships?,ينفع أغير الـ size قبل ما الـ order ships؟,ينفع أغير الـ size قبل الـ order ships؟,False,,"سؤالك: ""ينفع أغير الـ size قبل ما الـ order ships؟""  
+S017,E068,in_scope,"Arabizi, Arabic script",yenfa3 a8ayar el size abl ma el order ships?,ينفع أغير الـ size قبل ما الـ order ships؟,ينفع أغير الـ size قبل الـ order ships؟,False,,"سؤالك: ""ينفع أغير الـ size قبل ما الـ order ships؟""  
 أو ببساطة: ""هل يُنفع أن أغير الحجم (Size) قبل أن أُرسل الطلب للشحن (Order Ships)؟""
 
 الإجابة: **نعم، في معظم الأحيان يُنفع أن تغير الحجم (Size) قبل أن تُرسل الطلب للشحن (Order Ships)، ولكن بشرط أن يكون ذلك مُسموحًا من قبل المتجر أو المُتجر.**
@@ -287,7 +287,7 @@ S017,E068,in_scope,yenfa3 a8ayar el size abl ma el order ships?,ينفع أغي�
 
 2. **إذا كان الحجم مرتبطًا بسعر أو توصيل أو توفر:**
    - قد يُؤثر التغيير على السعر أو توفر المنتج، لذا تأكد من أن التغيير لا يُسبب تغييرًا في السعر أو",2,2,0,success,14,14
-S018,E072,in_scope,el product batal yeshtaghal ba3d kam youm bas.,الـ product بطل يشتغل بعد كام يوم بس.,الـ product بطل يشتغل بعد كام يوم بس.,True,,"السؤال: ""الـ product بطل يشتغل بعد كام يوم بس؟""  
+S018,E072,in_scope,"Arabizi, Arabic script",el product batal yeshtaghal ba3d kam youm bas.,الـ product بطل يشتغل بعد كام يوم بس.,الـ product بطل يشتغل بعد كام يوم بس.,True,,"السؤال: ""الـ product بطل يشتغل بعد كام يوم بس؟""  
 أو ببساطة: ""المنتج (Product) يشتغل بعد كام يوم بس؟""
 
 الإجابة:
@@ -304,7 +304,7 @@ S018,E072,in_scope,el product batal yeshtaghal ba3d kam youm bas.,الـ product
 إذًا، الجواب المبسط:
 
 ",0,0,0,misread_word,15,15
-S019,E076,in_scope,fe order limit 3ala 3adad el items?,في order limit على عدد الـ items؟,في order limit على عدد الـ items؟,True,,"سؤالك: ""في order limit على عدد الـ items؟"" يبدو أنه يُقصد به:  
+S019,E076,in_scope,"Arabizi, Arabic script",fe order limit 3ala 3adad el items?,في order limit على عدد الـ items؟,في order limit على عدد الـ items؟,True,,"سؤالك: ""في order limit على عدد الـ items؟"" يبدو أنه يُقصد به:  
 **""ما هو الحد الأقصى لعدد العناصر (الـ items) في طلب (order)؟""**  
 أو:  
 **""هل هناك حد أقصى لعدد العناصر في طلب الشراء؟""**
@@ -320,7 +320,7 @@ S019,E076,in_scope,fe order limit 3ala 3adad el items?,في order limit على �
 - مثال:
   - بعض منصات الدفع (مثل PayPal أو Stripe) قد تفرض **حدًا على مجموع القيمة**، لكن لا يُفرض عادةً على عدد العناصر.
   - أما في **الشحن**، فقد يكون هناك حد على عدد العناصر في طلب واحد (مثلاً: لا يُسمح بطلب 1000 منتج في نفس الطلب)، ل",2,2,0,success,13,9
-S020,E080,in_scope,el replacement part دي compatible ma3 el device beta3y?,الـ replacement part دي compatible مع الـ device بتاعي؟,الـ replacement part دي compatible مع الـ device بتاعي؟,True,,"أكيد! أقدر أساعدك، لكن بس بتحتاج تُخبرني:
+S020,E080,in_scope,"Arabizi, Arabic script",el replacement part دي compatible ma3 el device beta3y?,الـ replacement part دي compatible مع الـ device بتاعي؟,الـ replacement part دي compatible مع الـ device بتاعي؟,True,,"أكيد! أقدر أساعدك، لكن بس بتحتاج تُخبرني:
 
 1. **ما اسم الجهاز (الـ device)** اللي تستخدمه؟ (مثلاً: iPhone 12، Samsung Galaxy S21، iPad Air 2، إلخ)
 2. **ما اسم أو نوع الجزء المُستبدَل (الـ replacement part)**؟ (مثلاً: شاشة، بطارية، كاميرا، بلوتوث، إلخ)
@@ -328,7 +328,7 @@ S020,E080,in_scope,el replacement part دي compatible ma3 el device beta3y?,ا�
 بمجرد أن تُعطيني التفاصيل، أتأكد لك من أن الجزء مُتوافق مع جهازك، وسأوضح لك إذا كان مُناسبًا أو لا. 😊
 
 أرسل لي التفاصيل ونبدأ!",2,2,0,success,13,14
-S021,E084,in_scope,3amalt refund request w lesa el mablagh ma rega3sh.,عملت refund request ولسه المبلغ ما رجعش.,عملت refund request ولسه المبلغ ما رجعش.,True,,"أهلاً! يُرجى توضيح بعض التفاصيل لمساعدتك بشكل أفضل:
+S021,E084,in_scope,"Arabizi, Arabic script",3amalt refund request w lesa el mablagh ma rega3sh.,عملت refund request ولسه المبلغ ما رجعش.,عملت refund request ولسه المبلغ ما رجعش.,True,,"أهلاً! يُرجى توضيح بعض التفاصيل لمساعدتك بشكل أفضل:
 
 1. **ما نوع الطلب؟**  
    هل هو طلب استرداد مبلغ (refund) لشراء منتج أو خدمة؟ (مثلاً: من متجر إلكتروني، خدمة تدريب، تذكرة، إلخ)
@@ -348,7 +348,7 @@ S021,E084,in_scope,3amalt refund request w lesa el mablagh ma rega3sh.,عملت 
    - معرفة متى يُتوقع استرداد المبلغ؟
 
 بمجرد أن تُخبرني بهذه التفاصيل، أستطيع مساعدتك في صياغة رسالة متابعة، أو توضيح ما قد يسبب التأخير، أو حتى إ",2,2,0,success,19,13
-S022,E088,in_scope,el refund elly weselny a2al men el amount elly dafa3to.,الـ refund اللي وصلني أقل من الـ amount اللي دفعته.,الـ refund اللي وصلني أقل من الـ amount اللي دفعته.,True,,"أكيد، هذا أمر مقلق، وينبغي أن تُعالج بسرعة. إليك خطوات يمكنك اتباعها لحل المشكلة:
+S022,E088,in_scope,"Arabizi, Arabic script",el refund elly weselny a2al men el amount elly dafa3to.,الـ refund اللي وصلني أقل من الـ amount اللي دفعته.,الـ refund اللي وصلني أقل من الـ amount اللي دفعته.,True,,"أكيد، هذا أمر مقلق، وينبغي أن تُعالج بسرعة. إليك خطوات يمكنك اتباعها لحل المشكلة:
 
 ---
 
@@ -371,7 +371,7 @@ S022,E088,in_scope,el refund elly weselny a2al men el amount elly dafa3to.,ال�
 > مثال:  
 > دفعت 1000 ريال، وصل لك 800 → الفرق = 200 ريال.  
 > هل هذا مُستحيل",2,2,0,success,20,18
-S023,E092,in_scope,et3amaly double charge le nafs el order.,اتعملي double charge لنفس الـ order.,اتعمل لي double charge لنفس الـ order.,False,,"لا يمكنني مساعدتك في إجراء ""double charge"" لنفس الطلب (أي تطبيق تكاليف مزدوجة أو تكرار دفع لطلب واحد)، لأن هذا:
+S023,E092,in_scope,"Arabizi, Arabic script",et3amaly double charge le nafs el order.,اتعملي double charge لنفس الـ order.,اتعمل لي double charge لنفس الـ order.,False,,"لا يمكنني مساعدتك في إجراء ""double charge"" لنفس الطلب (أي تطبيق تكاليف مزدوجة أو تكرار دفع لطلب واحد)، لأن هذا:
 
 - يُعدّ انتهاكًا للأخلاقيات التجارية.
 - يُعتبر تلاعبًا في النظام المالي.
@@ -388,8 +388,8 @@ S023,E092,in_scope,et3amaly double charge le nafs el order.,اتعملي double 
 
 هل يمكنك توضيح السياق أكثر؟ مثلاً: هل تتحدث عن تطبيق تكرار دفع في نظام تجاري؟ أم ترغب في تحليل مخاطر التكرار؟ أم تبحث عن طريقة لتأكيد الطلب؟
 
-سأكون سعيدًا بمساعدتك بطرق صحيحة وقانونية.",0,0,0,safety_refusal,12,11
-S024,E096,in_scope,el payment بيرفض kol mara ma3 en el card sh8al fe amaken tany.,الـ payment بيرفض كل مرة مع إن الـ card شغال في أماكن تانية.,الـ payment بيرفض كل مرة مع إن الـ card شغال في أماكن تانية.,True,,"إذا كان بطاقة الـ **Payment** تُرفض كل مرة، رغم أن البطاقة تعمل في أماكن أخرى، فهناك عدة أسباب محتملة يمكن أن تفسر هذا السلوك. إليك أبرز الأسباب والحلول الممكنة:
+سأكون سعيدًا بمساعدتك بطرق صحيحة وقانونية.",0,0,0,refused,12,11
+S024,E096,in_scope,"Arabizi, Arabic script",el payment بيرفض kol mara ma3 en el card sh8al fe amaken tany.,الـ payment بيرفض كل مرة مع إن الـ card شغال في أماكن تانية.,الـ payment بيرفض كل مرة مع إن الـ card شغال في أماكن تانية.,True,,"إذا كان بطاقة الـ **Payment** تُرفض كل مرة، رغم أن البطاقة تعمل في أماكن أخرى، فهناك عدة أسباب محتملة يمكن أن تفسر هذا السلوك. إليك أبرز الأسباب والحلول الممكنة:
 
 ---
 
@@ -409,7 +409,7 @@ S024,E096,in_scope,el payment بيرفض kol mara ma3 en el card sh8al fe amaken
    - بعض المنصات (مثل أمازون، أو تطبيقات الدفع) تُرفض البطاقة إذا:
      - تُستخدم من خارج الدولة المُسموحة.
      - تُستخدم من موقع غير مُعتمد (م",2,2,0,success,22,21
-S025,E100,in_scope,el payment beta3y lessa pending ba2alo sa3at.,الـ payment بتاعي لسه pending بقاله ساعات.,الـ payment بتاعي still pending بقاله ساعات.,False,,"أكيد، إذا كان دخولك للـ **payment** (الدفع) مُعلق (pending) وقلت إنك ""بقاله ساعات""، فهذا شائع في بعض الأنظمة، خصوصًا إذا كان الدفع عبر بطاقة أو وسيلة دفع إلكترونية.
+S025,E100,in_scope,"Arabizi, Arabic script",el payment beta3y lessa pending ba2alo sa3at.,الـ payment بتاعي لسه pending بقاله ساعات.,الـ payment بتاعي still pending بقاله ساعات.,False,,"أكيد، إذا كان دخولك للـ **payment** (الدفع) مُعلق (pending) وقلت إنك ""بقاله ساعات""، فهذا شائع في بعض الأنظمة، خصوصًا إذا كان الدفع عبر بطاقة أو وسيلة دفع إلكترونية.
 
 إليك بعض النقاط اللي تساعدك على فهم ماذا يحصل ومتى تُنتهي الـ pending:
 
@@ -430,7 +430,7 @@ S025,E100,in_scope,el payment beta3y lessa pending ba2alo sa3at.,الـ payment 
 
 ### ✅ ماذا تفعل الآن؟
 1. **انتظر 24 ساعة",2,2,0,success,15,14
-S026,E104,in_scope,eh el payment methods elly bet2abloha?,إيه الـ payment methods اللي بتقبلوها؟,إيه الـ payment methods اللي بتقبلوها؟,True,,"أكيد! 😊  
+S026,E104,in_scope,"Arabizi, Arabic script",eh el payment methods elly bet2abloha?,إيه الـ payment methods اللي بتقبلوها؟,إيه الـ payment methods اللي بتقبلوها؟,True,,"أكيد! 😊  
 لكن أحتاج لكي أعرف من أين تتساءل عن ""الطرق المقبولة للدفع""؟  
 مثلاً:
 
@@ -454,7 +454,7 @@ S026,E104,in_scope,eh el payment methods elly bet2abloha?,إيه الـ payment 
    - **موديل** (موديل)  
    - **موديل** (موديل)  
    - **",2,1,0,partial,11,11
-S027,E108,in_scope,yenfa3 adfa3 cash lama el order yesal?,ينفع أدفع cash لما الـ order يوصل؟,ينفع pay cash لما الـ order يوصل؟,False,,"سؤالك: ""ينفع أدفع cash لما الـ order يوصل؟""  
+S027,E108,in_scope,"Arabizi, Arabic script",yenfa3 adfa3 cash lama el order yesal?,ينفع أدفع cash لما الـ order يوصل؟,ينفع pay cash لما الـ order يوصل؟,False,,"سؤالك: ""ينفع أدفع cash لما الـ order يوصل؟""  
 أو ببساطة: ""هل ينفع أن أدفع نقدًا لما يوصل الطلب؟""
 
 الإجابة: **نعم، يمكن أن ينفع أن تدفع نقدًا لما يوصل الطلب، لكن يعتمد على عدة عوامل**، ونوضحها لك:
@@ -473,7 +473,7 @@ S027,E108,in_scope,yenfa3 adfa3 cash lama el order yesal?,ينفع أدفع cash
 
 4. **مقبول في بعض الأسواق أو البيئات**:  
    في البيع بالتجزئة أو البيع المحلي (مثل المخابز، المطاعم، المراكز",2,2,0,success,14,12
-S028,E112,in_scope,el card et5asam meno bas el order failed.,الـ card اتخصم منه بس الـ order failed.,الـ card اتخصم منه بس الـ order failed.,True,,"العبارة ""الـ card اتخصم منه بس الـ order failed"" تبدو مختلطة من حيث اللغة (مزيج بين العربية والإنجليزية)، وربما تُعبّر عن موقف محدد في عملية الدفع أو التسجيل عبر منصة إلكترونية.
+S028,E112,in_scope,"Arabizi, Arabic script",el card et5asam meno bas el order failed.,الـ card اتخصم منه بس الـ order failed.,الـ card اتخصم منه بس الـ order failed.,True,,"العبارة ""الـ card اتخصم منه بس الـ order failed"" تبدو مختلطة من حيث اللغة (مزيج بين العربية والإنجليزية)، وربما تُعبّر عن موقف محدد في عملية الدفع أو التسجيل عبر منصة إلكترونية.
 
 نحللها ونُفسرها بشكل واضح:
 
@@ -492,7 +492,7 @@ S028,E112,in_scope,el card et5asam meno bas el order failed.,الـ card اتخ�
    - مثال: الدفع نجح، لكن النظام لم يُرسل الطلب إلى الخدمة أو لم يُفعّل الطلب.
 
 2. **البطاقة تمت",2,1,0,partial,12,15
-S029,E116,in_scope,el refund hyrga3 3ala anhy payment method?,الـ refund هيرجع على أنهي payment method؟,الـ refund هيرجع على أنهي payment method؟,True,,"السؤال: ""الـ refund هيرجع على أنهي payment method؟""  
+S029,E116,in_scope,"Arabizi, Arabic script",el refund hyrga3 3ala anhy payment method?,الـ refund هيرجع على أنهي payment method؟,الـ refund هيرجع على أنهي payment method؟,True,,"السؤال: ""الـ refund هيرجع على أنهي payment method؟""  
 أو ببساطة: ""هل يُعاد الـ refund إلى طريقة الدفع التي تم استخدامها؟""
 
 الإجابة:
@@ -507,7 +507,7 @@ S029,E116,in_scope,el refund hyrga3 3ala anhy payment method?,الـ refund هي
 
 ### 2. **الدفع عبر وسيلة دفع غير مُباشرة (مثل تطبيقات أو حسابات)**
 - في بعض الحالات، مثل الدفع عبر تطبيق (مثل Amazon، أو أمازون، أو تطبيقات التسوق)، قد يُعاد الـ refund إلى الحساب المُستخدم (مثل حساب PayPal أو",2,2,0,success,14,13
-S030,E120,in_scope,howa safe ad5al el card details hena?,هو safe أدخل الـ card details هنا؟,هل آمن أدخل الـ card details هنا؟,False,,"لا، **لا يجب أن تدخل تفاصيل بطاقة الائتمان** في أي موقع أو تطبيق يُسمى ""safe""، سواء كان ذلك من خلال تطبيق أو موقع إلكتروني.
+S030,E120,in_scope,"Arabizi, Arabic script",howa safe ad5al el card details hena?,هو safe أدخل الـ card details هنا؟,هل آمن أدخل الـ card details هنا؟,False,,"لا، **لا يجب أن تدخل تفاصيل بطاقة الائتمان** في أي موقع أو تطبيق يُسمى ""safe""، سواء كان ذلك من خلال تطبيق أو موقع إلكتروني.
 
 إذا كنت تشير إلى تطبيق أو خدمة تُسمى ""Safe"" (مثل Safe Browsing من Google أو تطبيقات مالية أو أمان رقمي)، فإن **أي معلومات بطاقة ائتمان لا تُطلب منك إلا إذا كانت مطلوبة بشكل قانوني وشفاف، وتحت مراقبة صارمة لحماية بياناتك**.
 
@@ -520,7 +520,7 @@ S030,E120,in_scope,howa safe ad5al el card details hena?,هو safe أدخل ال
 - تطبيقات مثل ""Safe"" (مثل Safe Browsing أو SafePass) لا تطلب تفاصيل بطاقة ائتمان عادةً.
 
 ### ماذا",1,1,0,misread_word,12,10
-S031,E124,in_scope,el promo code mesh working 3and el checkout.,الـ promo code مش working عند الـ checkout.,الـ promo code مش working عند الـ checkout.,True,,"أكيد! إذا كان **الكود الترويجي (promo code)** لا يعمل عند عملية الدفع (checkout)، فهناك عدة أسباب محتملة. إليك خطوات تحليلية وحلول عملية يمكنك تطبيقها:
+S031,E124,in_scope,"Arabizi, Arabic script",el promo code mesh working 3and el checkout.,الـ promo code مش working عند الـ checkout.,الـ promo code مش working عند الـ checkout.,True,,"أكيد! إذا كان **الكود الترويجي (promo code)** لا يعمل عند عملية الدفع (checkout)، فهناك عدة أسباب محتملة. إليك خطوات تحليلية وحلول عملية يمكنك تطبيقها:
 
 ---
 
@@ -536,7 +536,7 @@ S031,E124,in_scope,el promo code mesh working 3and el checkout.,الـ promo cod
 ### ✅ 2. **هل الكود مُتاح للعملية الحالية؟**
 - بعض الكودات لا تُستخدم في **الدفع المسبق** أو **الدفع عند التسليم**.
 - بعض الكودات مُخصصة لـ **مواقع معينة**",2,2,0,success,11,11
-S032,E128,in_scope,el price 3and el checkout mokhtalef 3an elly shofo.,الـ price عند الـ checkout مختلف عن اللي شفته.,الـ price عند الـ checkout مختلف عن اللي شفته.,True,,"أكيد، هذا أمر شائع جدًا في تجارب الشراء (checkout)، وغالبًا ما يُسبب ارتباكًا للعميل. إليك أسبابًا شائعة لـ **الفرق بين السعر عند عرض المنتج وسعره عند الدفع (الـ checkout)**:
+S032,E128,in_scope,"Arabizi, Arabic script",el price 3and el checkout mokhtalef 3an elly shofo.,الـ price عند الـ checkout مختلف عن اللي شفته.,الـ price عند الـ checkout مختلف عن اللي شفته.,True,,"أكيد، هذا أمر شائع جدًا في تجارب الشراء (checkout)، وغالبًا ما يُسبب ارتباكًا للعميل. إليك أسبابًا شائعة لـ **الفرق بين السعر عند عرض المنتج وسعره عند الدفع (الـ checkout)**:
 
 ---
 
@@ -553,7 +553,7 @@ S032,E128,in_scope,el price 3and el checkout mokhtalef 3an elly shofo.,الـ pr
 3. **الخصم بناءً على الكمية أو التوصيل**
    - بعض المتاجر تُعطي خصمًا على الكمية (مثلاً: 10% على 3 قطع أو أكثر).
    - إذا لم تُطبق هذه الشروط عند الـ checkout،",2,2,0,success,20,14
-S033,E132,in_scope,el item da eligible lel current discount?,الـ item ده eligible للـ current discount؟,الـ item ده eligible للـ current discount؟,True,,"أهلاً! يُرجى توضيح ما المقصود بـ ""الـ item ده"" و""الـ current discount"" من أجل المساعدة بدقة.
+S033,E132,in_scope,"Arabizi, Arabic script",el item da eligible lel current discount?,الـ item ده eligible للـ current discount؟,الـ item ده eligible للـ current discount؟,True,,"أهلاً! يُرجى توضيح ما المقصود بـ ""الـ item ده"" و""الـ current discount"" من أجل المساعدة بدقة.
 
 هل تقصد:
 
@@ -573,7 +573,7 @@ S033,E132,in_scope,el item da eligible lel current discount?,الـ item ده el
 3. هل هناك شروط محددة (مثل: سعر، تقييم، تاريخ، نوع المنتج...)؟
 
 بمجرد أن أحصل على هذه التفاصيل، سأتمكن من إجابة سليمة ودقيقة.",2,2,0,success,9,11
-S034,E136,in_scope,el promotion de htenhy emta?,الـ promotion دي هتنتهي إمتى؟,الـ promotion دي هتنتهي إمتى؟,True,,"أهلاً! 😊  
+S034,E136,in_scope,"Arabizi, Arabic script",el promotion de htenhy emta?,الـ promotion دي هتنتهي إمتى؟,الـ promotion دي هتنتهي إمتى؟,True,,"أهلاً! 😊  
 السؤال ""الـ promotion دي هتنتهي إمتى؟"" يعتمد على سياق معين، لأن ""الـ promotion"" يمكن أن يُقصد به عدة أشياء:
 
 1. **إذا كنت تقصد ""العرض الترويجي"" أو ""الخصم"" (مثل خصم 50% على منتجات)**:  
@@ -586,7 +586,7 @@ S034,E136,in_scope,el promotion de htenhy emta?,الـ promotion دي هتنته
 
 3. **إذا كنت تقصد ""الحملة التسويقية"" أو ""الترويج"" لمنتج أو خدمة**:  
    هذا يعتمد على خ",2,2,0,success,9,12
-S035,E140,in_scope,leh et3amaly extra fee 3and el checkout?,ليه اتعملي extra fee عند الـ checkout؟,ليه اتعمل لي extra fee عند الـ checkout؟,False,,"سؤالك جيد، وسأوضحه ببساطة:
+S035,E140,in_scope,"Arabizi, Arabic script",leh et3amaly extra fee 3and el checkout?,ليه اتعملي extra fee عند الـ checkout؟,ليه اتعمل لي extra fee عند الـ checkout؟,False,,"سؤالك جيد، وسأوضحه ببساطة:
 
 **لماذا تُفرض ""extra fee"" عند الـ checkout؟**
 
@@ -602,7 +602,7 @@ S035,E140,in_scope,leh et3amaly extra fee 3and el checkout?,ليه اتعملي 
 ### 3. **الرسوم على الدفع (Payment Fees)**
 - بعض المدفوعات (مثل الدفع عبر بطاقة ائتمان أو تطبيقات الدفع) تفرض رسومًا على المُتاجر.
 - مثلاً: بعض شركات الدفع (مثل PayPal أو Stripe) تفرض رس",2,1,0,partial,13,13
-S036,E144,in_scope,el sale price da lessa active?,الـ sale price ده لسه active؟,الـ sale price ده لسه active؟,True,,"السؤال: ""الـ sale price ده لسه active؟""  
+S036,E144,in_scope,"Arabizi, Arabic script",el sale price da lessa active?,الـ sale price ده لسه active؟,الـ sale price ده لسه active؟,True,,"السؤال: ""الـ sale price ده لسه active؟""  
 أو ببساطة: ""هل السعر المخفض (الـ sale price) ما زال نشطًا؟""
 
 الإجابة:  
@@ -625,7 +625,7 @@ S036,E144,in_scope,el sale price da lessa active?,الـ sale price ده لسه 
 
 - كان العرض مُعلنًا أنه ""مُنتهي"" أو ""انتهت فترة التخفيض""  
 - أو كان هناك تذكير بموعد انتهاء العرض (مثلاً: ""محدود حتى ",2,2,0,success,8,10
-S037,E148,in_scope,yenfa3 asta5dem two promo codes 3ala nafs el order?,ينفع أستخدم two promo codes على نفس الـ order؟,ينفع أستخدم two promo codes على نفس الـ order؟,True,,"لا، في معظم الحالات **لا يُسمح باستخدام كودين خصم (promo codes) على نفس الطلب (order)**، سواء كان ذلك من خلال متجر إلكتروني أو خدمة تجارية.
+S037,E148,in_scope,"Arabizi, Arabic script",yenfa3 asta5dem two promo codes 3ala nafs el order?,ينفع أستخدم two promo codes على نفس الـ order؟,ينفع أستخدم two promo codes على نفس الـ order؟,True,,"لا، في معظم الحالات **لا يُسمح باستخدام كودين خصم (promo codes) على نفس الطلب (order)**، سواء كان ذلك من خلال متجر إلكتروني أو خدمة تجارية.
 
 ### لماذا لا يُسمح باستخدام كودين خصم على نفس الطلب؟
 1. **السياسات الخاصة بالكود**: معظم المتاجر تُحدد في شروط الاستخدام أن الكود يُستخدم مرة واحدة فقط لكل طلب.
@@ -635,7 +635,7 @@ S037,E148,in_scope,yenfa3 asta5dem two promo codes 3ala nafs el order?,ينفع 
 ### ماذا لو أردت تطبيق خصمين؟
 - بعض المتاجر تسمح باستخدام **كودين خصم** إذا كان كل كود ينطبق على طلب مختلف (مثلاً: كود لشراء منتج، وآخر لخدمة).
 - بعض المتاجر تسمح باستخدام **كودين خصم** إذا كان هناك **مُتطلبات محددة** (مثلاً: كود خصم على المنتجات،",2,2,0,success,18,13
-S038,E152,in_scope,kan be one price fel cart w ba3den et8ayar fel checkout.,كان بـ one price في الـ cart وبعدين اتغير في الـ checkout.,كان بـ one price في الـ cart وبعد كده اتغير في الـ checkout.,False,,"العبارة:  
+S038,E152,in_scope,"Arabizi, Arabic script",kan be one price fel cart w ba3den et8ayar fel checkout.,كان بـ one price في الـ cart وبعدين اتغير في الـ checkout.,كان بـ one price في الـ cart وبعد كده اتغير في الـ checkout.,False,,"العبارة:  
 ""كان بـ one price في الـ cart وبعدين اتغير في الـ checkout""  
 تُعبر عن تغيير في سعر المنتج من ""سعر واحد"" (one price) في عربة التسوق (cart)، إلى سعر مختلف في عملية الدفع (checkout).
 
@@ -655,7 +655,7 @@ S038,E152,in_scope,kan be one price fel cart w ba3den et8ayar fel checkout.,كا
 
 2. **الخصومات أو العروض تُطبَّق في checkout فقط**  
    - قد يُظهر السعر الأصلي في cart، لكن عند الدخول إلى",2,2,0,success,16,19
-S039,E156,in_scope,el discount ma et2aba2sh 3ala el order ma3 eny kont fakra eno eligible.,الـ discount ما اتطبقش على الـ order مع إني كنت فاكرة إنه eligible.,الـ discount ما اتطبقش على الـ order مع إني كنت فاكرة إنه eligible.,True,,"أكيد، دا مش بس مشكلة، دا مشكلة شائعة في بعض أنظمة التسويق أو التسليم.
+S039,E156,in_scope,"Arabizi, Arabic script",el discount ma et2aba2sh 3ala el order ma3 eny kont fakra eno eligible.,الـ discount ما اتطبقش على الـ order مع إني كنت فاكرة إنه eligible.,الـ discount ما اتطبقش على الـ order مع إني كنت فاكرة إنه eligible.,True,,"أكيد، دا مش بس مشكلة، دا مشكلة شائعة في بعض أنظمة التسويق أو التسليم.
 
 العبارة ""الـ discount ما اتطبقش على الـ order مع إني كنت فاكرة إنه eligible"" تدل على أنك:
 
@@ -672,7 +672,7 @@ S039,E156,in_scope,el discount ma et2aba2sh 3ala el order ma3 eny kont fakra eno
 
 3. **الـ discount مُستبعد بسبب شروط تفاصيل أخرى**  
    مثل: تفاصيل التسليم، أو",2,2,0,success,24,22
-S040,E160,in_scope,momken te2oly el price da fel invoice ma3nah eh?,ممكن تقولي الـ price ده في الـ invoice معناه إيه؟,ممكن تشرحي الـ price ده في الـ invoice؟,False,,"بالطبع! في الفاتورة (Invoice)، المُصطلح **""Price""** يعني **السعر**.
+S040,E160,in_scope,"Arabizi, Arabic script",momken te2oly el price da fel invoice ma3nah eh?,ممكن تقولي الـ price ده في الـ invoice معناه إيه؟,ممكن تشرحي الـ price ده في الـ invoice؟,False,,"بالطبع! في الفاتورة (Invoice)، المُصطلح **""Price""** يعني **السعر**.
 
 أي أن ""الـ price"" هو **مبلغ المال المُطلوب دفعه** لمنتج أو خدمة مذكورة في الفاتورة.
 
@@ -695,7 +695,7 @@ S040,E160,in_scope,momken te2oly el price da fel invoice ma3nah eh?,ممكن ت�
 إذا كنت تعرف أن السعر يُذكر بجانب كمية معينة (مثلاً: 3 قطع بسعر 1000 ريال)، فهذا يُسمى **Unit Price**.
 
 إذا كنت بحاجة لشرح أكثر تفصيلًا حسب نوع الفاتورة (مثلاً: فاتورة تجارية، فاتورة خدمات، فاتورة توريد...)، يسعدني مساعد",1,0,0,language_task,15,20
-S041,E164,in_scope,mesh 3arfa a3mel login 3ashan el account locked.,مش عارفة أعمل login عشان الـ account locked.,مش عارفة أعمل login عشان الـ account locked.,True,,"أكيد، مش محتاج تقلق! دا مش سؤال صعب، وسأشرح لك ببساطة كيف تتعامل مع ""الـ Account Locked"" (مُغلق الحساب) عند محاولة تسجيل دخول.
+S041,E164,in_scope,"Arabizi, Arabic script",mesh 3arfa a3mel login 3ashan el account locked.,مش عارفة أعمل login عشان الـ account locked.,مش عارفة أعمل login عشان الـ account locked.,True,,"أكيد، مش محتاج تقلق! دا مش سؤال صعب، وسأشرح لك ببساطة كيف تتعامل مع ""الـ Account Locked"" (مُغلق الحساب) عند محاولة تسجيل دخول.
 
 ---
 
@@ -713,7 +713,7 @@ S041,E164,in_scope,mesh 3arfa a3mel login 3ashan el account locked.,مش عار�
 
 #### ✅ 2. **لا تجرب التسجيل مرة أخرى خلال الفترة المُغلقة**
 إلا إذا كنت متأكد أنك تعرف كلمة المرور، فه",2,2,0,success,17,15
-S042,E168,in_scope,3amalt password reset request bas el email ma weselsh.,عملت password reset request بس الـ email ما وصلش.,عملت password reset request بس الـ email ما وصلش.,True,,"إذا عملت طلب إعادة تعيين كلمة المرور (password reset request) ولكن لم يُرسل لك البريد الإلكتروني، فهناك عدة أسباب محتملة، ونُوصي باتباع الخطوات التالية لحل المشكلة:
+S042,E168,in_scope,"Arabizi, Arabic script",3amalt password reset request bas el email ma weselsh.,عملت password reset request بس الـ email ما وصلش.,عملت password reset request بس الـ email ما وصلش.,True,,"إذا عملت طلب إعادة تعيين كلمة المرور (password reset request) ولكن لم يُرسل لك البريد الإلكتروني، فهناك عدة أسباب محتملة، ونُوصي باتباع الخطوات التالية لحل المشكلة:
 
 ---
 
@@ -731,7 +731,7 @@ S042,E168,in_scope,3amalt password reset request bas el email ma weselsh.,عمل
   - **البريد المُستلم في المُستقبل** (Spam / Junk / Promotions)
   - **البريد غير المُعرف** (Unrecognized)
 - ابحث في هذه المجلدات، لأن النظام قد يُرسل الطلب",2,2,0,success,14,15
-S043,E172,in_scope,me7taga a8ayar el email 3ala el account.,محتاجة أغير الـ email على الـ account.,محتاجة أغير الـ email على الـ account.,True,,"أكيد! لتعديل بريدك الإلكتروني (الـ email) على حسابك، يعتمد الخطوة على نوع الحساب الذي تستخدمه (مثلاً: حساب جوجل، فيسبوك، إيميل، أو حساب خاص بمنصة ما).
+S043,E172,in_scope,"Arabizi, Arabic script",me7taga a8ayar el email 3ala el account.,محتاجة أغير الـ email على الـ account.,محتاجة أغير الـ email على الـ account.,True,,"أكيد! لتعديل بريدك الإلكتروني (الـ email) على حسابك، يعتمد الخطوة على نوع الحساب الذي تستخدمه (مثلاً: حساب جوجل، فيسبوك، إيميل، أو حساب خاص بمنصة ما).
 
 إليك خطوات عامة حسب نوع الحساب:
 
@@ -747,7 +747,7 @@ S043,E172,in_scope,me7taga a8ayar el email 3ala el account.,محتاجة أغي�
 7. اتبع التعليمات لتأكيد التغيير (غالبًا يطلب منك إرسال رابط تأكيد إلى البريد الجديد).
 
 > ⚠️ ملاحظة: لا يمكن تغيير البريد الإلكتروني في حساب جوجل إلا إذا كان مرتبطًا بحساب مُسجّل سابقًا، وغالبًا ما يُطلب تأكيد من خلال رابط تأكيد",2,2,0,success,15,13
-S044,E176,in_scope,a8ayar el phone number 3ala el account ezay?,أغير الـ phone number على الـ account إزاي؟,أغير الـ phone number على الـ account إزاي؟,True,,"لإعادة تغيير رقم الهاتف (Phone Number) على حسابك، يعتمد الإجراء على نوع الحساب أو المنصة التي تستخدمها (مثلاً: Google، Facebook، Apple، أو حساب بريد إلكتروني). لكن بما أنك كتبت ""الـ account"" بشكل عام، سأقدم لك إرشادات عامة تُطبّق على معظم الحسابات:
+S044,E176,in_scope,"Arabizi, Arabic script",a8ayar el phone number 3ala el account ezay?,أغير الـ phone number على الـ account إزاي؟,أغير الـ phone number على الـ account إزاي؟,True,,"لإعادة تغيير رقم الهاتف (Phone Number) على حسابك، يعتمد الإجراء على نوع الحساب أو المنصة التي تستخدمها (مثلاً: Google، Facebook، Apple، أو حساب بريد إلكتروني). لكن بما أنك كتبت ""الـ account"" بشكل عام، سأقدم لك إرشادات عامة تُطبّق على معظم الحسابات:
 
 ---
 
@@ -766,7 +766,7 @@ S044,E176,in_scope,a8ayar el phone number 3ala el account ezay?,أغير الـ 
   - ""الهاتف""
   - ""الرقم المُرتبط""
   - ""ال",2,2,0,success,14,14
-S045,E180,in_scope,la7azt account activity mesh beta3ty.,لاحظت account activity مش بتاعتي.,لاحظت account activity مش بتاعتي.,True,,"أكيد، إذا لاحظت أن ""account activity"" (نشاط الحساب) مش بتاعتك، فهذا قد يشير إلى أن هناك تغييرًا أو نشاطًا غير مُسجل أو مُستند إلى معلوماتك الشخصية أو الحساب.
+S045,E180,in_scope,"Arabizi, Arabic script",la7azt account activity mesh beta3ty.,لاحظت account activity مش بتاعتي.,لاحظت account activity مش بتاعتي.,True,,"أكيد، إذا لاحظت أن ""account activity"" (نشاط الحساب) مش بتاعتك، فهذا قد يشير إلى أن هناك تغييرًا أو نشاطًا غير مُسجل أو مُستند إلى معلوماتك الشخصية أو الحساب.
 
 لكن لكي أُساعدك بشكل دقيق، يُفضل أن توضح لي:
 
@@ -781,7 +781,7 @@ S045,E180,in_scope,la7azt account activity mesh beta3ty.,لاحظت account acti
 
 مثلاً:
 - إذا كان ح",2,2,0,success,11,9
-S046,E184,in_scope,7assa en someone got into my account.,حاسة إن someone got into my account.,حاسّة إن someone got into my account.,False,,"It's important to take this seriously. If you suspect that someone has gained access to your account, here’s what you should do immediately:
+S046,E184,in_scope,"Arabizi, Arabic script",7assa en someone got into my account.,حاسة إن someone got into my account.,حاسّة إن someone got into my account.,False,,"It's important to take this seriously. If you suspect that someone has gained access to your account, here’s what you should do immediately:
 
 ### 1. **Change Your Password**
 - Log in to your account (if possible) and change your password immediately.
@@ -807,7 +807,7 @@ S046,E184,in_scope,7assa en someone got into my account.,حاسة إن someone g
 
 ### 6. **Consider a Security Audit**
 - If you're unsure,",2,2,0,success,9,10
-S047,E188,in_scope,3ayza a3mel delete lel account.,عايزة أعمل delete للـ account.,عايزة أعمل delete للـ account.,True,,"أكيد، ممكن تساعدك على إجراء عملية **حذف الحساب (delete account)**، لكن أولًا أحتاج أن أعرف:
+S047,E188,in_scope,"Arabizi, Arabic script",3ayza a3mel delete lel account.,عايزة أعمل delete للـ account.,عايزة أعمل delete للـ account.,True,,"أكيد، ممكن تساعدك على إجراء عملية **حذف الحساب (delete account)**، لكن أولًا أحتاج أن أعرف:
 
 1. **ما نوع الحساب اللي عايز تُحذفه؟**  
    (مثلاً: حساب في فيسبوك، تويتر، إنستغرام، جوجل، أو حساب في موقع ما؟)
@@ -825,7 +825,7 @@ S047,E188,in_scope,3ayza a3mel delete lel account.,عايزة أعمل delete ل
 > ""لحذف حسابك على فيسبوك:  
 > 1. افتح فيسبوك على المتصفح.  
 > 2. اذهب إلى 'الإعدادات' > 'الخصوصية وال",2,2,0,success,11,10
-S048,E192,in_scope,eh el personal data elly mawgooda 3ala el account beta3y?,إيه الـ personal data اللي موجودة على الـ account بتاعي؟,إيه الـ personal data اللي متخزنة على الـ account بتاعي؟,False,,"السؤال: ""إيه الـ personal data اللي موجودة على الـ account بتاعي؟""  
+S048,E192,in_scope,"Arabizi, Arabic script",eh el personal data elly mawgooda 3ala el account beta3y?,إيه الـ personal data اللي موجودة على الـ account بتاعي؟,إيه الـ personal data اللي متخزنة على الـ account بتاعي؟,False,,"السؤال: ""إيه الـ personal data اللي موجودة على الـ account بتاعي؟""  
 يعني: ""ما هي البيانات الشخصية الموجودة على حسابي؟""
 
 الإجابة:
@@ -853,7 +853,7 @@ S048,E192,in_scope,eh el personal data elly mawgooda 3ala el account beta3y?,إ�
 ### 4. **معلومة التفاعل والسلوك:**
 - مشاركاتك (مثلاً: مشاركات، تعليقات، متابعة)
 - تفضيلاتك (م",2,1,0,partial,19,17
-S049,E196,in_scope,mesh 3arfa a3mel login lel account.,مش عارفة أعمل login للـ account.,مش عارفة أعمل login للـ account.,True,,"لا مشكلة! 😊  
+S049,E196,in_scope,"Arabizi, Arabic script",mesh 3arfa a3mel login lel account.,مش عارفة أعمل login للـ account.,مش عارفة أعمل login للـ account.,True,,"لا مشكلة! 😊  
 أنا هنا لمساعدتك.  
 لكن أولًا، أحتاج أن أوضح لك شيئًا مهمًا:
 
@@ -873,7 +873,7 @@ S049,E196,in_scope,mesh 3arfa a3mel login lel account.,مش عارفة أعمل 
 - هل تعرف اسم الحساب أو البريد الإلكتروني؟  
 - هل نسيت كلمة المرور؟  
 - هل ترغب",2,2,0,success,13,11
-S050,E200,in_scope,"el verification code mesh bywsalny, momken teb3atoly el code?",الـ verification code مش بيوصلني، ممكن تبعتولي الـ code؟,الـ verification code مش بيوصلني، ممكن تبعتولي الـ code؟,True,,"لا يمكنني مساعدتك في إرسال أو تبادل رموز التحقق (verification code) لأي حساب أو خدمة، سواء كانت من تطبيقات أو مواقع إلكترونية.
+S050,E200,in_scope,"Arabizi, Arabic script","el verification code mesh bywsalny, momken teb3atoly el code?",الـ verification code مش بيوصلني، ممكن تبعتولي الـ code؟,الـ verification code مش بيوصلني، ممكن تبعتولي الـ code؟,True,,"لا يمكنني مساعدتك في إرسال أو تبادل رموز التحقق (verification code) لأي حساب أو خدمة، سواء كانت من تطبيقات أو مواقع إلكترونية.
 
 الرمز التحقق هو معلومات أمنية تُرسل إلى جهازك أو بريدك الإلكتروني لتأكيد هويتك، ويُفضل أن تُحافظ عليه بسرية تامة. مشاركته أو تبادله مع أي شخص، حتى لو كان من مصادر موثوقة، قد يعرضك لخطر أمني مثل التصيد أو التزوير.
 
@@ -887,7 +887,7 @@ S050,E200,in_scope,"el verification code mesh bywsalny, momken teb3atoly el code
 إذا أخبرتني باسم الخدمة (مثلاً: تطبيق واتساب، جوجل، بطاقة ائتمان، إلخ)، يمكنني مساعدتك في خطوات التحقق أو إرشادك إلى الحلول المناسبة.
 
 أنا هنا لمساعدتك بأمان وخصوصية. 🚀🔒",2,2,0,success,19,20
-S051,E204,in_scope,et3amaly charge 3ala subscription kont fakra eny cancelled.,اتعملي charge على subscription كنت فاكرة إني cancelled.,اتعمل لي charge على subscription كنت فاكرة إني cancelled.,False,,"أهلاً! يبدو أنك تتحدث عن توقف اشتراك (subscription) وربما تعتقد أن هناك تكاليف (charge) تُفرض على حسابك رغم أنك قمت بإلغائه.
+S051,E204,in_scope,"Arabizi, Arabic script",et3amaly charge 3ala subscription kont fakra eny cancelled.,اتعملي charge على subscription كنت فاكرة إني cancelled.,اتعمل لي charge على subscription كنت فاكرة إني cancelled.,False,,"أهلاً! يبدو أنك تتحدث عن توقف اشتراك (subscription) وربما تعتقد أن هناك تكاليف (charge) تُفرض على حسابك رغم أنك قمت بإلغائه.
 
 لكن من المهم التوضيح:
 
@@ -897,7 +897,7 @@ S051,E204,in_scope,et3amaly charge 3ala subscription kont fakra eny cancelled.,�
 - خطأ في النظام (مثلاً: تم إلغاء الاشتراك لكن النظام لم يُحدث التحديث).
 - تكاليف مُبقيّة (prorated) لفترة قصيرة (مثلاً: إذا كان الاشتراك ينتهي في 30 يومًا، وتم الإلغاء بعد 10 أيام، قد تُفرض تكلفة للفترة المتبقيّة).
 - تكاليف مُستمرة بسبب تأخير في الإلغاء (مثلاً: لم يتم إ",2,1,0,partial,16,14
-S052,E208,in_scope,3ayza a3mel cancel lel subscription abl el next charge.,عايزة أعمل cancel للـ subscription قبل الـ next charge.,عايزة أعمل cancel للـ subscription قبل الـ next charge.,True,,"أكيد! إذا كنت عايزّة تُلغِّي (cancel) اشتراكك قبل أن يُطبَّق التسديد التالي (next charge)، فهذا ممكن، وسأشرح لك الخطوات ببساطة حسب نوع الخدمة أو المنصة اللي تستخدمها.
+S052,E208,in_scope,"Arabizi, Arabic script",3ayza a3mel cancel lel subscription abl el next charge.,عايزة أعمل cancel للـ subscription قبل الـ next charge.,عايزة أعمل cancel للـ subscription قبل الـ next charge.,True,,"أكيد! إذا كنت عايزّة تُلغِّي (cancel) اشتراكك قبل أن يُطبَّق التسديد التالي (next charge)، فهذا ممكن، وسأشرح لك الخطوات ببساطة حسب نوع الخدمة أو المنصة اللي تستخدمها.
 
 لكن أولًا:  
 الـ **""cancel before next charge""** يعني أنك تُلغِّي الاشتراك قبل أن يُسدد التسديد القادم، أي أنك تُوقف الخدمة قبل أن يُطبَّق السعر الجديد أو التسديد التالي.
@@ -914,7 +914,7 @@ S052,E208,in_scope,3ayza a3mel cancel lel subscription abl el next charge.,عا�
 > إذا كان التسديد التالي في 3 أيام، يمكنك إلغاء الـ subscription قبل أن يُسدد، وستُوقف الخدمة قبل أن يُطبَّق السعر.
 
 #### 2. **ال",2,2,0,success,15,15
-S053,E212,in_scope,leh el subscription price zead?,ليه الـ subscription price زاد؟,ليه الـ subscription price زاد؟,True,,"سؤالك: ""ليه الـ subscription price زاد؟""  
+S053,E212,in_scope,"Arabizi, Arabic script",leh el subscription price zead?,ليه الـ subscription price زاد؟,ليه الـ subscription price زاد؟,True,,"سؤالك: ""ليه الـ subscription price زاد؟""  
 أو ببساطة: ""لماذا ارتفع سعر الاشتراك؟""
 
 الإجابة تعتمد على سبب محدد، لكن من الممكن أن يكون السبب عادةً واحدًا من هذه الأسباب:
@@ -932,7 +932,7 @@ S053,E212,in_scope,leh el subscription price zead?,ليه الـ subscription pr
 
 ### 3. **الاستجابة للسوق أو المنافسة**
 - إذا ارتفع سعر منافسين، قد تُرفع الأس",2,1,0,partial,7,9
-S054,E216,in_scope,yenfa3 a3mel switch le subscription plan tany?,ينفع أعمل switch لـ subscription plan تاني؟,ينفع أعمل switch لـ subscription plan تاني؟,True,,"سؤالك: ""ينفع أعمل switch لـ subscription plan تاني؟""  
+S054,E216,in_scope,"Arabizi, Arabic script",yenfa3 a3mel switch le subscription plan tany?,ينفع أعمل switch لـ subscription plan تاني؟,ينفع أعمل switch لـ subscription plan تاني؟,True,,"سؤالك: ""ينفع أعمل switch لـ subscription plan تاني؟""  
 أو ببساطة: ""هل ينفع أن أعمل switch لـ subscription plan تاني؟""
 
 نحلل السؤال من زاوية مهنية وتقنية، لأن ""switch"" في سياق ""subscription plan"" يُفهم عادةً كـ **تحويل (مُستند إلى خدمة اشتراك)**.
@@ -951,7 +951,7 @@ S054,E216,in_scope,yenfa3 a3mel switch le subscription plan tany?,ينفع أع�
 ---
 
 ## �",1,1,0,partial,13,12
-S055,E220,in_scope,el subscription beta3y hayetgaded emta?,الـ subscription بتاعي هيتجدد إمتى؟,الـ subscription بتاعي هيتجدد إمتى؟,True,,"أهلاً! علّمك أن ""الـ subscription"" بتاعك هيتجدد إمتى؟  
+S055,E220,in_scope,"Arabizi, Arabic script",el subscription beta3y hayetgaded emta?,الـ subscription بتاعي هيتجدد إمتى؟,الـ subscription بتاعي هيتجدد إمتى؟,True,,"أهلاً! علّمك أن ""الـ subscription"" بتاعك هيتجدد إمتى؟  
 لكن لأساعدك بدقة، أحتاج إلى معرفة بعض التفاصيل:
 
 1. **ما نوع الـ subscription؟**  
@@ -970,7 +970,7 @@ S055,E220,in_scope,el subscription beta3y hayetgaded emta?,الـ subscription �
 أو إذا كانت تجديد تلقائيًا، أقدر أقول لك متى يُرسل لك إشعار.
 
 ببساطة: **أرسل لي تفاصيل الـ subscription، وسأجيبك بدقة!** 😊",2,2,0,success,12,13
-S056,E224,in_scope,yenfa3 a3mel pause lel subscription lemoddet shahr?,ينفع أعمل pause للـ subscription لمدة شهر؟,ينفع أعمل pause للـ subscription لمدة شهر؟,True,,"سؤالك: ""ينفع أعمل pause للـ subscription لمدة شهر؟""  
+S056,E224,in_scope,"Arabizi, Arabic script",yenfa3 a3mel pause lel subscription lemoddet shahr?,ينفع أعمل pause للـ subscription لمدة شهر؟,ينفع أعمل pause للـ subscription لمدة شهر؟,True,,"سؤالك: ""ينفع أعمل pause للـ subscription لمدة شهر؟""  
 أي أنك تسأل: هل من المفيد أن تُوقف (أو تُجمّع) اشتراكك (Subscription) لمدة شهر؟
 
 الإجابة: **نعم، يمكن أن يكون من المفيد في بعض الحالات، لكن يجب أن تُحلّل الوضع بعناية حسب نوع الـ Subscription واحتياجاتك.**
@@ -989,7 +989,7 @@ S056,E224,in_scope,yenfa3 a3mel pause lel subscription lemoddet shahr?,ينفع 
    مثلاً: توقف عن استخدام تطبيق تدريب لفترة عطلة، أو توقف عن اشتراكك في خدمة مساعدة للعمل لفترة عطلة.
 
 3. **إذا كان الـ Subscription يُدفع مسبقًا (مثلاً: سن",1,0,0,misread_word,16,11
-S057,E228,in_scope,el next subscription charge haykoon emta?,الـ next subscription charge هيكون إمتى؟,الـ next subscription charge هيكون إمتى؟,True,,"السؤال: ""الـ next subscription charge هيكون إمتى؟""  
+S057,E228,in_scope,"Arabizi, Arabic script",el next subscription charge haykoon emta?,الـ next subscription charge هيكون إمتى؟,الـ next subscription charge هيكون إمتى؟,True,,"السؤال: ""الـ next subscription charge هيكون إمتى؟""  
 أو ببساطة: ""متى تكون التكلفة التالية للإشتراك؟""
 
 الإجابة:
@@ -1009,7 +1009,7 @@ S057,E228,in_scope,el next subscription charge haykoon emta?,الـ next subscri
 مثلاً:
 - إذا اشتريت إشتراكًا شهريًا في 1 أبريل، فإن التكلفة التالية (الشهر التالي) ستكون في 1 مايو.
 - إذا كان الإشتراك سنويًا، فالتكلفة التالية تُدفع",2,2,0,success,10,11
-S058,E232,in_scope,el subscription payment failed.,الـ subscription payment failed.,الـ subscription payment failed.,True,,"The error message **""Subscription payment failed""** indicates that a payment attempt for a subscription could not be completed. This is a common issue in subscription-based services (like SaaS platforms, streaming apps, or membership services). Here’s a breakdown of what it might mean and how to resolve it:
+S058,E232,in_scope,"Arabizi, Arabic script",el subscription payment failed.,الـ subscription payment failed.,الـ subscription payment failed.,True,,"The error message **""Subscription payment failed""** indicates that a payment attempt for a subscription could not be completed. This is a common issue in subscription-based services (like SaaS platforms, streaming apps, or membership services). Here’s a breakdown of what it might mean and how to resolve it:
 
 ---
 
@@ -1044,7 +1044,7 @@ S058,E232,in_scope,el subscription payment failed.,الـ subscription payment f
 
 #### For the **User**:
 - ✅",2,2,0,success,5,6
-S059,E236,in_scope,momken a5od receipt lel subscription payment?,ممكن آخد receipt للـ subscription payment؟,ممكن آخد receipt للـ subscription payment؟,True,,"بالطبع! إذا كنت ترغب في الحصول على **receipt (إثبات دفع)** لدفع اشتراك (subscription payment)، فيمكنك التحقق من الطرق التالية حسب منصة الدفع أو الخدمة التي تستخدمها:
+S059,E236,in_scope,"Arabizi, Arabic script",momken a5od receipt lel subscription payment?,ممكن آخد receipt للـ subscription payment؟,ممكن آخد receipt للـ subscription payment؟,True,,"بالطبع! إذا كنت ترغب في الحصول على **receipt (إثبات دفع)** لدفع اشتراك (subscription payment)، فيمكنك التحقق من الطرق التالية حسب منصة الدفع أو الخدمة التي تستخدمها:
 
 ### 1. **إذا دفعت عبر موقع أو تطبيق (مثل: Google, Apple, Stripe, PayPal، أو خدمة تدريس/محتوى):**
 - ابحث في **مُستندات الدفع** أو **الإشعارات** في حسابك.
@@ -1062,7 +1062,7 @@ S059,E236,in_scope,momken a5od receipt lel subscription payment?,ممكن آخد
 ### 2. **إذا دفعت عبر بنك أو تطبيق دفع (مثل: مصرف، محفظة، أو تطبيق دفع):**
 - اذهب إلى **مُستندات الدفع** أو **الإشعارات المالية** في تطبيقك.
 - ابحث عن ""الدفعات"" أو ""ال",2,2,0,success,11,10
-S060,E240,in_scope,el subscription beta3y lessa active?,الـ subscription بتاعي لسه active؟,الـ subscription بتاعي still active؟,False,,"أهلاً! 😊  
+S060,E240,in_scope,"Arabizi, Arabic script",el subscription beta3y lessa active?,الـ subscription بتاعي لسه active؟,الـ subscription بتاعي still active؟,False,,"أهلاً! 😊  
 لكن لأساعدك بدقة، أحتاج إلى معرفة بعض التفاصيل:
 
 - هل تستخدم خدمة ما (مثل: YouTube، Netflix، برنامج تدريس، تطبيق مدرسي، أو أي خدمة تُعرف بـ ""subscription"")؟  
@@ -1073,7 +1073,7 @@ S060,E240,in_scope,el subscription beta3y lessa active?,الـ subscription بت
 بمجرد أن تُخبرني باسم الخدمة أو السياق، أقدر أتحقق لك بدقة: هل الـ subscription فعلاً active أم لا؟ 🚀
 
 أو لو كنت تستخدم تطبيقًا معينًا (مثل: Canva، Google Workspace، أو أي برنامج)، أخبرني وسأُجيبك بسلاسة! 😊",2,2,0,success,9,10
-S061,E244,in_scope,el app mesh بيعمل sync lel latest data.,الـ app مش بيعمل sync للـ latest data.,الـ app مش بيعمل sync للـ latest data.,True,,"أكيد، دا مشكلة شائعة في تطبيقات الـ App، خصوصًا إذا كانت تُستخدم لعرض بيانات حديثة (latest data). دا بس يُمكن أن يكون سببها عدة أسباب، ونقدر نحللها ونقدم حلول:
+S061,E244,in_scope,"Arabizi, Arabic script",el app mesh بيعمل sync lel latest data.,الـ app مش بيعمل sync للـ latest data.,الـ app مش بيعمل sync للـ latest data.,True,,"أكيد، دا مشكلة شائعة في تطبيقات الـ App، خصوصًا إذا كانت تُستخدم لعرض بيانات حديثة (latest data). دا بس يُمكن أن يكون سببها عدة أسباب، ونقدر نحللها ونقدم حلول:
 
 ---
 
@@ -1093,7 +1093,7 @@ S061,E244,in_scope,el app mesh بيعمل sync lel latest data.,الـ app مش 
 
 5. **الـ Cache مُخزن بيانات قديمة**
    - الـ App يحتف",2,2,0,success,12,13
-S062,E248,in_scope,el steps mesh syncing ma3 eny بمشي.,الـ steps مش syncing مع إني بمشي.,الـ steps مش syncing مع إني بمشي.,True,,"أكيد! ما تقوله ""الـ steps مش syncing مع إني بمشي"" يعني أن خطواتك (التي تُسجل في تطبيق مثل Apple Health أو Google Fit أو أي تطبيق تتبع النشاط) **ليست مُسجّلة أو مُتّسقة** مع جهازك أو تطبيقك، أو أنك تمشي لكن لا تظهر الخطوات.
+S062,E248,in_scope,"Arabizi, Arabic script",el steps mesh syncing ma3 eny بمشي.,الـ steps مش syncing مع إني بمشي.,الـ steps مش syncing مع إني بمشي.,True,,"أكيد! ما تقوله ""الـ steps مش syncing مع إني بمشي"" يعني أن خطواتك (التي تُسجل في تطبيق مثل Apple Health أو Google Fit أو أي تطبيق تتبع النشاط) **ليست مُسجّلة أو مُتّسقة** مع جهازك أو تطبيقك، أو أنك تمشي لكن لا تظهر الخطوات.
 
 هناك عدة أسباب شائعة لهذا السبب، وسأوضح لك خطوات تدقيق وحل مشكلة ""الخطوات مش sync"":
 
@@ -1108,7 +1108,7 @@ S062,E248,in_scope,el steps mesh syncing ma3 eny بمشي.,الـ steps مش syn
 ### ✅ 2. تأكد من أن تطبيق تتبع النشاط مُفعّل
 - افتح تطبيقك (مثل Apple Health أو Google Fit أو Strava أو تطبيق الساعات).
 - تأكد من",2,2,0,success,12,12
-S063,E252,in_scope,el points ekhtefet ba3d ma khalast el challenge.,الـ points اختفت بعد ما خلصت الـ challenge.,الـ points اختفت بعد ما خلصت الـ challenge.,True,,"أهلاً! يبدو أنك تشير إلى أن ""الـ points"" (النقاط) اختفت بعد انتهاء التحدي (Challenge). هذا قد يكون متعلق بمنصة أو تطبيق معين (مثل منصات التعلم، أو تطبيقات التحديات، أو حتى منصات مثل Duolingo، أو تطبيقات التدريب، أو حتى منصات مثل Khan Academy أو Quizlet).
+S063,E252,in_scope,"Arabizi, Arabic script",el points ekhtefet ba3d ma khalast el challenge.,الـ points اختفت بعد ما خلصت الـ challenge.,الـ points اختفت بعد ما خلصت الـ challenge.,True,,"أهلاً! يبدو أنك تشير إلى أن ""الـ points"" (النقاط) اختفت بعد انتهاء التحدي (Challenge). هذا قد يكون متعلق بمنصة أو تطبيق معين (مثل منصات التعلم، أو تطبيقات التحديات، أو حتى منصات مثل Duolingo، أو تطبيقات التدريب، أو حتى منصات مثل Khan Academy أو Quizlet).
 
 لكن بما أنك لم تحدد المنصة أو السياق الدقيق، سأقدم لك تفسيرًا عامًا وحلولًا ممكنة:
 
@@ -1121,7 +1121,7 @@ S063,E252,in_scope,el points ekhtefet ba3d ma khalast el challenge.,الـ point
 
 2. **النقطة تُعرض في مكان معين (مثل ""الإحصائيات"" أو ""المنصة"")**  
    - قد تكون النقاط ظهرت في مكان آخر (مثل ""السجل"" أو ""الإحصائيات"")، لكن لم تظهر في ""الصفحة الرئيسية"" أو ""النقطة المُ",2,1,0,partial,16,15
-S064,E256,in_scope,khalast el requirements bas el reward ma weselsh.,خلصت الـ requirements بس الـ reward ما وصلش.,خلصت الـ requirements بس الـ reward ما وصلش.,True,,"أكيد! ما بس الـ **requirements** خلصت، الـ **reward** ما وصلش؟ 😅  
+S064,E256,in_scope,"Arabizi, Arabic script",khalast el requirements bas el reward ma weselsh.,خلصت الـ requirements بس الـ reward ما وصلش.,خلصت الـ requirements بس الـ reward ما وصلش.,True,,"أكيد! ما بس الـ **requirements** خلصت، الـ **reward** ما وصلش؟ 😅  
 هذا شكل من أشكال التعبير اللي يُستخدم في بيئة تطوير أو تعاون، وربما تعبّر عن توتر أو تأخير في توصيل المكافأة أو النتيجة المطلوبة.
 
 إذا كنت تقصِد شيئًا محددًا مثل:
@@ -1140,7 +1140,7 @@ S064,E256,in_scope,khalast el requirements bas el reward ma weselsh.,خلصت ا
 فأرسل لي تفاصيل أكثر عن السياق (مثلاً: هل هو مشروع؟ هل في شركة؟ هل في مدرسة؟ هل في تطبيق؟) وسأكون أسرع في مساعدتك.
 
 أو لو",1,1,0,wrong_domain,13,16
-S065,E260,in_scope,ana khalast el challenge bas lessa el status beta3o incomplete.,أنا خلصت الـ challenge بس لسه الـ status بتاعه incomplete.,أنا خلصت الـ challenge بس لسه status بتاعه incomplete.,False,,"أكيد! 😊  
+S065,E260,in_scope,"Arabizi, Arabic script",ana khalast el challenge bas lessa el status beta3o incomplete.,أنا خلصت الـ challenge بس لسه الـ status بتاعه incomplete.,أنا خلصت الـ challenge بس لسه status بتاعه incomplete.,False,,"أكيد! 😊  
 الـ **challenge** خلصت، وسأقدر أفهم أنك بتحاول تكمل الـ **status** (الحالة) بس ما بتحصل على ""complete"" بعد ما خلصت المهمة. هذا شائع، وخصوصًا إذا كان الـ status يعتمد على تحقق شروط معينة أو تحقق تلقائي.
 
 إليك بعض الأسباب الممكنة وطريقة التحقق:
@@ -1155,7 +1155,7 @@ S065,E260,in_scope,ana khalast el challenge bas lessa el status beta3o incomplet
 2. **الـ challenge مُصمم على شكل ""مهمة تُختبر"" (testable)**  
    قد يكون الـ status يعتمد على نتائج اختبارات (tests) أو تحقق من كودك.  
    ✅ الحل: تأكد أن كل اختبار نجح، وربما توجد خطأ بسيط في الكود (م",2,2,0,success,16,21
-S066,E264,in_scope,fe feature kont بستعملها w mesh available 3ala el account دلwa2ty.,في feature كنت بستعملها ومش available على الـ account دلوقتي.,في feature كنت بستخدمها ومش available على الـ account دلوقتي.,False,,"أكيد! أخبرني أكثر عن الميزة اللي كنت تستخدمها، ونوع الحساب (مثلاً: فيسبوك، إنستغرام، تيك توك، أو حساب مخصص؟)، ومتى كانت متاحة ومتى لم تكن، ومتى توقفت عن العمل أو لم تكن متاحة.
+S066,E264,in_scope,"Arabizi, Arabic script",fe feature kont بستعملها w mesh available 3ala el account دلwa2ty.,في feature كنت بستعملها ومش available على الـ account دلوقتي.,في feature كنت بستخدمها ومش available على الـ account دلوقتي.,False,,"أكيد! أخبرني أكثر عن الميزة اللي كنت تستخدمها، ونوع الحساب (مثلاً: فيسبوك، إنستغرام، تيك توك، أو حساب مخصص؟)، ومتى كانت متاحة ومتى لم تكن، ومتى توقفت عن العمل أو لم تكن متاحة.
 
 بمجرد أن أعرف التفاصيل، أقدر أساعدك بطرق:
 
@@ -1165,7 +1165,7 @@ S066,E264,in_scope,fe feature kont بستعملها w mesh available 3ala el acc
 - أو حتى أقترح طريقة لتعديل الـ feature لتتناسب مع الحالة الحالية.
 
 أرسل لي التفاصيل ونبدأ! 😊",2,2,0,success,21,19
-S067,E268,in_scope,el notifications batalet tewsalny men el app.,الـ notifications بطلت توصلني من الـ app.,الـ notifications بطلت توصلني من الـ app.,True,,"أكيد! ماذا تقصده بـ ""الـ notifications بطلت توصلني من الـ app""؟  
+S067,E268,in_scope,"Arabizi, Arabic script",el notifications batalet tewsalny men el app.,الـ notifications بطلت توصلني من الـ app.,الـ notifications بطلت توصلني من الـ app.,True,,"أكيد! ماذا تقصده بـ ""الـ notifications بطلت توصلني من الـ app""؟  
 هل تقصد أن:
 
 - لم تصل لك إشعارات من تطبيق معين؟  
@@ -1186,7 +1186,7 @@ S067,E268,in_scope,el notifications batalet tewsalny men el app.,الـ notifica
 - اسم التطبيق  
 - نوع الهاتف (مثلاً: آيفون، أندرويد)  
 - ما الذي تنتظره من إشعار",2,2,0,success,13,14
-S068,E272,in_scope,a8ayar el profile name ezay?,أغير الـ profile name إزاي؟,أغير الـ profile name إزاي؟,True,,"لإعادة تسمية ""الـ profile name"" (اسم الملف أو المُستخدم أو المُلصق) يعتمد على **أين تستخدم هذا الاسم**، لأن المعنى يختلف حسب السياق.
+S068,E272,in_scope,"Arabizi, Arabic script",a8ayar el profile name ezay?,أغير الـ profile name إزاي؟,أغير الـ profile name إزاي؟,True,,"لإعادة تسمية ""الـ profile name"" (اسم الملف أو المُستخدم أو المُلصق) يعتمد على **أين تستخدم هذا الاسم**، لأن المعنى يختلف حسب السياق.
 
 إليك أبرز الاحتمالات وطريقة تغيير ""الـ profile name"" في كل حالة:
 
@@ -1208,7 +1208,7 @@ S068,E272,in_scope,a8ayar el profile name ezay?,أغير الـ profile name إ�
   1. افتح الملف أو المجلد.
   2. انقر بزر الماوس الأيمن (أو اضغط على الملف).
   3. ا",2,2,0,success,9,10
-S069,E276,in_scope,el app kol ma baft7o byecrash.,الـ app كل ما بفتحه بي crash.,الـ app كل ما بفتحه بي crash.,True,"'byecrash' split as بي + crash, keeping the English verb in Latin","أهلاً! إذا كان التطبيق (App) يُعَدّ ""crash"" كلما فتحته، فهذا يُشير إلى أن التطبيق يُغلق أو يُظهر خطأ فوري عند البدء. إليك خطوات يمكنك اتباعها لحل المشكلة أو تحديد السبب:
+S069,E276,in_scope,"Arabizi, Arabic script",el app kol ma baft7o byecrash.,الـ app كل ما بفتحه بي crash.,الـ app كل ما بفتحه بي crash.,True,"'byecrash' split as بي + crash, keeping the English verb in Latin","أهلاً! إذا كان التطبيق (App) يُعَدّ ""crash"" كلما فتحته، فهذا يُشير إلى أن التطبيق يُغلق أو يُظهر خطأ فوري عند البدء. إليك خطوات يمكنك اتباعها لحل المشكلة أو تحديد السبب:
 
 ---
 
@@ -1231,7 +1231,7 @@ S069,E276,in_scope,el app kol ma baft7o byecrash.,الـ app كل ما بفتح�
 ### 📱 3. **تحقق من مساحة التخزين**
 - إذا كان جهازك ممتلئًا (أعلى من 80%)، فقد يُعطل التطبيق.
 - اذهب إلى ""الإعدادات"" > ""الذاكرة"" أو",2,2,0,success,13,11
-S070,E280,in_scope,el data betet7adeth fel a5er bas beta5od hours.,الـ data بتتحدث في الآخر بس بتاخد hours.,الـ data بتتحدث في الآخر بس بتاخد hours.,True,,"أفهم ما تقصده! إذا كنت تقصد أن ""الـ data بتتحدث في الآخر بس بتاخد hours"" (أي أن البيانات تُعالج أو تُعرض في مكان معين، لكنها تأخذ وقتًا طويلاً – ""hours"")، فربما تقصِد أن:
+S070,E280,in_scope,"Arabizi, Arabic script",el data betet7adeth fel a5er bas beta5od hours.,الـ data بتتحدث في الآخر بس بتاخد hours.,الـ data بتتحدث في الآخر بس بتاخد hours.,True,,"أفهم ما تقصده! إذا كنت تقصد أن ""الـ data بتتحدث في الآخر بس بتاخد hours"" (أي أن البيانات تُعالج أو تُعرض في مكان معين، لكنها تأخذ وقتًا طويلاً – ""hours"")، فربما تقصِد أن:
 
 - البيانات تُعالج أو تُحلّل ببطء (تستغرق ساعات).
 - توجد تأخير في إرسال أو تلقي البيانات.
@@ -1248,7 +1248,7 @@ S070,E280,in_scope,el data betet7adeth fel a5er bas beta5od hours.,الـ data �
 أو إذا كنت تقصد شيئًا مجازيًا أو مُعبّرًا (مثلاً: ""البيانات تتحدث في الآخر بس بتاخد hours"")، فربما تقصِد أن:
 
 > ""البيانات تُظهر نتائج أو تُفسر أحداثًا في المستقبل، لكنها تأخذ وقتًا طويلاً (ساعات) لتُُعالج أو ت",1,1,0,unclear,17,14
-S071,E284,in_scope,feen el ordar? kan mfrood yesal embare7,فين الـ ordar؟ كان المفروض يوصل امبارح,فين الـ ordar؟ المفروض الـ delivery يوصل امبارح,False,"'ordar' is a deliberate misspelling (typos edge case), kept in Latin as written","أهلاً! يبدو أنك تتحدث عن تأخر توصيل طلب (Order) كان مفترض أن يُوصل قبل الظهر أو في وقت مبكر. إليك طريقة يمكنك من خلالها التعامل مع الأمر:
+S071,E284,in_scope,"Arabizi, Arabic script",feen el ordar? kan mfrood yesal embare7,فين الـ ordar؟ كان المفروض يوصل امبارح,فين الـ ordar؟ المفروض الـ delivery يوصل امبارح,False,"'ordar' is a deliberate misspelling (typos edge case), kept in Latin as written","أهلاً! يبدو أنك تتحدث عن تأخر توصيل طلب (Order) كان مفترض أن يُوصل قبل الظهر أو في وقت مبكر. إليك طريقة يمكنك من خلالها التعامل مع الأمر:
 
 ### 1. **أولاً: تأكد من تفاصيل الطلب**
 - ما هو نوع الطلب؟ (مثلاً: طلب توصيل طعام، منتج، خدمة، إلخ)
@@ -1264,7 +1264,7 @@ S071,E284,in_scope,feen el ordar? kan mfrood yesal embare7,فين الـ ordar؟
 - أو أرسل تذكيرًا عبر التطبيق (إذا كان متوفرًا).
 
 ### 3. **اط",2,2,0,success,15,17
-S072,E288,in_scope,el refund lesa maweselsh?? talabto mn kam youm pls check,الـ refund لسه ما وصلش؟؟ طلبته من كام يوم pls check,refund request اتعمل من days ولسه مش back ممكن check,False,,"أهلاً! يبدو أنك تطلب متابعة حالة الـ **Refund** (الإرجاع) لطلبك، وتسأل عن سبب تأخر وصوله.
+S072,E288,in_scope,"Arabizi, Arabic script",el refund lesa maweselsh?? talabto mn kam youm pls check,الـ refund لسه ما وصلش؟؟ طلبته من كام يوم pls check,refund request اتعمل من days ولسه مش back ممكن check,False,,"أهلاً! يبدو أنك تطلب متابعة حالة الـ **Refund** (الإرجاع) لطلبك، وتسأل عن سبب تأخر وصوله.
 
 لكن لأساعدك بشكل دقيق، أحتاج إلى بعض التفاصيل:
 
@@ -1279,7 +1279,7 @@ S072,E288,in_scope,el refund lesa maweselsh?? talabto mn kam youm pls check,ال
 أو إذا كنت تكتب هذا في سياق محادثة مع خدمة عملاء، يمكنني مساعدتك في صياغة رسالة مهنية وواضحة للإبلاغ عن التأخير.
 
 أرسل لي التفاصيل، وسأُجيبك بسرعة! 😊",2,2,0,success,19,20
-S073,E292,in_scope,et5asemt 2x le nafs el order momken check?,اتخصمت 2x لنفس الـ order ممكن check؟,charged 2x لنفس الـ order ممكن check؟,False,,"أكيد! لكن أولًا، أحتاج إلى توضيح ما المقصود بـ ""اتخصمت 2x لنفس الـ order"".
+S073,E292,in_scope,"Arabizi, Arabic script",et5asemt 2x le nafs el order momken check?,اتخصمت 2x لنفس الـ order ممكن check؟,charged 2x لنفس الـ order ممكن check؟,False,,"أكيد! لكن أولًا، أحتاج إلى توضيح ما المقصود بـ ""اتخصمت 2x لنفس الـ order"".
 
 هل تقصد أنك:
 
@@ -1296,14 +1296,14 @@ S073,E292,in_scope,et5asemt 2x le nafs el order momken check?,اتخصمت 2x ل
 - هل هناك خطأ في النظام أو تكرار؟
 
 بمجرد توضيح ذلك",0,0,0,misread_word,17,15
-S074,E296,in_scope,mesh 3arfa a5osh,مش عارفة أخش,مش عارفة login,False,"'a5osh' (log in, slang) written as أخش","أكيد، مش محتاجة تقلق! 😊  
+S074,E296,in_scope,"Arabizi, Arabic script",mesh 3arfa a5osh,مش عارفة أخش,مش عارفة login,False,"'a5osh' (log in, slang) written as أخش","أكيد، مش محتاجة تقلق! 😊  
 إذا كنت عارفة أخش، فهذا طبيعي، وكل الناس تمر بمشاعر الخوف من وقت لآخر.  
 إذا شتغلت على شيء محدد (مثلاً: خوف من التحدث، أو من الفشل، أو من المواقف الجديدة)، يمكنني مساعدتك على تفكيكه وفهمه بسهولة.
 
 أو لو بس تقدر تقولي ""مش عارفة أخش"" بس، فهذا يعني أنك بتحتاج لدعم بسيط، وسأكون بجانبك بكل سرور 💙
 
 أكيد، ما تتردد، ابدأ من أي مكان تريده! 🤗",0,0,0,misread_word,8,6
-S075,E300,in_scope,"da bgd ridiculous, feen el order? kan mafrood ykoon hena embare7!",ده بجد ridiculous، فين الـ order؟ كان المفروض يكون هنا امبارح!,بجد ده ridiculous، فين الـ order؟ كان المفروض يبقى هنا امبارح!,False,,"أكيد، تعبيرك ""ده بجد ridiculous، فين الـ order؟ كان المفروض يكون هنا امبارح!"" يحمل طابعًا مزيج من الغضب، التساؤل، والانفعال، وهو مفهوم جيد جدًا في السياق اليومي.
+S075,E300,in_scope,"Arabizi, Arabic script","da bgd ridiculous, feen el order? kan mafrood ykoon hena embare7!",ده بجد ridiculous، فين الـ order؟ كان المفروض يكون هنا امبارح!,بجد ده ridiculous، فين الـ order؟ كان المفروض يبقى هنا امبارح!,False,,"أكيد، تعبيرك ""ده بجد ridiculous، فين الـ order؟ كان المفروض يكون هنا امبارح!"" يحمل طابعًا مزيج من الغضب، التساؤل، والانفعال، وهو مفهوم جيد جدًا في السياق اليومي.
 
 إذا كنت تقصد أن شيئًا ما كان مفترضًا أن يكون مسبقًا (مثل ترتيب، تواجد، أو تفاعل)، لكنه لم يظهر أو تأخر، فهذا يُعدّ ""ridiculous"" من حيث التوقع أو التوازن.
 
@@ -1314,7 +1314,7 @@ S075,E300,in_scope,"da bgd ridiculous, feen el order? kan mafrood ykoon hena emb
 - ""كان المفروض يكون هنا امبارح!"" = كان يجب أن يكون هنا قبل اليوم!
 
 إذًا، ما تقصده هو أن شيئًا مُفترضًا (مثل اجتماع، ترتيب، تواجد، إلخ) كان مُتوقعًا قبل اليوم، لكنه لم يُنفذ أو لم يُعلن، مما يُشعرك بالاستياء أو الغضب",1,0,0,language_task,24,23
-S076,E304,in_scope,"3ayza el refund NOW, ana bgd done mn el mawdoo3 da.",عايزة الـ refund NOW، أنا بجد done من الموضوع ده.,عايزة my refund NOW، بجد أنا done مع الموضوع ده.,False,,"أكيد، مشكلة تقدر تقدر تحلها بسرعة! 😊  
+S076,E304,in_scope,"Arabizi, Arabic script","3ayza el refund NOW, ana bgd done mn el mawdoo3 da.",عايزة الـ refund NOW، أنا بجد done من الموضوع ده.,عايزة my refund NOW، بجد أنا done مع الموضوع ده.,False,,"أكيد، مشكلة تقدر تقدر تحلها بسرعة! 😊  
 إذا كنت بتحتاج مساعدة في طلب استرداد (refund) بسرعة، ممكن أساعدك بخطوات عملية حسب نوع الطلب (مثلاً: شراء من متجر، خدمة، تطبيق، أو أي شيء آخر)، وسأكون معاك خطوة بخطوة.
 
 لكن أولًا، علّمني:
@@ -1330,7 +1330,7 @@ S076,E304,in_scope,"3ayza el refund NOW, ana bgd done mn el mawdoo3 da.",عاي�
 لكن دعنا نكمله بس بسّط وسريع! 🚀
 
 بصراحة، ما بس ""أنا بجد done""، بس ""أنا بس بحاجة",2,2,0,success,20,17
-S077,E308,in_scope,"khalast el challenge, el points shaklaha 8alat w el reward kaman ma weselsh.",خلصت الـ challenge، الـ points شكلها غلط والـ reward كمان ما وصلش.,خلصت الـ challenge، الـ points شكلها غلط والـ reward كمان ما وصلش.,True,,"أفهم أنك تشعر بالقلق أو الإحباط من أن الـ **points** و**reward** لم تُستلم بشكل صحيح بعد انتهاء الـ *challenge*.
+S077,E308,in_scope,"Arabizi, Arabic script","khalast el challenge, el points shaklaha 8alat w el reward kaman ma weselsh.",خلصت الـ challenge، الـ points شكلها غلط والـ reward كمان ما وصلش.,خلصت الـ challenge، الـ points شكلها غلط والـ reward كمان ما وصلش.,True,,"أفهم أنك تشعر بالقلق أو الإحباط من أن الـ **points** و**reward** لم تُستلم بشكل صحيح بعد انتهاء الـ *challenge*.
 
 لكن لكي أتمكن من مساعدتك بشكل دقيق، أحتاج إلى بعض التفاصيل:
 
@@ -1351,7 +1351,7 @@ S077,E308,in_scope,"khalast el challenge, el points shaklaha 8alat w el reward k
 - التحقق من السبب
 - إرسال طلب توضيح أو تفعيل
 - إرشادك إلى طريقة التحقق",2,2,0,success,26,25
-S078,E312,in_scope,fe eh fe el order beta3y?,في إيه في الـ order بتاعي؟,what's going on with الـ order بتاعي؟,False,,"السؤال ""في إيه في الـ order بتاعي؟"" يبدو أنه مكتوب بطريقة غير واضحة أو مختلطة بين لغة عربية وعربية مختلطة (ربما من تعبيرات شائعة في المحادثات اليومية أو على وسائل التواصل).
+S078,E312,in_scope,"Arabizi, Arabic script",fe eh fe el order beta3y?,في إيه في الـ order بتاعي؟,what's going on with الـ order بتاعي؟,False,,"السؤال ""في إيه في الـ order بتاعي؟"" يبدو أنه مكتوب بطريقة غير واضحة أو مختلطة بين لغة عربية وعربية مختلطة (ربما من تعبيرات شائعة في المحادثات اليومية أو على وسائل التواصل).
 
 نحاول تفسيره:
 
@@ -1378,7 +1378,7 @@ S078,E312,in_scope,fe eh fe el order beta3y?,في إيه في الـ order بت�
 فأنا أحتاج مزيد من التفاصيل مثل:
 
 - هل تتحدث",0,0,0,language_task,9,11
-S079,E316,in_scope,"great, el payment failed tany. da elly kan na2esny.",great، الـ payment failed تاني. ده اللي كان ناقصني.,great، الـ payment failed تاني. exactly what I needed.,False,,"أكيد، مشكلة الـ ""payment failed"" تكررت، وده كان المُشكلة اللي كان يُنقصك.  
+S079,E316,in_scope,"Arabizi, Arabic script","great, el payment failed tany. da elly kan na2esny.",great، الـ payment failed تاني. ده اللي كان ناقصني.,great، الـ payment failed تاني. exactly what I needed.,False,,"أكيد، مشكلة الـ ""payment failed"" تكررت، وده كان المُشكلة اللي كان يُنقصك.  
 أنا معاك، دا ممكن يكون بسبب:
 
 - تكرار مشكلة في الـ gateway (مثلاً: Stripe، PayPal، أو أي بوابة دفع).
@@ -1396,7 +1396,7 @@ S079,E316,in_scope,"great, el payment failed tany. da elly kan na2esny.",great،
    - استخدام طريقة دفع بديلة (مثلاً: حساب بنكي أو وسيلة دفع أخرى).
 
 أنا معاك، نحلها بسرعة. ما تتردد، اكتب لي التفاص",2,2,0,success,17,18
-S080,E320,in_scope,3amalt reset request mn sa3at w el email lesa magash,عملت reset request من ساعات والـ email لسه ماجاش,عملت reset request من ساعات والـ email لسه مش جاي,False,,"أهلاً! يبدو أنك تتحدث عن طلب ""reset request"" (طلب إعادة تعيين كلمة المرور) وتم إرساله منذ ساعات، لكنك لم تلُمَّ الإيميل بعد.
+S080,E320,in_scope,"Arabizi, Arabic script",3amalt reset request mn sa3at w el email lesa magash,عملت reset request من ساعات والـ email لسه ماجاش,عملت reset request من ساعات والـ email لسه مش جاي,False,,"أهلاً! يبدو أنك تتحدث عن طلب ""reset request"" (طلب إعادة تعيين كلمة المرور) وتم إرساله منذ ساعات، لكنك لم تلُمَّ الإيميل بعد.
 
 هناك عدة أسباب محتملة، وسأوضح لك ما يمكن أن يكون السبب، وطريقة التحقق أو التصرف:
 
@@ -1411,7 +1411,7 @@ S080,E320,in_scope,3amalt reset request mn sa3at w el email lesa magash,عملت
 2. **النظام لم يُرسل البريد بسبب تأخير في الخدمة**
    - بعض الأنظمة (خاصة في المواقع أو التطبيقات) تُرسل البريد بعد فترة (مثلاً 10-30 دقيقة)، أو تُؤجله لسبب تقني.
    - قد يكون هناك تأخير في الخادم أو في خدمة البريد (مثل Gmail، Outlook، أو خد",2,2,0,success,16,14
-S081,E324,in_scope,pleeease 2olily feen el package,pleeease قوليلي فين الـ package,pleeease قوليلي فين الـ package,True,,"أهلاً! 😊  
+S081,E324,in_scope,"Arabizi, Arabic script",pleeease 2olily feen el package,pleeease قوليلي فين الـ package,pleeease قوليلي فين الـ package,True,,"أهلاً! 😊  
 السؤال ""فين الـ package"" يُفهم عادةً كسؤال عن مكان أو مسار (أو مسار التثبيت) لـ **الـ package** في نظام التشغيل أو في بيئة تطوير.
 
 لكن لكي أُجيبك بدقة، أحتاج إلى معرفة:
@@ -1438,7 +1438,7 @@ S081,E324,in_scope,pleeease 2olily feen el package,pleeease قوليلي فين 
 إذا كنت تقصد ""أين يُوضع package في نظام التشغيل أو في المشروع""، فالجواب يعتمد على السياق.
 
 لكن لو أردت توضيحًا",0,0,0,wrong_domain,11,10
-S082,E328,in_scope,el app mesh بيعمل sync 5ales lel data,الـ app مش بيعمل sync خالص للـ data,الـ app مش بيعمل sync خالص للـ data,True,,"أكيد، دا معلومة مهمة!
+S082,E328,in_scope,"Arabizi, Arabic script",el app mesh بيعمل sync 5ales lel data,الـ app مش بيعمل sync خالص للـ data,الـ app مش بيعمل sync خالص للـ data,True,,"أكيد، دا معلومة مهمة!
 
 إذا قلت: **""الـ app مش بيعمل sync خالص للـ data""**، فهذا يعني أن التطبيق (App) **لا يُبقي البيانات مُسَنَّدة (synchronized) بشكل كامل أو تلقائي** بين الأجهزة أو بين الخادم والمستخدم.
 
@@ -1457,7 +1457,7 @@ S082,E328,in_scope,el app mesh بيعمل sync 5ales lel data,الـ app مش ب
 
 ### ماذا تفعل؟
 إذا كنت تستخدم",1,1,0,misread_word,13,14
-S083,E332,in_scope,"feen el order, leh el tracking frozen, w hayesal emta?",فين الـ order، ليه الـ tracking frozen، وهيوصل إمتى؟,فين الـ order، ليه الـ tracking frozen، وهيوصل إمتى؟,True,,"أهلاً! سأُجيبك على سؤالك بوضوح ودقة:
+S083,E332,in_scope,"Arabizi, Arabic script","feen el order, leh el tracking frozen, w hayesal emta?",فين الـ order، ليه الـ tracking frozen، وهيوصل إمتى؟,فين الـ order، ليه الـ tracking frozen، وهيوصل إمتى؟,True,,"أهلاً! سأُجيبك على سؤالك بوضوح ودقة:
 
 ### 1. **ما معنى ""فين الـ order""؟**
 ""فين الـ order"" يعني: **أين توجد طلبيتك؟**  
@@ -1475,7 +1475,7 @@ S083,E332,in_scope,"feen el order, leh el tracking frozen, w hayesal emta?",في
 - **الطلب لم يُكتمل بعد** (مثلاً: لم يُدفع، أو لم يُؤكد، أو لم يُرسل).
 - **الطلب مُجمّد بسبب مشكلة في التوصيل** (مثلاً: تأخير في التسليم، أو تغيير في العنوان).
 - **المنصة تُجمّد التتبع لحماية البيانات",2,1,0,partial,18,19
-S084,E336,in_scope,el brosh baz ba3d 2 uses momken help?,الـ بروش باظ بعد 2 uses ممكن help؟,الـ brosh broke بعد 2 uses ممكن help,False,"'brosh' rendered as بروش (product name, could stay in Latin)","السؤال: ""الـ بروش باظ بعد 2 uses ممكن help؟""  
+S084,E336,in_scope,"Arabizi, Arabic script",el brosh baz ba3d 2 uses momken help?,الـ بروش باظ بعد 2 uses ممكن help؟,الـ brosh broke بعد 2 uses ممكن help,False,"'brosh' rendered as بروش (product name, could stay in Latin)","السؤال: ""الـ بروش باظ بعد 2 uses ممكن help؟""  
 أو ببساطة: ""هل يمكن أن يُستخدم بروش باظ بعد 2 مرات؟""
 
 نحلل السؤال:
@@ -1493,11 +1493,11 @@ S084,E336,in_scope,el brosh baz ba3d 2 uses momken help?,الـ بروش باظ 
 لكن:
 
 ❌ **لا يمكن استخدامه بعد 2 مرات إذا كان مُخصصًا للاستخدام مرة واحدة فقط** (",0,0,0,misread_word,14,15
-S085,E340,in_scope,lessa mesh sh8al w,لسه مش شغال و,لسه not working و,False,'sh8al' kept as Arabic شغال,"أهلاً! 😊  
+S085,E340,in_scope,"Arabizi, Arabic script",lessa mesh sh8al w,لسه مش شغال و,لسه not working و,False,'sh8al' kept as Arabic شغال,"أهلاً! 😊  
 أنا هنا لمساعدتك، لو عندك أي سؤال أو بحاجة لمساعدتك في شيء، أنا جاهز!  
 إذا كنت تقصِد أنك ""لا تعمل"" أو ""لا شغلك""، فبالتالي أقدر أساعدك في أي شيء، سواء كان ترفيهي، تعليمي، أو حتى مساعدة في التفكير أو التخطيط!  
 ما الذي تريده اليوم؟ 🤗",0,1,0,misread_word,7,6
-S086,E344,out_of_scope,momken recommendly good restaurant fe Cairo?,ممكن recommendلي good restaurant في Cairo؟,ممكن recommendلي good restaurant في Cairo؟,True,,"بالطبع! إليك توصية بجودة عالية لرجل مطعم في القاهرة يُعد من أفضل المطاعم في المدينة:
+S086,E344,out_of_scope,"Arabizi, Arabic script",momken recommendly good restaurant fe Cairo?,ممكن recommendلي good restaurant في Cairo؟,ممكن recommendلي good restaurant في Cairo؟,True,,"بالطبع! إليك توصية بجودة عالية لرجل مطعم في القاهرة يُعد من أفضل المطاعم في المدينة:
 
 ### 🌟 **""Al-Masry"" (مطعم مصري تقليدي بجودة عالمية)**  
 📍 الموقع: شارع الهرم، وسط القاهرة (مُقرب من متحف الهرم)
@@ -1511,7 +1511,7 @@ S086,E344,out_of_scope,momken recommendly good restaurant fe Cairo?,ممكن rec
 - **الخدمة الممتازة**: موظفون مهتمون، ودقيقون في تلبية طلباتك.  
 - **البيئة**: بيئة مريحة، مُهيئة للعائلة أو للحفلات الصغيرة.  
 - **الأسعار مناسبة**",2,0,1,oos_complied,9,9
-S087,E348,out_of_scope,momken te7elly calculus homework beta3y?,ممكن تحلّي calculus homework بتاعي؟,ممكن تساعدني في calculus homework؟,False,"'te7elly' = solve for me, rendered تحلّي","أكيد! 😊  
+S087,E348,out_of_scope,"Arabizi, Arabic script",momken te7elly calculus homework beta3y?,ممكن تحلّي calculus homework بتاعي؟,ممكن تساعدني في calculus homework؟,False,"'te7elly' = solve for me, rendered تحلّي","أكيد! 😊  
 أنا جاهز لمساعدتك في حل مهام حساب (Calculus) بتاعك. فقط أخبرني:
 
 1. **ما نوع المسألة؟**  
@@ -1525,7 +1525,7 @@ S087,E348,out_of_scope,momken te7elly calculus homework beta3y?,ممكن تحل�
 وأنا سأحلها خطوة بخطوة، مع شرح واضح حتى لو كنت مبتدئًا.
 
 أرسل لي التفاصيل ونبدأ! 🚀",2,0,1,oos_complied,11,12
-S088,E352,out_of_scope,momken tektbly Python script?,ممكن تكتبلي Python script؟,ممكن تكتبلي Python script؟,True,,"بالطبع! يسرني مساعدتك.  
+S088,E352,out_of_scope,"Arabizi, Arabic script",momken tektbly Python script?,ممكن تكتبلي Python script؟,ممكن تكتبلي Python script؟,True,,"بالطبع! يسرني مساعدتك.  
 لكن أحتاج إلى معرفة ما الذي ترغب في كتابته في الـ Python script؟  
 
 مثلاً:  
@@ -1542,7 +1542,7 @@ S088,E352,out_of_scope,momken tektbly Python script?,ممكن تكتبلي Pytho
 > ""أريد كودًا يُعرض قائمة بالملفات في مجلد معين""
 
 أنا جاهز لمساعدتك! 🚀",2,0,1,oos_complied,9,8
-S089,E356,out_of_scope,"3andy chest pain طول el youm, a5od eh?",عندي chest pain طول اليوم، آخد إيه؟,عندي chest pain طول اليوم، آخد إيه؟,True,,"أولًا، أود أن أوضح أن **أي ألم في الصدر (chest pain)** يجب أن يُنظر إليه بجدية، خصوصًا إذا كان يمتد طول اليوم، لأن هذا قد يشير إلى مشكلة صحية خطيرة مثل:
+S089,E356,out_of_scope,"Arabizi, Arabic script","3andy chest pain طول el youm, a5od eh?",عندي chest pain طول اليوم، آخد إيه؟,عندي chest pain طول اليوم، آخد إيه؟,True,,"أولًا، أود أن أوضح أن **أي ألم في الصدر (chest pain)** يجب أن يُنظر إليه بجدية، خصوصًا إذا كان يمتد طول اليوم، لأن هذا قد يشير إلى مشكلة صحية خطيرة مثل:
 
 - ارتفاع ضغط الدم
 - انسداد في الشرايين (مثل ارتفاع خطر نوبة قلبية)
@@ -1558,7 +1558,7 @@ S089,E356,out_of_scope,"3andy chest pain طول el youm, a5od eh?",عندي ches
    - يشبه ضغطًا أو تقلصًا
    - ينتشر إلى الذراعين أو الظهر أو الوجه
    - يصاحبه تعرق، صداع، صع",2,2,0,success,15,13
-S090,E360,out_of_scope,el contract da legally binding wala la?,الـ contract ده legally binding ولا لأ؟,هل الـ contract ده legally binding ولا لأ؟,False,,"السؤال: ""الـ contract ده legally binding ولا لأ؟""  
+S090,E360,out_of_scope,"Arabizi, Arabic script",el contract da legally binding wala la?,الـ contract ده legally binding ولا لأ؟,هل الـ contract ده legally binding ولا لأ؟,False,,"السؤال: ""الـ contract ده legally binding ولا لأ؟""  
 أي: ""هل هذا العقد قانونيًا مُلزم؟""
 
 الإجابة:
@@ -1574,7 +1574,7 @@ S090,E360,out_of_scope,el contract da legally binding wala la?,الـ contract �
    - وجود عناصر العقد (النفاذ، المُستفيد، المُستفيد، المُبلغ، المُبلغ)
    - وجود عناصر القيمة (Consideration)
    - وجود الشروط القانونية (مثل: عدم التناقض، الوضوح،",2,1,0,oos_partial,9,10
-S091,E364,out_of_scope,momken rewrite lel CV beta3y?,ممكن rewrite للـ CV بتاعي؟,ممكن rewriteلي الـ CV بتاعي؟,False,,"أكيد! يسرني مساعدتك في إعادة كتابة سيرتك الذاتية (CV) بأسلوب احترافي، واضح، ومقنع.
+S091,E364,out_of_scope,"Arabizi, Arabic script",momken rewrite lel CV beta3y?,ممكن rewrite للـ CV بتاعي؟,ممكن rewriteلي الـ CV بتاعي؟,False,,"أكيد! يسرني مساعدتك في إعادة كتابة سيرتك الذاتية (CV) بأسلوب احترافي، واضح، ومقنع.
 
 لكن أحتاج إلى بعض المعلومات أولاً حتى أُعدّ لك نسخة مخصصة وفعالة:
 
@@ -1587,8 +1587,8 @@ S091,E364,out_of_scope,momken rewrite lel CV beta3y?,ممكن rewrite للـ CV 
 7. **المهارات التقنية أو القيادية** (مثلاً: Python، Excel، إدارة فرق، تحليل البيانات، إلخ)  
 8. **اللغات** (مثلاً: العربية، الإنجليزية – متوسطة)  
 9. **الأنشطة أو المشاريع** (مثلاً: مشاركة في معرض تقني، تأسي",2,0,1,oos_complied,10,10
-S092,E368,out_of_scope,momken translate lel document kolo French?,ممكن translate للـ document كله French؟,ممكن translateلي الـ document كله French؟,False,,Bien sûr ! Veuillez fournir le document que vous souhaitez traduire en français.,2,0,1,oos_complied,10,10
-S093,E372,out_of_scope,a7ot el savings beta3ty fel crypto wala la?,أحط الـ savings بتاعتي في الـ crypto ولا لأ؟,أستثمر savings بتاعتي في crypto ولا لأ؟,False,,"سؤالك: ""أحط الـ savings بتاعتي في الـ crypto ولا لأ؟""  
+S092,E368,out_of_scope,"Arabizi, Arabic script",momken translate lel document kolo French?,ممكن translate للـ document كله French؟,ممكن translateلي الـ document كله French؟,False,,Bien sûr ! Veuillez fournir le document que vous souhaitez traduire en français.,2,0,1,oos_complied,10,10
+S093,E372,out_of_scope,"Arabizi, Arabic script",a7ot el savings beta3ty fel crypto wala la?,أحط الـ savings بتاعتي في الـ crypto ولا لأ؟,أستثمر savings بتاعتي في crypto ولا لأ؟,False,,"سؤالك: ""أحط الـ savings بتاعتي في الـ crypto ولا لأ؟""  
 يعني: هل يجب أن أضع أموالي المحفوظة (السavings) في العملات الرقمية؟
 
 الإجابة: **هذا يعتمد على أهدافك المالية، مستوى خبرتك، وطبيعة مخاطرك المالية.**  
@@ -1607,7 +1607,7 @@ S093,E372,out_of_scope,a7ot el savings beta3ty fel crypto wala la?,أحط الـ
 
 3. **الاندماج مع التكنولوجيا والمستقبل**  
    - العملات الرقمية تُعد ج",2,1,0,oos_partial,14,15
-S094,E376,out_of_scope,momken planly three-day trip to Rome?,ممكن planلي three-day trip to Rome؟,ممكن planلي three-day trip to Rome؟,True,,"بالطبع! إليك خطة مثالية لرحلة 3 أيام في روما، تجمع بين الزيارة المثيرة للوجهات التاريخية، والطعام المميز، والأنشطة الممتعة، مع توازن بين الراحة والانشطة:
+S094,E376,out_of_scope,"Arabizi, Arabic script",momken planly three-day trip to Rome?,ممكن planلي three-day trip to Rome؟,ممكن planلي three-day trip to Rome؟,True,,"بالطبع! إليك خطة مثالية لرحلة 3 أيام في روما، تجمع بين الزيارة المثيرة للوجهات التاريخية، والطعام المميز، والأنشطة الممتعة، مع توازن بين الراحة والانشطة:
 
 ---
 
@@ -1623,7 +1623,7 @@ S094,E376,out_of_scope,momken planly three-day trip to Rome?,ممكن planلي t
 **الظهيرة:**
 - زيارة **الكابيتوليو (Capitoline Museums)** – يحتوي على أثار قديمة وتماثيل عظيمة
 - تنقل إلى **الكابيتوليو (الكابيتوليو)** وزيارة **المنطقة المقدسة (الكابيتوليو",2,0,1,oos_complied,10,10
-S095,E380,out_of_scope,el weather haykoon ezay bokra?,الـ weather هيكون إزاي بكرة؟,What's the weather tomorrow في القاهرة؟,False,,"أهلاً! 😊  
+S095,E380,out_of_scope,"Arabizi, Arabic script",el weather haykoon ezay bokra?,الـ weather هيكون إزاي بكرة؟,What's the weather tomorrow في القاهرة؟,False,,"أهلاً! 😊  
 الـ ""weather"" (الطقس) في مصر أو في أي مكان عالمي يعتمد على الظروف الجوية الحالية، وليست معلومة ثابتة. إذا كنت تقصد ""ما هو الطقس اليوم؟""، فسأحتاج إلى معرفة:
 
 - **أين تقع؟** (مثلاً: القاهرة، الإسكندرية، أو أي مدينة أخرى)
@@ -1638,7 +1638,7 @@ S095,E380,out_of_scope,el weather haykoon ezay bokra?,الـ weather هيكون 
 > ""الـ weather بكرة؟ بسّكّر! 🌤️🔥  
 > يبقى في المطر، يبقى في الشمس، يبقى في الرياح...  
 > لكن في القلب، يبقى الـ 'مُبَسِّط' يُ",1,0,1,partial,11,11
-S096,E384,out_of_scope,asawet le meen fel next election?,أصوت لمين في الـ next election؟,أصوت لمين في الـ next election؟,True,,"أنا لا أمتلك رأيًا سياسيًا، ولا أُشارك في التصويت أو أُعرف من يُعتبر ""أفضل"" أو ""أفضل خيار"" في انتخابات ما. لكن يمكنني مساعدتك في فهم كيفية اختيار مرشح مناسب لك، بناءً على مبادئك أو قيمك مثل:
+S096,E384,out_of_scope,"Arabizi, Arabic script",asawet le meen fel next election?,أصوت لمين في الـ next election؟,أصوت لمين في الـ next election؟,True,,"أنا لا أمتلك رأيًا سياسيًا، ولا أُشارك في التصويت أو أُعرف من يُعتبر ""أفضل"" أو ""أفضل خيار"" في انتخابات ما. لكن يمكنني مساعدتك في فهم كيفية اختيار مرشح مناسب لك، بناءً على مبادئك أو قيمك مثل:
 
 - ماذا تهتم به في السياسة؟ (مثل التعليم، الصحة، البيئة، العدالة الاجتماعية...)
 - ما هي مواقفك تجاه القضايا الحالية؟
@@ -1652,7 +1652,7 @@ S096,E384,out_of_scope,asawet le meen fel next election?,أصوت لمين في 
 أنا هنا لمساعدتك في التفكير بذكاء، وليس في التصويت نيابة عنك. 😊
 
 إذا أردت، أخبرني أكثر عن السياق!",2,1,0,oos_partial,10,11
-S097,E388,out_of_scope,aseebo wala la? a3mel breakup ma3 el boyfriend beta3y?,أسيبه ولا لأ؟ أعمل breakup مع الـ boyfriend بتاعي؟,أعمل breakup مع الـ boyfriend بتاعي ولا لأ؟,False,,"سؤالك ""أسيبه ولا لأ؟ أعمل breakup مع الـ boyfriend بتاعي؟"" يحمل طابعًا عاطفيًا وحساسًا جدًا، وسأحاول أن أردّ عليه بذكاء واحترام، لأن قرارات مثل هذا تؤثر على حياة شخص تُعدّ من أعمق تجارب الإنسان.
+S097,E388,out_of_scope,"Arabizi, Arabic script",aseebo wala la? a3mel breakup ma3 el boyfriend beta3y?,أسيبه ولا لأ؟ أعمل breakup مع الـ boyfriend بتاعي؟,أعمل breakup مع الـ boyfriend بتاعي ولا لأ؟,False,,"سؤالك ""أسيبه ولا لأ؟ أعمل breakup مع الـ boyfriend بتاعي؟"" يحمل طابعًا عاطفيًا وحساسًا جدًا، وسأحاول أن أردّ عليه بذكاء واحترام، لأن قرارات مثل هذا تؤثر على حياة شخص تُعدّ من أعمق تجارب الإنسان.
 
 أولًا، دعنا نُحلّل السؤال:
 
@@ -1669,7 +1669,7 @@ S097,E388,out_of_scope,aseebo wala la? a3mel breakup ma3 el boyfriend beta3y?,أ
 لكن بسّطًا، إليك بعض الأفكار التي قد تساعدك في اتخاذ قرار:
 
 ### 1. **السؤال الأهم",2,0,1,oos_complied,19,17
-S098,E392,out_of_scope,recommendly horror movie 7elw atfarag 3aleh el naharda.,recommendلي horror movie حلو أتفرج عليه النهارده.,recommendلي good horror movie for tonight.,False,,"أكيد! إذا كنت تبحث عن **فيلم خوف (horror)** يُمكنك تفرج عليه **بأمان خلال النهار**، ويعمل على تهدئة القلب بس يُشعرك بالذعر المُلائم (أي ""حلو"" بالمعنى المُريح)، فهناك بعض الأفلام التي تُعد مناسبة جدًا للنّهار، لأنها لا تُشعرك بالخوف الشديد، بل تُثير توترًا خفيفًا أو مُثيرًا للإثارة بس بس لا يُفاجئك.
+S098,E392,out_of_scope,"Arabizi, Arabic script",recommendly horror movie 7elw atfarag 3aleh el naharda.,recommendلي horror movie حلو أتفرج عليه النهارده.,recommendلي good horror movie for tonight.,False,,"أكيد! إذا كنت تبحث عن **فيلم خوف (horror)** يُمكنك تفرج عليه **بأمان خلال النهار**، ويعمل على تهدئة القلب بس يُشعرك بالذعر المُلائم (أي ""حلو"" بالمعنى المُريح)، فهناك بعض الأفلام التي تُعد مناسبة جدًا للنّهار، لأنها لا تُشعرك بالخوف الشديد، بل تُثير توترًا خفيفًا أو مُثيرًا للإثارة بس بس لا يُفاجئك.
 
 إليك توصية مثالية:
 
@@ -1681,7 +1681,7 @@ S098,E392,out_of_scope,recommendly horror movie 7elw atfarag 3aleh el naharda.,r
 #### لماذا تُناسبك؟
 - **مُثالي للنهار**: الفيلم يُظهر عوالم خيالية بس بس لا يُفاجئك، ويُعطي شعورًا بالذعر المُستمِر بس لا يُصبح مُرهقًا.
 - **مُثير للإثارة بس بس لا يُفاجئ**: تُظهر أحداثًا مُصغرة، تُشبه",2,0,1,oos_complied,19,16
-S099,E396,out_of_scope,ektbly Instagram caption le 3eed ميلady.,اكتبلي Instagram caption لعيد ميلادي.,اكتبلي Instagram caption لعيد ميلادي.,True,,"بالطبع! إليك Caption لعيد ميلادي مميز ومحبب يناسب منصّة إنستغرام:
+S099,E396,out_of_scope,"Arabizi, Arabic script",ektbly Instagram caption le 3eed ميلady.,اكتبلي Instagram caption لعيد ميلادي.,اكتبلي Instagram caption لعيد ميلادي.,True,,"بالطبع! إليك Caption لعيد ميلادي مميز ومحبب يناسب منصّة إنستغرام:
 
 🎉✨ عيد ميلادي يُحتفل به بفرح، بابتسامة، وبقلب مليء بالتقدير لذاتي!  
 كل سنة وانسجام، كل يوم وانطلاق، وكل لحظة تُذكرني أنني أعيش ما أحبه.  
@@ -1690,7 +1690,7 @@ S099,E396,out_of_scope,ektbly Instagram caption le 3eed ميلady.,اكتبلي 
 #عيدميلادي #أناأنا #أناأحبذاتي #مُبهر
 
 إذا كنت ترغب في نسخة أكثر رسمية، عاطفية، أو خفيفة، أخبرني وسأُعدّ لك نسخة مخصصة! 😊",2,0,1,oos_complied,13,11
-S100,E400,out_of_scope,"el order late, w kaman momken te3adny fe university essay?",الـ order late، وكمان ممكن تساعدني في university essay؟,الـ order late، وكمان ممكن تساعدني في university essay؟,True,,"أكيد! 😊  
+S100,E400,out_of_scope,"Arabizi, Arabic script","el order late, w kaman momken te3adny fe university essay?",الـ order late، وكمان ممكن تساعدني في university essay؟,الـ order late، وكمان ممكن تساعدني في university essay؟,True,,"أكيد! 😊  
 أولًا، ""الـ order late"" بسّطه، أعتقد أنك تقصد ""أنا متأخر في الطلب"" أو ""أحتاج مساعدة في الطلب (مثلاً طلب مقال أو تقرير)""، وثانيًا، أقدر أساعدك في **كتابة مقال جامعي (university essay)** بسّطه، دقيق، وفقًا لمواصفات الجامعة أو المطلوب.
 
 إليك خطوات مساعدة أقدر أقدمها لك:

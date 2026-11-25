@@ -6,19 +6,9 @@
 
 A 400-example benchmark that writes the same 100 customer-support requests in four forms of everyday Egyptian communication, used to test whether a language model keeps the same understanding of a request when only its written form changes. It comes with the responses of [Qwen/Qwen3-4B-Instruct-2507](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507), their scores, and a follow-up test that rewrites the Arabizi requests in Arabic script.
 
-**Author:** Nouran Mohamed El-Sayed (Ain Shams University, Cairo) · **Created:** October 2026 · **Results last revised:** 24 November 2026
+**Author:** Nouran Mohamed El-Sayed (Ain Shams University, Cairo) · **Version:** 1.8 (25 November 2026) · **Created:** October 2026 · **Data on Hugging Face:** [nour-rayann/qwen3-4b-egyptian-arabic-evaluation](https://huggingface.co/buckets/nour-rayann/qwen3-4b-egyptian-arabic-evaluation)
 
-> **Update (24 November 2026).** Added a third model, the Arabic-focused ALLaM-7B, with every score checked by hand (see "Other models: size and Arabic training" below). The main tables did not change.
-
-> **Update (22 November 2026).** Added a second model: Qwen3-1.7B on the 85 in-scope requests in English, Arabizi and the Arabic-script rewrite, with every score checked by hand (see "Other models: size and Arabic training" below). The main tables did not change.
-
-> **Update (21 November 2026).** Added a spelling-variation test (respelled Arabizi did not do better, and slightly worse) and two checks of scoring reliability: a blind self re-score of 100 answers and agreement between the LLM judge's first pass and the hand-checked scores. The main tables did not change.
-
-> **Update (20 November 2026).** Added three follow-up runs on Qwen3-4B, all hand-checked: a support-assistant system prompt, an Arabizi hint, and asking the model to rewrite Arabizi in Arabic script before answering (see "Follow-up: does telling the model more fix the gap?" below). The main tables did not change.
-
-> **Update (17 November 2026).** Added a hidden-state analysis comparing how the model represents the same request in different forms, with a control comparison against pure Egyptian Arabic (see "Inside the model" below). No scores changed.
-
-> **Update (15 November 2026).** Fourteen "Egyptian Arabic" prompts had English words in Latin letters (for example "refund", "sync", "tracking"), so that condition was not purely in Arabic script. They were rewritten with the same English words in Arabic letters (ريفاند، سينك، التراكر), run again with the same model and settings, and scored again. The earlier prompts, answers and scores are kept in the `_v1` columns of `data/results_400.csv`. Egyptian Arabic scores fell (in-scope intent from 1.52 to 1.44, action from 1.26 to 1.15); no other condition changed. The difficulty of scenarios S046 and S050 was corrected from `high` to `medium`, and a missing urgency label (E020) in `data/benchmark_400_prompts.csv` was restored.
+What changed in each version is in [`CHANGELOG.md`](CHANGELOG.md). The scoring rubric is in [`RUBRIC.md`](RUBRIC.md).
 
 > **Correction (18 October 2026).** An earlier version of this repository reported results from a spreadsheet in which most model responses could not be traced to the prompts they sat next to: 219 of the 400 responses were exact copies of another row's response, and many belonged to a different prompt. Those results, including an Arabizi intent score of 0.34 and a failure breakdown dominated by "Welsh or Portuguese" and "AWS App Mesh" readings, are withdrawn. All 400 prompts were run again with the same model and settings, and every response was scored again. The tables below come from that run.
 
@@ -47,6 +37,9 @@ The idea grew out of a mentorship with Prof. Ahmed Hassan Yousef (https://schola
 ## Repository layout
 
 ```
+RUBRIC.md                         how every answer is scored, with the conventions for borderline answers
+CHANGELOG.md                      what changed in each version
+requirements.txt                  versions the analysis scripts were run with
 data/
   benchmark_400_prompts.csv       the 400 prompts and gold labels
   results_400.csv                 prompts + model responses + scores + response type
@@ -60,10 +53,11 @@ data/
   spelling_variants_scored.csv    the model's answers to the respelled requests, with scores
   blind_rescore.csv               100 answers re-scored blind by the author, with their original IDs
   followup_llm_first_pass.csv     the LLM judge's first-pass scores for the 600 follow-up answers
+  more_models_llm_first_pass.csv  the LLM judge's first-pass scores for the other models
   more_models_scored.csv          other models' answers to the in-scope requests, with scores (Qwen3-1.7B, ALLaM-7B)
 notebooks/
   qwen3_4b_egyptian_arabic_evaluation.ipynb   builds the benchmark, runs the model, summarizes scores
-  extensions.ipynb                code for the planned follow-up experiments (see Next steps)
+  extensions.ipynb                the follow-up experiments: system prompt, fixes, spelling, other models, hidden states
 scripts/
   summarize.py                    recomputes every table in this README
   stats.py                        confidence intervals and paired significance tests
@@ -73,6 +67,7 @@ scripts/
   self_agreement.py               blind self re-score and LLM-judge agreement
   spelling_stats.py               tables and tests for the spelling-variation test
   model_stats.py                  other models compared with Qwen3-4B
+  sensitivity.py                  main results without the seven flagged Arabizi prompts
   make_spelling_variants.py       builds the rule-based spelling variants before checking
 figures/
   results_by_condition.png
@@ -81,18 +76,28 @@ figures/
   followup_arabizi.png
 ```
 
-To reproduce the tables: `pip install pandas` then `python scripts/summarize.py`. For the intervals and tests: `pip install pandas numpy scipy` then `python scripts/stats.py`. For the follow-up runs: `pip install pandas numpy scipy matplotlib` then `python scripts/followup_stats.py`.
+To reproduce every number: `pip install -r requirements.txt`, then run the scripts from the repository root, for example `python scripts/summarize.py` for the tables, `python scripts/stats.py` for the intervals and tests, and `python scripts/followup_stats.py` for the follow-up runs and their chart.
 
 ## Evaluation setup
 
 - **Model:** Qwen/Qwen3-4B-Instruct-2507, loaded with `transformers`.
 - **Prompting:** each prompt sent on its own as a single user message, with no system prompt.
-- **Decoding:** greedy (`do_sample=False`), up to 300 new tokens.
+- **Decoding:** greedy (`do_sample=False`), up to 300 new tokens. Longer answers are cut off at 300 tokens and scored on what is there.
+- **Formatting:** each prompt goes through the model's own chat template (`apply_chat_template` with `add_generation_prompt=True`).
+- **Other models** (`notebooks/extensions.ipynb`) use the same settings, plus:
+  - **Qwen3-1.7B:** a hybrid thinking model, run with `enable_thinking=False` so every answer is a direct reply.
+  - **ALLaM-7B and Qwen3-8B:** loaded in 4-bit (bitsandbytes, float16 compute) to fit a T4 GPU.
+  - **Nile-Chat-4B:** its built-in repetition penalty of 1.1 is switched off, so all models decode the same way.
+  - **Chat templates that reject a system message:** the system text goes at the top of the user message instead.
+- **Hardware and software:** every run used Google Colab (Python 3 runtime) on an NVIDIA T4 GPU.
+  - **Main Qwen3-4B run:** the install log saved in the main notebook shows `transformers` 5.20.1, `torch` 2.11.0+cu130, `accelerate` 1.15.0 and Python 3.13.
+  - **Follow-up runs:** the exact library versions were not recorded. The notebooks now print them when they load a model.
+  - **Analysis scripts:** their versions are in `requirements.txt`.
 - **Scoring:** each response gets two scores on a 0 to 2 scale (0 = incorrect, 1 = partly correct or incomplete, 2 = correct) and an unsupported-action flag.
   - **Intent:** did the model identify the user's underlying issue? Restating the meaning correctly but treating the message as text to translate, rather than as a request, scores 1.
   - **Action:** did it propose an appropriate next step for that issue (asking for the order number, giving the right troubleshooting steps, or, for out-of-scope requests, declining and redirecting)?
   - **Unsupported action:** did it make the scenario's forbidden assumption (for example inventing a store policy, or acting as a travel planner)?
-- **Who scored:** first-pass scores were assigned by an LLM judge following the rubric above, and every score was then checked by hand by the author. Each response also has a `response_type` label describing what the model did.
+- **Who scored:** first-pass scores were assigned by an LLM judge following the rubric above, and every score was then checked by hand by the author. Each response also has a `response_type` label describing what the model did. The full rubric, with the conventions used for borderline answers and every label, is in [`RUBRIC.md`](RUBRIC.md).
 
 Because there is no system prompt, the model has no way of knowing that it is meant to be a support assistant. On the 15 out-of-scope requests it therefore usually just fulfils the request (recommending restaurants, planning a trip), in every condition. The main table uses the 85 in-scope requests for that reason; the all-100 table is given below it.
 
@@ -126,6 +131,11 @@ Each scenario appears in every condition, so conditions can be compared scenario
 - **The rewrite against the Egyptian Arabic + English condition:** intent differs by 0.08 [−0.01, +0.19] (p = 0.10), so the remaining gap cannot be told apart from zero.
 - **English against Arabizi:** intent +1.22 [+1.06, +1.38] (p < 0.001). English never scored lower than Arabizi on intent.
 - **Egyptian Arabic against Egyptian Arabic + English:** keeping English terms in Latin letters helped, intent +0.27 [+0.12, +0.44] (p = 0.003), action +0.39 [+0.21, +0.56] (p < 0.001).
+- **Without the seven flagged Arabizi prompts** (see "Known issues"; 80 in-scope scenarios remain), every result above holds:
+  - English against Arabizi, intent: +1.23 [+1.06, +1.39].
+  - The Arabic-script rewrite against Arabizi, intent: +0.86 [+0.69, +1.05] (both p < 0.001).
+  - The rewrite against Egyptian Arabic + English: still not distinguishable from zero (+0.09, p = 0.10).
+  - To reproduce: `python scripts/sensitivity.py`.
 
 ### Is the gap about script or dialect?
 
@@ -227,12 +237,16 @@ Arabizi has no standard spelling, so the gap could belong to one way of writing 
 
 - **The gap is not tied to one spelling.** Respelling did not help overall; if anything it made things slightly worse. Most requests scored the same (42 of 69 on intent), 19 scored lower and 8 higher. Leaving out the variants that also swap a word gives the same picture (intent −0.19, p = 0.03; action −0.21, p = 0.02).
 - **Dropping the digits accounted for most of the drop** (54 variants: intent 0.83 to 0.63). One possible reason is that the digit spellings (3, 7, 2) are the more common Arabizi forms, so removing them makes Egyptian words even less recognizable. The `mixed` (13) and `more digits` (9) groups are too small to read anything from.
-- **The same failures came back:** misread Egyptian words (28 of 76), "please rephrase" (16), answers in another language (9), including Persian, Hebrew, Bengali, Malagasy and Haitian Creole. "ma weselsh" was read as Welsh again, and a variant of "el order etlgha" (the order was cancelled) was read as an ETL data pipeline.
+- **The same failures came back:** misread Egyptian words (28 of the 76 in-scope variants), "please rephrase" (16), answers in another language (9), including Persian, Hebrew, Bengali, Malagasy and Haitian Creole. "ma weselsh" was read as Welsh again, and a variant of "el order etlgha" (the order was cancelled) was read as an ETL data pipeline.
 
 ### How reliable are the scores?
 
 - **Blind self re-score.** 100 answers (25 scenarios in all four conditions, shuffled, original scores hidden) were scored again by the author six days later, from the rubric alone (`data/blind_rescore.csv`). Agreement with the original scores: intent 93% exact, Cohen's kappa 0.85 (quadratic-weighted 0.95); action 85%, kappa 0.74 (0.90); unsupported action 94%, kappa 0.77. Agreement was lowest on Arabizi (intent 84%, kappa 0.73), where answers are most ambiguous. English was 96% exact; kappa is not meaningful there because nearly every English answer scores 2. The re-scores were slightly stricter on action (mean 1.19 against 1.09).
-- **LLM judge against the hand-checked scores.** On the 600 follow-up answers, the judge's first-pass scores agreed with the final hand-checked scores on 92% of intent scores (kappa 0.86) and 92% of action scores (kappa 0.88) (`data/followup_llm_first_pass.csv`). Every score in this repository is the hand-checked one.
+- **LLM judge against the hand-checked scores.** On the 600 follow-up answers, the judge's first-pass scores agreed with the final hand-checked scores on 92% of intent scores (kappa 0.86) and 92% of action scores (kappa 0.88) (`data/followup_llm_first_pass.csv`).
+  - Qwen3-1.7B: intent 89% (kappa 0.83), action 92% (kappa 0.87).
+  - ALLaM-7B: intent 95% (kappa 0.91), action 95% (kappa 0.92).
+  - The hand check changed at least one field in 60 and 36 of their 255 answers (`data/more_models_llm_first_pass.csv`).
+  - Every score in this repository is the hand-checked one.
 
 To reproduce: `pip install pandas scikit-learn` then `python scripts/self_agreement.py`. This measures one person's consistency, not agreement between different annotators.
 
@@ -241,7 +255,7 @@ To reproduce: `pip install pandas scikit-learn` then `python scripts/self_agreem
 The 85 in-scope requests were run on two more models, in English, Arabizi + English and the Arabic-script rewrite, with the main benchmark's settings (no system prompt, greedy decoding, 300 new tokens):
 
 - [Qwen/Qwen3-1.7B](https://huggingface.co/Qwen/Qwen3-1.7B), a smaller model from the same family;
-- [ALLaM-AI/ALLaM-7B-Instruct-preview](https://huggingface.co/ALLaM-AI/ALLaM-7B-Instruct-preview), a model built for Arabic by the Saudi Data and AI Authority (SDAIA), loaded in 4-bit to fit a T4 GPU.
+- [ALLaM-AI/ALLaM-7B-Instruct-preview](https://huggingface.co/ALLaM-AI/ALLaM-7B-Instruct-preview), a model built for Arabic by the Saudi Data and AI Authority (SDAIA), loaded in 4-bit to fit a T4 GPU. It is now also published as [humain-ai/ALLaM-7B-Instruct-preview](https://huggingface.co/humain-ai/ALLaM-7B-Instruct-preview).
 
 The first pass was done by the LLM judge and every score was then checked by hand (`data/more_models_scored.csv`; `python scripts/model_stats.py`).
 
@@ -259,7 +273,7 @@ Intervals for every cell are printed by the script. Each model is compared with 
 - **ALLaM assumes the customer is in Saudi Arabia.** In 12 of its 170 Arabic-language answers (3 Arabizi, 9 Arabic script) and none of its English answers, it brought Saudi Arabia into the reply, for example quoting Saudi customs rules and a 3,000-riyal import limit (E076), pointing to Saudi Post (E052), or saying that prize competitions are not permitted in Saudi Arabia (E308). These answers scored lower on action (0.78 against 1.36 for its other Arabic-script answers). With no system prompt, nothing told the model where the store is; an Egyptian customer would still be poorly served.
 - **The script still matters most.** In every model, the same requests rewritten in Arabic script were understood far better: intent 0.27 to 1.07 for Qwen3-1.7B, 0.46 to 1.66 for ALLaM-7B, and 0.74 to 1.62 for Qwen3-4B.
 
-Qwen3-1.7B comes from the first Qwen3 release, while Qwen3-4B-Instruct-2507 is a later instruction-tuned update, and ALLaM-7B was run in 4-bit, so the models differ in more than size or training data. Qwen3-8B has also been run and will be added once its scores are checked. Nile-Chat-4B, a model trained on Egyptian Arabic in both scripts, is next (section 5b of `notebooks/extensions.ipynb`).
+Qwen3-1.7B comes from the first Qwen3 release, while Qwen3-4B-Instruct-2507 is a later instruction-tuned update, and ALLaM-7B was run in 4-bit, so the models differ in more than size or training data. Two more models have been run and will be added once their scores are checked by hand: Qwen3-8B, and Nile-Chat-4B, a model trained on Egyptian Arabic in both scripts (section 5b of `notebooks/extensions.ipynb`).
 
 ### All 100 requests per condition
 
@@ -276,22 +290,25 @@ Almost all unsupported actions here are out-of-scope requests that the model ful
 ## Known issues and limitations
 
 - **Few models, one domain, one annotator.** Most results are from Qwen3-4B, with Qwen3-1.7B and ALLaM-7B as comparison models. The scores are evidence from this benchmark only, not a general measure of any model's Arabic ability. The first pass was done by an LLM judge and the hand check is by one person. That person's scoring is consistent (blind re-score, intent kappa 0.85), but agreement between different annotators has not been measured.
+- **The scorer could see the condition.** The author wrote the requests and also checked the scores. The form of a request (English, Arabic script, Arabizi) is visible in the answer being scored, so scoring cannot be blind to condition. The blind re-score hid the earlier scores, not the condition, so it shows consistency rather than the absence of bias. A second annotator would address this.
+- **The LLM judge's first pass is not kept for the main run or the script test.** For every later run (follow-ups, spelling variants, Qwen3-1.7B, ALLaM-7B) it is kept, and the data show which scores the hand check changed.
+- **Library versions were not recorded for the follow-up runs** (see "Evaluation setup"). Greedy decoding can give slightly different answers under different `transformers` versions. All model answers are saved in `data/`, so the scores can be checked without re-running the models.
 - **No system prompt in the main run.** The model was not told it was a support assistant, which mainly affects the out-of-scope requests. The follow-up runs add a short system prompt, but not a store policy or a defined scope.
 - **Synthetic requests.** All scenarios were written by the author, not collected from real users.
 - **Seven Arabizi prompts contain Arabic-script words** that were not intended (E080, E096, E244, E248, E264, E356, E396). E328 is mixed script on purpose (`edge_case = mixed_script`).
 
-These rows are flagged in the `data_note` column and were not changed, so the scores match the prompts the model saw.
+These rows are flagged in the `data_note` column and were not changed, so the scores match the prompts the model saw. Leaving those scenarios out does not change any conclusion (see "How sure are these numbers?").
 
 ## Next steps
 
-The code for steps 1 to 4 is in `notebooks/extensions.ipynb`. Steps 2, 3 and 4 are reported above; step 1 is reported for Qwen3-1.7B and ALLaM-7B, and Qwen3-8B is being checked.
+The code for steps 1 to 4 is in `notebooks/extensions.ipynb`. Steps 2, 3 and 4 are reported above. Step 1 is reported for Qwen3-1.7B and ALLaM-7B; Qwen3-8B and Nile-Chat-4B are being checked.
 
-1. **Scale and training data:** Qwen3-1.7B and ALLaM-7B done (see above). Next: Qwen3-8B (run, being checked) and Nile-Chat-4B, trained on Egyptian Arabic in Arabic script and Arabizi.
+1. **Scale and training data:** Qwen3-1.7B and ALLaM-7B done (see above). Run, and being checked: Qwen3-8B, and Nile-Chat-4B, trained on Egyptian Arabic in Arabic script and Arabizi.
 2. **Where in the model does the gap appear?** Done for Qwen3-4B (see above). Next: repeat it on the other models from step 1.
 3. **System prompt:** done (see above). Next: give the model a written store policy and a defined scope, alone and together with the Arabizi hint, to see how much of the gap a well-instructed assistant still shows.
 4. **Simple fixes:** done (see above).
 5. **Consistency training:** build paired data in which one request appears in many realistic forms and test whether consistency-based training narrows the gap.
-6. **Scoring reliability:** self-agreement and LLM-judge agreement done (see above). Next: a second annotator on the same blind sheet.
+6. **Scoring reliability:** self-agreement and LLM-judge agreement done (see above). Next: a second annotator on the same blind sheet (`scripts/make_annotation_sheet.py`, then `scripts/agreement.py`), which also addresses the scorer seeing the condition.
 
 ## Citation
 
@@ -300,6 +317,7 @@ The code for steps 1 to 4 is in `notebooks/extensions.ipynb`. Steps 2, 3 and 4 a
   author = {El-Sayed, Nouran Mohamed},
   title  = {Egyptian Arabic, Code-Switching and Arabizi Consistency Benchmark},
   year   = {2026},
+  note   = {Version 1.8},
   howpublished = {\url{https://github.com/nour-rayann/egyptian-arabizi-consistency}}
 }
 ```

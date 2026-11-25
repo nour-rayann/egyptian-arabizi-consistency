@@ -1,0 +1,7 @@
+# Analysis scripts in scripts/ (no GPU needed). These are the versions every script was last run with.
+# The model runs happen in the notebooks on Colab, which print their own transformers / torch versions.
+pandas==3.0.5
+numpy==2.5.3
+scipy==1.18.1
+matplotlib==3.11.2
+scikit-learn==1.9.1

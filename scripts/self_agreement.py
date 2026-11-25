@@ -4,6 +4,7 @@
    six days later without seeing the original scores (data/blind_rescore.csv).
 2. LLM judge vs final scores: the judge's first pass on the 600 follow-up answers
    (data/followup_llm_first_pass.csv) against the hand-checked scores.
+3. The same for the other models (data/more_models_llm_first_pass.csv).
 Usage: python scripts/self_agreement.py      Needs: pip install pandas scikit-learn
 """
 from pathlib import Path
@@ -40,3 +41,12 @@ m = fu.merge(j, on=["experiment", "row_id"])
 print(f"\n2. LLM judge first pass vs hand-checked scores ({len(m)} follow-up answers)")
 for col, ordinal in [("intent_score", True), ("action_score", True), ("unsupported_action", False)]:
     print(agree(m["judge_" + col], m[col], col, ordinal))
+
+mm = pd.read_csv(ROOT / "data" / "more_models_scored.csv")
+jm = pd.read_csv(ROOT / "data" / "more_models_llm_first_pass.csv")
+mm = mm.merge(jm, on=["model", "condition", "row_id"])
+print(f"\n3. LLM judge first pass vs hand-checked scores, other models ({len(mm)} answers)")
+for model, g in mm.groupby("model"):
+    print(f"  {model} ({len(g)} answers, {g.changed_in_hand_check.sum()} changed in the hand check)")
+    for col, ordinal in [("intent_score", True), ("action_score", True), ("unsupported_action", False)]:
+        print("  " + agree(g["judge_" + col], g[col], col, ordinal))

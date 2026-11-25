@@ -1,4 +1,4 @@
-﻿scenario_id,arabizi_example_id,arabizi,arabic_plus_english_original,same_word_count,arabic_script_exact,transliteration_note
+scenario_id,arabizi_example_id,arabizi,arabic_plus_english_original,same_word_count,arabic_script_exact,transliteration_note
 S001,E004,momken tebosly leh el order stuck?,ممكن تبصلي ليه الـ order stuck؟,True,ممكن تبصلي ليه الـ order stuck؟,
 S002,E008,"el order etlgha men 8eer ma atlob, momken a3raf leh?",الـ order اتلغى من غير ما أطلب، ممكن أعرف ليه؟,True,الـ order اتلغى من غير ما أطلب، ممكن أعرف ليه؟,
 S003,E012,wasalny item 8eer elly talabto.,وصلني item غير اللي طلبته.,True,وصلني item غير اللي طلبته.,
