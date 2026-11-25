@@ -509,3 +509,258 @@ ALLaM-AI/ALLaM-7B-Instruct-preview,"Arabizi, Arabic script",E328,2,2,0,success,0
 ALLaM-AI/ALLaM-7B-Instruct-preview,"Arabizi, Arabic script",E332,2,1,0,partial,1
 ALLaM-AI/ALLaM-7B-Instruct-preview,"Arabizi, Arabic script",E336,1,0,0,misread_word,1
 ALLaM-AI/ALLaM-7B-Instruct-preview,"Arabizi, Arabic script",E340,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E001,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E005,2,1,0,partial,1
+MBZUAI-Paris/Nile-Chat-4B,English,E009,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E013,2,2,0,success,1
+MBZUAI-Paris/Nile-Chat-4B,English,E017,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E021,2,0,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,English,E025,0,0,0,refused,0
+MBZUAI-Paris/Nile-Chat-4B,English,E029,1,0,0,language_task,1
+MBZUAI-Paris/Nile-Chat-4B,English,E033,0,0,0,refused,0
+MBZUAI-Paris/Nile-Chat-4B,English,E037,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E041,0,0,0,refused,0
+MBZUAI-Paris/Nile-Chat-4B,English,E045,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E049,0,0,0,misread_word,0
+MBZUAI-Paris/Nile-Chat-4B,English,E053,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E057,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E061,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E065,2,1,0,partial,1
+MBZUAI-Paris/Nile-Chat-4B,English,E069,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E073,0,0,0,unclear,1
+MBZUAI-Paris/Nile-Chat-4B,English,E077,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E081,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E085,1,1,0,partial,1
+MBZUAI-Paris/Nile-Chat-4B,English,E089,1,0,0,language_task,0
+MBZUAI-Paris/Nile-Chat-4B,English,E093,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E097,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,English,E101,2,1,0,partial,1
+MBZUAI-Paris/Nile-Chat-4B,English,E105,2,1,1,success_unsupported,0
+MBZUAI-Paris/Nile-Chat-4B,English,E109,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E113,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E117,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,English,E121,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E125,0,0,0,refused,0
+MBZUAI-Paris/Nile-Chat-4B,English,E129,0,0,0,unclear,0
+MBZUAI-Paris/Nile-Chat-4B,English,E133,0,0,0,refused,1
+MBZUAI-Paris/Nile-Chat-4B,English,E137,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E141,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E145,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E149,0,0,0,unclear,0
+MBZUAI-Paris/Nile-Chat-4B,English,E153,0,0,0,refused,0
+MBZUAI-Paris/Nile-Chat-4B,English,E157,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E161,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,English,E165,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E169,0,0,0,refused,0
+MBZUAI-Paris/Nile-Chat-4B,English,E173,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E177,0,0,0,refused,0
+MBZUAI-Paris/Nile-Chat-4B,English,E181,0,0,0,refused,0
+MBZUAI-Paris/Nile-Chat-4B,English,E185,0,0,0,refused,0
+MBZUAI-Paris/Nile-Chat-4B,English,E189,2,0,0,partial,1
+MBZUAI-Paris/Nile-Chat-4B,English,E193,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,English,E197,0,0,0,refused,1
+MBZUAI-Paris/Nile-Chat-4B,English,E201,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,English,E205,0,0,0,refused,0
+MBZUAI-Paris/Nile-Chat-4B,English,E209,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E213,1,0,0,unclear,1
+MBZUAI-Paris/Nile-Chat-4B,English,E217,2,0,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,English,E221,0,0,0,refused,0
+MBZUAI-Paris/Nile-Chat-4B,English,E225,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E229,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,English,E233,1,0,0,unclear,1
+MBZUAI-Paris/Nile-Chat-4B,English,E237,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E241,2,1,0,partial,1
+MBZUAI-Paris/Nile-Chat-4B,English,E245,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E249,1,1,1,wrong_domain,1
+MBZUAI-Paris/Nile-Chat-4B,English,E253,0,0,0,refused,0
+MBZUAI-Paris/Nile-Chat-4B,English,E257,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E261,0,0,0,refused,0
+MBZUAI-Paris/Nile-Chat-4B,English,E265,0,0,0,refused,0
+MBZUAI-Paris/Nile-Chat-4B,English,E269,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E273,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E277,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E281,0,0,0,refused,0
+MBZUAI-Paris/Nile-Chat-4B,English,E285,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,English,E289,2,0,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,English,E293,1,1,0,unclear,1
+MBZUAI-Paris/Nile-Chat-4B,English,E297,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E301,2,1,0,partial,1
+MBZUAI-Paris/Nile-Chat-4B,English,E305,1,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,English,E309,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E313,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E317,1,0,0,misread_word,1
+MBZUAI-Paris/Nile-Chat-4B,English,E321,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E325,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E329,0,0,0,refused,0
+MBZUAI-Paris/Nile-Chat-4B,English,E333,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,English,E337,0,0,0,refused,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E004,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E008,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E012,1,0,0,misread_word,1
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E016,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E020,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E024,0,0,0,garbled_output,1
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E028,1,0,0,wrong_domain,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E032,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E036,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E040,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E044,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E048,2,2,0,success,1
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E052,0,0,0,misread_word,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E056,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E060,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E064,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E068,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E072,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E076,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E080,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E084,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E088,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E092,0,0,0,misread_word,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E096,2,1,0,partial,1
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E100,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E104,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E108,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E112,0,0,0,garbled_output,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E116,2,1,1,success_unsupported,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E120,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E124,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E128,0,0,0,unclear,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E132,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E136,0,0,0,refused,1
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E140,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E144,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E148,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E152,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E156,0,0,0,garbled_output,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E160,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E164,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E168,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E172,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E176,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E180,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E184,2,1,0,partial,1
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E188,0,0,0,refused,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E192,2,0,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E196,2,0,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E200,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E204,2,1,0,partial,1
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E208,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E212,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E216,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E220,2,0,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E224,2,1,1,success_unsupported,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E228,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E232,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E236,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E240,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E244,2,1,0,partial,1
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E248,2,1,0,partial,1
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E252,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E256,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E260,2,0,0,partial,1
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E264,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E268,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E272,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E276,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E280,0,0,0,garbled_output,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E284,0,0,0,refused,1
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E288,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E292,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E296,1,1,0,unclear,1
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E300,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E304,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E308,1,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E312,2,0,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E316,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E320,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E324,2,0,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E328,2,1,0,partial,1
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E332,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E336,0,0,0,misread_word,0
+MBZUAI-Paris/Nile-Chat-4B,Arabizi + English,E340,0,0,0,refused,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E004,1,0,0,wrong_domain,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E008,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E012,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E016,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E020,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E024,0,0,0,garbled_output,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E028,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E032,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E036,0,0,0,garbled_output,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E040,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E044,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E048,2,1,1,success_unsupported,1
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E052,0,0,0,wrong_domain,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E056,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E060,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E064,2,0,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E068,2,1,1,success_unsupported,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E072,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E076,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E080,2,1,1,success_unsupported,1
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E084,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E088,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E092,0,0,0,misread_word,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E096,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E100,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E104,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E108,2,1,0,wrong_domain,1
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E112,0,0,0,garbled_output,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E116,2,1,1,success_unsupported,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E120,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E124,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E128,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E132,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E136,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E140,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E144,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E148,0,0,0,refused,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E152,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E156,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E160,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E164,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E168,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E172,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E176,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E180,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E184,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E188,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E192,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E196,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E200,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E204,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E208,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E212,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E216,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E220,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E224,2,2,0,success,1
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E228,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E232,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E236,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E240,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E244,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E248,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E252,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E256,1,0,0,wrong_domain,1
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E260,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E264,0,0,0,garbled_output,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E268,2,1,0,partial,1
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E272,2,1,0,wrong_domain,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E276,1,0,0,wrong_domain,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E280,0,0,0,garbled_output,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E284,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E288,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E292,0,0,0,misread_word,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E296,0,0,0,misread_word,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E300,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E304,2,1,0,partial,1
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E308,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E312,2,1,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E316,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E320,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E324,2,0,0,partial,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E328,2,2,0,success,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E332,0,0,0,refused,0
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E336,1,0,0,misread_word,1
+MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E340,0,0,0,garbled_output,0

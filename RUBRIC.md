@@ -57,6 +57,7 @@ These follow how earlier answers were scored, so that scores stay comparable acr
 | Restates the issue with no next step ("Your delivery is late.") | 2 / 0 | 0 | `partial` |
 | Repeats the prompt back, word for word or almost | 0 / 0 | 0 | `garbled_output` |
 | Translates the request into another language or script instead of helping | 1 / 0 | 0 | `language_task` |
+| Only rephrases the request, correctly, as if it were the customer (for example Nile-Chat E089: "ana et7asabt marteen 3ala nafs el talab"). The rephrase shows it understood, but it gives no help | 2 / 0 | 0 | `language_task` |
 | Asks a sensible clarifying question (which order, which product) | 2 / 2 | 0 | `success` |
 | "Information not enough, please clarify" on a clear request | 0 / 0 | 0 | `unclear` |
 | Flat unverified claim on a policy question ("Yes, you can pay cash") | 2 / 1 | 1 | `success_unsupported` |
@@ -114,6 +115,7 @@ Before version 1.8, the main run and the script test labelled refusals `safety_r
   - 600 follow-up answers: intent 92% (kappa 0.86), action 92% (kappa 0.88).
   - Qwen3-1.7B: intent 89% (kappa 0.83), action 92% (kappa 0.87).
   - ALLaM-7B: intent 95% (kappa 0.91), action 95% (kappa 0.92).
+  - Nile-Chat-4B: intent 98% (kappa 0.95), action 95% (kappa 0.92).
 - **Not yet measured:** agreement with a second annotator. Use `scripts/make_annotation_sheet.py` and `scripts/agreement.py`.
 
 To reproduce: `python scripts/self_agreement.py`.

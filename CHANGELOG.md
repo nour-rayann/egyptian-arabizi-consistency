@@ -2,6 +2,25 @@
 
 Version numbers follow `CITATION.cff`. Unless an entry says otherwise, the main tables did not change.
 
+## 1.9 (25 November 2026)
+
+Added a fourth model, Nile-Chat-4B (Gemma 3 4B trained on Egyptian Arabic), with every score checked by hand. The main tables did not change.
+
+- **Arabizi gap closed.** Nile-Chat understood Arabizi as well as the Arabic-script rewrite (intent 1.71 against 1.65, p = 0.48), almost a point above Qwen3-4B on Arabizi.
+- **But English got worse.** Nile-Chat is the weakest model in English (intent 1.36), mostly because of refusals.
+- **New section, "How Nile-Chat talks to customers"**, with a new script, `scripts/tone.py`. It covers:
+  - answering English customers in Arabizi (78 of 85)
+  - bare refusals (19 English answers)
+  - apologies that open refusals
+  - repeated "as an AI, I can't"
+  - lecturing angry customers
+- **Nile-Chat was disappointing outside Arabizi.** It gave vague next steps: of the English requests it understood, the next step was fully right in 69%, against 93% for Qwen3-4B. But it was the only model, without a system prompt, to get the misspelt "brosh" request (E333) fully right.
+- **Data:**
+  - `data/more_models_scored.csv` and `data/more_models_llm_first_pass.csv` gain Nile-Chat's 255 answers.
+  - The hand check changed 22 of the first-pass scores.
+- **`RUBRIC.md`** records one more convention: an answer that only rephrases the request correctly, as if it were the customer, scores 2/0.
+- **`scripts/model_stats.py`** now gives each model its own fixed random seed for the bootstrap intervals, so adding a model no longer shifts another model's intervals. Qwen3-1.7B's intervals move by at most 0.02; its means, counts and p-values are unchanged.
+
 ## 1.8 (25 November 2026)
 
 Housekeeping. No scores changed.

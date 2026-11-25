@@ -38,6 +38,7 @@ def holm(p):
 
 
 for model, g in other.groupby("model"):
+    rng = np.random.default_rng(0)  # same seed for every model, so adding a model never shifts another's intervals
     print(f"\n{model} vs Qwen/Qwen3-4B-Instruct-2507 (85 in-scope requests per condition)")
     rows = []
     for c in CONDS:
