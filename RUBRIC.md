@@ -116,6 +116,7 @@ Before version 1.8, the main run and the script test labelled refusals `safety_r
   - Qwen3-1.7B: intent 89% (kappa 0.83), action 92% (kappa 0.87).
   - ALLaM-7B: intent 95% (kappa 0.91), action 95% (kappa 0.92).
   - Nile-Chat-4B: intent 98% (kappa 0.95), action 95% (kappa 0.92).
+  - Qwen3-8B: not computed, because its first-pass scores were not kept. The hand check changed 34 of its 255 answers.
 - **Not yet measured:** agreement with a second annotator. Use `scripts/make_annotation_sheet.py` and `scripts/agreement.py`.
 
 To reproduce: `python scripts/self_agreement.py`.

@@ -6,7 +6,7 @@
 
 A 400-example benchmark that writes the same 100 customer-support requests in four forms of everyday Egyptian communication, used to test whether a language model keeps the same understanding of a request when only its written form changes. It comes with the responses of [Qwen/Qwen3-4B-Instruct-2507](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507), their scores, and a follow-up test that rewrites the Arabizi requests in Arabic script.
 
-**Author:** Nouran Mohamed El-Sayed (Ain Shams University, Cairo) · **Version:** 1.9 (25 November 2026) · **Created:** October 2026 · **Data on Hugging Face:** [nour-rayann/qwen3-4b-egyptian-arabic-evaluation](https://huggingface.co/buckets/nour-rayann/qwen3-4b-egyptian-arabic-evaluation)
+**Author:** Nouran Mohamed El-Sayed (Ain Shams University, Cairo) · **Version:** 1.10 (27 November 2026) · **Created:** October 2026 · **Data on Hugging Face:** [nour-rayann/qwen3-4b-egyptian-arabic-evaluation](https://huggingface.co/buckets/nour-rayann/qwen3-4b-egyptian-arabic-evaluation)
 
 What changed in each version is in [`CHANGELOG.md`](CHANGELOG.md). The scoring rubric is in [`RUBRIC.md`](RUBRIC.md).
 
@@ -54,7 +54,7 @@ data/
   blind_rescore.csv               100 answers re-scored blind by the author, with their original IDs
   followup_llm_first_pass.csv     the LLM judge's first-pass scores for the 600 follow-up answers
   more_models_llm_first_pass.csv  the LLM judge's first-pass scores for the other models
-  more_models_scored.csv          other models' answers to the in-scope requests, with scores (Qwen3-1.7B, ALLaM-7B, Nile-Chat-4B)
+  more_models_scored.csv          other models' answers to the in-scope requests, with scores (Qwen3-1.7B, ALLaM-7B, Nile-Chat-4B, Qwen3-8B)
 notebooks/
   qwen3_4b_egyptian_arabic_evaluation.ipynb   builds the benchmark, runs the model, summarizes scores
   extensions.ipynb                the follow-up experiments: system prompt, fixes, spelling, other models, hidden states
@@ -86,7 +86,7 @@ To reproduce every number: `pip install -r requirements.txt`, then run the scrip
 - **Decoding:** greedy (`do_sample=False`), up to 300 new tokens. Longer answers are cut off at 300 tokens and scored on what is there.
 - **Formatting:** each prompt goes through the model's own chat template (`apply_chat_template` with `add_generation_prompt=True`).
 - **Other models** (`notebooks/extensions.ipynb`) use the same settings, plus:
-  - **Qwen3-1.7B:** a hybrid thinking model, run with `enable_thinking=False` so every answer is a direct reply.
+  - **Qwen3-1.7B and Qwen3-8B:** hybrid thinking models, run with `enable_thinking=False` so every answer is a direct reply.
   - **ALLaM-7B and Qwen3-8B:** loaded in 4-bit (bitsandbytes, float16 compute) to fit a T4 GPU.
   - **Nile-Chat-4B:** its built-in repetition penalty of 1.1 is switched off, so all models decode the same way.
   - **Chat templates that reject a system message:** the system text goes at the top of the user message instead.
@@ -248,29 +248,31 @@ Arabizi has no standard spelling, so the gap could belong to one way of writing 
   - ALLaM-7B: intent 95% (kappa 0.91), action 95% (kappa 0.92).
   - Nile-Chat-4B: intent 98% (kappa 0.95), action 95% (kappa 0.92).
   - The hand check changed at least one field in 60, 36 and 22 of their 255 answers (`data/more_models_llm_first_pass.csv`).
+  - Qwen3-8B: the hand check changed 34 of its 255 answers (16 Arabizi, 15 Arabic script, 3 English). 31 of the 34 were among the 97 answers the judge had flagged to check first. Its first-pass scores are not in the repository, so judge agreement is not computed for it; the `changed_in_hand_check` column in `data/more_models_scored.csv` shows which answers changed.
   - Every score in this repository is the hand-checked one.
 
 To reproduce: `pip install pandas scikit-learn` then `python scripts/self_agreement.py`. This measures one person's consistency, not agreement between different annotators.
 
 ### Other models: size and Arabic training
 
-The 85 in-scope requests were run on three more models, in English, Arabizi + English and the Arabic-script rewrite, with the main benchmark's settings (no system prompt, greedy decoding, 300 new tokens):
+The 85 in-scope requests were run on four more models, in English, Arabizi + English and the Arabic-script rewrite, with the main benchmark's settings (no system prompt, greedy decoding, 300 new tokens):
 
 - [Qwen/Qwen3-1.7B](https://huggingface.co/Qwen/Qwen3-1.7B), a smaller model from the same family;
+- [Qwen/Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B), a larger model from the same family, loaded in 4-bit to fit a T4 GPU;
 - [ALLaM-AI/ALLaM-7B-Instruct-preview](https://huggingface.co/ALLaM-AI/ALLaM-7B-Instruct-preview), a model built for Arabic by the Saudi Data and AI Authority (SDAIA), loaded in 4-bit to fit a T4 GPU. It is now also published as [humain-ai/ALLaM-7B-Instruct-preview](https://huggingface.co/humain-ai/ALLaM-7B-Instruct-preview);
 - [MBZUAI-Paris/Nile-Chat-4B](https://huggingface.co/MBZUAI-Paris/Nile-Chat-4B), Gemma 3 4B trained further on Egyptian Arabic. Its model card describes it as made for generating Egyptian Arabic in both Arabic script and Arabizi.
 
 The first pass was done by the LLM judge and every score was then checked by hand (`data/more_models_scored.csv`; `python scripts/model_stats.py`).
 
-| 85 in-scope requests (intent / action) | Qwen3-1.7B | ALLaM-7B | Nile-Chat-4B | Qwen3-4B |
-|---|---|---|---|---|
-| English | 1.93 / 1.71 | 1.92 / 1.73 | 1.36 / 1.08 | 1.96 / 1.87 |
-| Arabizi + English | 0.27 / 0.22 | 0.46 / 0.31 | 1.71 / 1.26 | 0.74 / 0.54 |
-| Arabizi, rewritten in Arabic script | 1.07 / 0.74 | 1.66 / 1.29 | 1.65 / 1.28 | 1.62 / 1.47 |
+| 85 in-scope requests (intent / action) | Qwen3-1.7B | Qwen3-8B | ALLaM-7B | Nile-Chat-4B | Qwen3-4B |
+|---|---|---|---|---|---|
+| English | 1.93 / 1.71 | 1.96 / 1.88 | 1.92 / 1.73 | 1.36 / 1.08 | 1.96 / 1.87 |
+| Arabizi + English | 0.27 / 0.22 | 0.94 / 0.61 | 0.46 / 0.31 | 1.71 / 1.26 | 0.74 / 0.54 |
+| Arabizi, rewritten in Arabic script | 1.07 / 0.74 | 1.55 / 1.26 | 1.66 / 1.29 | 1.65 / 1.28 | 1.62 / 1.47 |
 
 Intervals for every cell are printed by the script. Each model is compared with Qwen3-4B on the same requests (paired Wilcoxon tests, Holm-corrected over the six comparisons per model).
 
-- **The Arabizi gap appears in every model not trained on Egyptian Arabic.** Qwen3-1.7B, ALLaM-7B and Qwen3-4B understand English requests almost equally well (intent 1.92 to 1.96), and all three do far worse on the same requests in Arabizi.
+- **The Arabizi gap appears in every model not trained on Egyptian Arabic.** Qwen3-1.7B, Qwen3-4B, Qwen3-8B and ALLaM-7B understand English requests almost equally well (intent 1.92 to 1.96), and all four do far worse on the same requests in Arabizi.
 - **Training on Egyptian Arabic closes the gap.** Nile-Chat-4B understood Arabizi as well as the Arabic-script rewrite:
   - Intent 1.71 against 1.65 (p = 0.48); action 1.26 against 1.28.
   - On Arabizi it beats Qwen3-4B by almost a full point: intent 1.71 against 0.74, higher in 61 requests and lower in 6 (p < 0.001).
@@ -278,30 +280,34 @@ Intervals for every cell are printed by the script. Each model is compared with 
   - The misreadings that dominate the other models are almost gone: no "Welsh", no App Mesh, no other languages.
 - **But Nile-Chat is the weakest model in English.** Its English intent is 1.36 against 1.96 for Qwen3-4B (lower in 31 requests, higher in 3, p < 0.001). It is the only model that understood Arabizi better than English (intent 1.71 against 1.36, p = 0.004). The cause is mostly refusals, not misreading (see "How Nile-Chat talks to customers" below).
 - **Size matters for Arabizi, not for English.** Qwen3-1.7B matches Qwen3-4B on English intent (p = 0.26), but its Arabizi intent is almost three times lower (lower in 38 requests, higher in 5, p < 0.001). Its English action is a little lower too (p = 0.02).
+- **Doubling the size does not close the gap.** Qwen3-8B matches Qwen3-4B on English (intent 1.96 for both, p = 1). On Arabizi it is a little higher, but the difference is not significant (intent 0.94 against 0.74; higher in 31 requests, lower in 21, p = 0.24). Across the three Qwen3 sizes, English intent stays at 1.93 to 1.96 while Arabizi intent goes from 0.27 to 0.74 to 0.94, still less than half the English score at 8B.
+  - Within Qwen3-8B, English is far above Arabizi (intent higher in 57 requests, lower in none, p < 0.001). In 30 of the 85 requests it understood the English fully (intent 2) and the Arabizi not at all (intent 0).
+  - Its Arabizi failures are the familiar ones: misread Egyptian words (26 of 85), "please clarify" on a clear request (16), answers in Spanish, French or Portuguese (5) and "mesh" read as a 3D mesh or a mesh network (3). Examples: "lessa" read as an AI company (E144), "yenfa3" as a store called YenFamart (E148), and "el next subscription charge haykoon emta?" answered in Spanish about a project-management tool (E228).
+  - On the Arabic-script rewrite it is level with Qwen3-4B on intent (1.55 against 1.62, p = 1) and somewhat lower on action (1.26 against 1.47; lower in 25 requests, higher in 10, p = 0.07). Its most common script failure was explaining or translating the message instead of helping (13 of 85).
+  - Unlike Qwen3-4B, it never refused: no flat refusals in any form, against 5 for Qwen3-4B.
 - **Arabic training helps Arabic script, not Arabizi.** On the Arabic-script rewrite ALLaM-7B is level with Qwen3-4B (1.66 against 1.62, p = 0.63), but on Arabizi it is lower (0.46 against 0.74; lower in 30 requests, higher in 11, p = 0.01). Its Arabizi failures were often of its own kind: broken, repetitive output (16 of 85) and refusals (9).
 - **ALLaM assumes the customer is in Saudi Arabia.** In 12 of its 170 Arabic-language answers (3 Arabizi, 9 Arabic script) and none of its English answers, it brought Saudi Arabia into the reply, for example quoting Saudi customs rules and a 3,000-riyal import limit (E076), pointing to Saudi Post (E052), or saying that prize competitions are not permitted in Saudi Arabia (E308). These answers scored lower on action (0.78 against 1.36 for its other Arabic-script answers). With no system prompt, nothing told the model where the store is; an Egyptian customer would still be poorly served.
-- **For the other models, the script still matters most.** The same requests rewritten in Arabic script were understood far better: intent 0.27 to 1.07 for Qwen3-1.7B, 0.46 to 1.66 for ALLaM-7B, and 0.74 to 1.62 for Qwen3-4B. Only for Nile-Chat-4B did the script make no difference.
+- **For the other models, the script still matters most.** The same requests rewritten in Arabic script were understood far better: intent 0.27 to 1.07 for Qwen3-1.7B, 0.74 to 1.62 for Qwen3-4B, 0.94 to 1.55 for Qwen3-8B (higher in 45 requests, lower in 8, p < 0.001) and 0.46 to 1.66 for ALLaM-7B. Only for Nile-Chat-4B did the script make no difference.
 
 The models differ in more than size or training data:
 
 - Qwen3-1.7B comes from the first Qwen3 release, while Qwen3-4B-Instruct-2507 is a later instruction-tuned update.
-- ALLaM-7B was run in 4-bit.
+- ALLaM-7B and Qwen3-8B were run in 4-bit, so part of any difference from Qwen3-4B may come from quantization.
+- Qwen3-8B, like Qwen3-1.7B, comes from the first Qwen3 release.
 - Nile-Chat-4B is built on Gemma 3 rather than Qwen3, and was run with its repetition penalty switched off.
-
-Qwen3-8B has also been run and will be added once its scores are checked by hand.
 
 ### How Nile-Chat talks to customers
 
 Nile-Chat-4B closed the Arabizi gap, but it did so in a way a support team would not accept. These are counts of how its answers are worded, from `python scripts/tone.py`, on the same 85 in-scope requests in each of the three forms. They are not scores: an answer can apologise, or mention being an AI, and still be right.
 
-| 85 requests per form | Nile-Chat-4B | Qwen3-4B | ALLaM-7B | Qwen3-1.7B |
-|---|---|---|---|---|
-| English requests answered in English | 2 | 85 | 85 | 85 |
-| English requests answered with a flat refusal | 19 | 0 | 0 | 0 |
-| English answers saying "I can't help" | 36 | 1 | 2 | 1 |
-| English answers that open with "sorry, but I can't…" | 35 | 11 | 4 | 3 |
-| Answers saying "as an AI, I can't / don't have…" (English / Arabizi) | 22 / 43 | 2 / 0 | 17 / 3 | 0 / 0 |
-| Answers that lecture the customer (all three forms) | 5 | 0 | 1 | 0 |
+| 85 requests per form | Nile-Chat-4B | Qwen3-4B | ALLaM-7B | Qwen3-1.7B | Qwen3-8B |
+|---|---|---|---|---|---|
+| English requests answered in English | 2 | 85 | 85 | 85 | 85 |
+| English requests answered with a flat refusal | 19 | 0 | 0 | 0 | 0 |
+| English answers saying "I can't help" | 36 | 1 | 2 | 1 | 0 |
+| English answers that open with "sorry, but I can't…" | 35 | 11 | 4 | 3 | 2 |
+| Answers saying "as an AI, I can't / don't have…" (English / Arabizi) | 22 / 43 | 2 / 0 | 17 / 3 | 0 / 0 | 0 / 0 |
+| Answers that lecture the customer (all three forms) | 5 | 0 | 1 | 0 | 0 |
 
 - **It answers English customers in Arabizi.** Of the 85 English requests, it answered 78 in Arabizi, 5 in Arabic script and 2 in English. Every other model answered all 85 in English. The model card lists English only for the larger Nile-Chat-3x4B. Reply language is not part of the score (see `RUBRIC.md`), so this costs it nothing in the table above.
 - **It refuses ordinary requests.** In English, 19 answers were a bare "Sorry, I can't help with this request" (`ana asef, bas mesh ha2dar asa3dak fel talab da`). This happened for returning an item, changing an email address, cancelling a subscription, a missing reward, and a customer saying someone may be in their account. Counting refusals that come with a pointer elsewhere, 36 of its 85 English answers said it couldn't help, against 1 or 2 for the other models.
@@ -311,12 +317,12 @@ Nile-Chat-4B closed the Arabizi gap, but it did so in a way a support team would
   - "we need to handle this respectfully", in English and in Arabic script;
   - "you must remember that orders take time".
 
-  Twice more it moralised over a request it had misread: "we must respect people's privacy" (E284) and "we must follow the rules" (E092). Among the other models' 765 answers here, only one lectured: ALLaM-7B told a customer with a late delivery that "it's important to stay calm and patient" (E021).
+  Twice more it moralised over a request it had misread: "we must respect people's privacy" (E284) and "we must follow the rules" (E092). Among the other models' 1,020 answers here, only one lectured: ALLaM-7B told a customer with a late delivery that "it's important to stay calm and patient" (E021).
 - **Its register is casual.** In Arabic script it sometimes opens with "بص يا سيدي" (look, sir; 4 answers) or "أهلا يا صاحبي" (hey, buddy; 1 answer). No other model used terms of address like these.
 
 **Nile-Chat was a disappointment outside Arabizi.** As the only model trained on Egyptian Arabic, it was expected to be the strongest model here. It is the best at reading Arabizi, but not the best overall:
 
-- **Lowest English score of the four models** (intent 1.36), as above.
+- **Lowest English score of the five models** (intent 1.36), as above.
 - **Vague next steps.** Even when it understood the request, its next step was often only partly useful: generic tips, a list that repeats itself, or "contact the company" with nothing else. Of the English requests it understood, the next step was fully right in 37 of 54 (69%), against 93% for Qwen3-4B and 86% for ALLaM-7B. In Arabizi the figure was 42 of 70 (60%).
 - **Average over the three forms.** Its intent is above Qwen3-4B's (1.57 against 1.44), but only because of Arabizi. Its action is slightly lower (1.21 against 1.29).
 
@@ -344,9 +350,9 @@ Almost all unsupported actions here are out-of-scope requests that the model ful
 
 ## Known issues and limitations
 
-- **Few models, one domain, one annotator.** Most results are from Qwen3-4B, with Qwen3-1.7B, ALLaM-7B and Nile-Chat-4B as comparison models. The scores are evidence from this benchmark only, not a general measure of any model's Arabic ability. The first pass was done by an LLM judge and the hand check is by one person. That person's scoring is consistent (blind re-score, intent kappa 0.85), but agreement between different annotators has not been measured.
+- **Few models, one domain, one annotator.** Most results are from Qwen3-4B, with Qwen3-1.7B, Qwen3-8B, ALLaM-7B and Nile-Chat-4B as comparison models. The scores are evidence from this benchmark only, not a general measure of any model's Arabic ability. The first pass was done by an LLM judge and the hand check is by one person. That person's scoring is consistent (blind re-score, intent kappa 0.85), but agreement between different annotators has not been measured.
 - **The scorer could see the condition.** The author wrote the requests and also checked the scores. The form of a request (English, Arabic script, Arabizi) is visible in the answer being scored, so scoring cannot be blind to condition. The blind re-score hid the earlier scores, not the condition, so it shows consistency rather than the absence of bias. A second annotator would address this.
-- **The LLM judge's first pass is not kept for the main run or the script test.** For every later run (follow-ups, spelling variants, Qwen3-1.7B, ALLaM-7B, Nile-Chat-4B) it is kept, and the data show which scores the hand check changed.
+- **The LLM judge's first pass is not kept for the main run or the script test.** For every later run (follow-ups, spelling variants, Qwen3-1.7B, ALLaM-7B, Nile-Chat-4B) it is kept, and the data show which scores the hand check changed. For Qwen3-8B only the record of which answers changed is kept, not the first-pass scores.
 - **Library versions were not recorded for the follow-up runs** (see "Evaluation setup"). Greedy decoding can give slightly different answers under different `transformers` versions. All model answers are saved in `data/`, so the scores can be checked without re-running the models.
 - **No system prompt in the main run.** The model was not told it was a support assistant, which mainly affects the out-of-scope requests. The follow-up runs add a short system prompt, but not a store policy or a defined scope.
 - **Synthetic requests.** All scenarios were written by the author, not collected from real users.
@@ -356,9 +362,9 @@ These rows are flagged in the `data_note` column and were not changed, so the sc
 
 ## Next steps
 
-The code for steps 1 to 4 is in `notebooks/extensions.ipynb`. Steps 2, 3 and 4 are reported above. Step 1 is reported for Qwen3-1.7B, ALLaM-7B and Nile-Chat-4B; Qwen3-8B is being checked.
+The code for steps 1 to 4 is in `notebooks/extensions.ipynb`. Steps 2, 3 and 4 are reported above. Step 1 is reported for Qwen3-1.7B, Qwen3-8B, ALLaM-7B and Nile-Chat-4B.
 
-1. **Scale and training data:** Qwen3-1.7B, ALLaM-7B and Nile-Chat-4B done (see above). Run, and being checked: Qwen3-8B. Next: Google's Gemma-3-4B-it, the instruction-tuned version of Nile-Chat's base model, to show exactly what the Egyptian training adds and whether the refusals come from it.
+1. **Scale and training data:** Qwen3-1.7B, Qwen3-8B, ALLaM-7B and Nile-Chat-4B done (see above). Next: Google's Gemma-3-4B-it, the instruction-tuned version of Nile-Chat's base model, to show exactly what the Egyptian training adds and whether the refusals come from it.
 2. **Where in the model does the gap appear?** Done for Qwen3-4B (see above). Next: repeat it on the other models from step 1.
 3. **System prompt:** done (see above). Next: give the model a written store policy and a defined scope, alone and together with the Arabizi hint, to see how much of the gap a well-instructed assistant still shows.
 4. **Simple fixes:** done (see above).
@@ -372,7 +378,7 @@ The code for steps 1 to 4 is in `notebooks/extensions.ipynb`. Steps 2, 3 and 4 a
   author = {El-Sayed, Nouran Mohamed},
   title  = {Egyptian Arabic, Code-Switching and Arabizi Consistency Benchmark},
   year   = {2026},
-  note   = {Version 1.9},
+  note   = {Version 1.10},
   howpublished = {\url{https://github.com/nour-rayann/egyptian-arabizi-consistency}}
 }
 ```
