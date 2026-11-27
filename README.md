@@ -318,7 +318,7 @@ Nile-Chat-4B closed the Arabizi gap, but it did so in a way a support team would
   - "you must remember that orders take time".
 
   Twice more it moralised over a request it had misread: "we must respect people's privacy" (E284) and "we must follow the rules" (E092). Among the other models' 1,020 answers here, only one lectured: ALLaM-7B told a customer with a late delivery that "it's important to stay calm and patient" (E021).
-- **Its register is casual.** In Arabic script it sometimes opens with "بص يا سيدي" (look, sir; 4 answers) or "أهلا يا صاحبي" (hey, buddy; 1 answer). No other model used terms of address like these.
+- **Its register is casual.** In Arabic script it sometimes opens with "بص يا سيدي" (look, man; 4 answers) or "أهلا يا صاحبي" (hey, buddy; 1 answer). No other model used terms of address like these.
 
 **Nile-Chat was a disappointment outside Arabizi.** As the only model trained on Egyptian Arabic, it was expected to be the strongest model here. It is the best at reading Arabizi, but not the best overall:
 
