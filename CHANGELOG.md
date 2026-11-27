@@ -2,6 +2,20 @@
 
 Version numbers follow `CITATION.cff`. Unless an entry says otherwise, the main tables did not change.
 
+## 1.10 (27 November 2026)
+
+Added a fifth model, Qwen3-8B, with every score checked by hand. The main tables did not change.
+
+- **Doubling the size does not close the Arabizi gap.** Qwen3-8B matches Qwen3-4B on English (intent 1.96 for both). On Arabizi it is a little higher, but not significantly (intent 0.94 against 0.74, p = 0.24).
+- **Across the three Qwen3 sizes,** English intent stays at 1.93 to 1.96 while Arabizi intent goes from 0.27 (1.7B) to 0.74 (4B) to 0.94 (8B).
+- **The Arabic-script rewrite still helps most** (intent 0.94 to 1.55). On the rewrite Qwen3-8B is level with Qwen3-4B on intent and somewhat lower on action (1.26 against 1.47, p = 0.07).
+- **No refusals.** Qwen3-8B gave no flat refusals in any form.
+- **Data:**
+  - `data/more_models_scored.csv` gains Qwen3-8B's 255 answers. The hand check changed 34 of them; 31 of those were among the 97 the LLM judge had flagged to check first.
+  - `data/more_models_llm_first_pass.csv` gains the LLM judge's first-pass scores for Qwen3-8B. Judge agreement with the hand check: intent 96% (kappa 0.92), action 95% (kappa 0.91).
+- **README:** "Other models" and "How Nile-Chat talks to customers" gain a Qwen3-8B column. The evaluation setup now says Qwen3-8B was also run with `enable_thinking=False`.
+- **README:** corrected the gloss of Nile-Chat's "بص يا سيدي" from "look, sir" to "look, man".
+
 ## 1.9 (25 November 2026)
 
 Added a fourth model, Nile-Chat-4B (Gemma 3 4B trained on Egyptian Arabic), with every score checked by hand. The main tables did not change.

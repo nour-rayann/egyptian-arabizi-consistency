@@ -764,3 +764,258 @@ MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E328,2,2,0,success,0
 MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E332,0,0,0,refused,0
 MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E336,1,0,0,misread_word,1
 MBZUAI-Paris/Nile-Chat-4B,"Arabizi, Arabic script",E340,0,0,0,garbled_output,0
+Qwen/Qwen3-8B,English,E001,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E004,2,1,0,partial,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E004,2,1,0,partial,1
+Qwen/Qwen3-8B,English,E005,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E008,0,0,0,unclear,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E008,2,1,0,partial,1
+Qwen/Qwen3-8B,English,E009,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E012,0,0,0,misread_word,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E012,2,2,0,success,0
+Qwen/Qwen3-8B,English,E013,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E016,0,0,0,misread_word,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E016,1,1,0,language_task,1
+Qwen/Qwen3-8B,English,E017,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E020,0,0,0,unclear,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E020,2,2,0,success,0
+Qwen/Qwen3-8B,English,E021,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E024,1,1,0,language_task,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E024,1,0,0,language_task,1
+Qwen/Qwen3-8B,English,E025,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E028,0,0,0,mesh,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E028,1,1,0,unclear,1
+Qwen/Qwen3-8B,English,E029,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E032,2,2,0,success,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E032,2,2,0,success,0
+Qwen/Qwen3-8B,English,E033,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E036,0,0,0,misread_word,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E036,2,2,0,success,0
+Qwen/Qwen3-8B,English,E037,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E040,2,1,0,partial,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E040,2,2,0,success,0
+Qwen/Qwen3-8B,English,E041,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E044,1,1,0,unclear,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E044,1,1,0,unclear,1
+Qwen/Qwen3-8B,English,E045,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E048,2,1,0,misread_word,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E048,2,2,0,success,0
+Qwen/Qwen3-8B,English,E049,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E052,1,0,0,wrong_domain,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E052,0,0,0,wrong_domain,0
+Qwen/Qwen3-8B,English,E053,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E056,2,2,0,success,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E056,2,2,0,success,0
+Qwen/Qwen3-8B,English,E057,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E060,0,0,0,other_language,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E060,1,1,0,language_task,1
+Qwen/Qwen3-8B,English,E061,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E064,2,1,0,partial,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E064,2,1,0,partial,1
+Qwen/Qwen3-8B,English,E065,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E068,0,0,0,misread_word,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E068,2,2,0,success,0
+Qwen/Qwen3-8B,English,E069,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E072,0,0,0,misread_word,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E072,0,0,0,misread_word,0
+Qwen/Qwen3-8B,English,E073,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E076,2,1,0,partial,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E076,0,0,0,wrong_domain,0
+Qwen/Qwen3-8B,English,E077,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E080,2,2,0,success,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E080,2,2,0,success,0
+Qwen/Qwen3-8B,English,E081,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E084,1,1,0,language_task,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E084,2,2,0,success,0
+Qwen/Qwen3-8B,English,E085,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E088,1,0,0,misread_word,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E088,2,2,0,success,0
+Qwen/Qwen3-8B,English,E089,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E092,0,0,0,other_language,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E092,2,1,0,partial,1
+Qwen/Qwen3-8B,English,E093,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E096,0,0,0,unclear,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E096,2,2,0,success,0
+Qwen/Qwen3-8B,English,E097,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E100,1,1,0,misread_word,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E100,2,2,0,success,0
+Qwen/Qwen3-8B,English,E101,2,1,1,success_unsupported,1
+Qwen/Qwen3-8B,Arabizi + English,E104,0,0,0,misread_word,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E104,2,1,1,success_unsupported,1
+Qwen/Qwen3-8B,English,E105,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E108,0,0,0,unclear,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E108,2,2,0,success,0
+Qwen/Qwen3-8B,English,E109,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E112,0,0,0,unclear,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E112,1,0,0,misread_word,1
+Qwen/Qwen3-8B,English,E113,2,1,0,partial,1
+Qwen/Qwen3-8B,Arabizi + English,E116,0,0,0,unclear,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E116,2,1,0,partial,1
+Qwen/Qwen3-8B,English,E117,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E120,1,0,0,wrong_domain,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E120,2,1,0,partial,1
+Qwen/Qwen3-8B,English,E121,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E124,1,0,0,mesh,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E124,2,2,0,success,0
+Qwen/Qwen3-8B,English,E125,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E128,1,0,0,unclear,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E128,2,2,0,success,0
+Qwen/Qwen3-8B,English,E129,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E132,1,0,1,other_language,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E132,2,2,0,success,0
+Qwen/Qwen3-8B,English,E133,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E136,0,0,0,other_language,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E136,0,0,0,misread_word,0
+Qwen/Qwen3-8B,English,E137,2,1,0,partial,1
+Qwen/Qwen3-8B,Arabizi + English,E140,2,1,0,partial,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E140,2,1,0,partial,1
+Qwen/Qwen3-8B,English,E141,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E144,0,0,0,misread_word,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E144,1,1,0,language_task,1
+Qwen/Qwen3-8B,English,E145,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E148,1,0,1,misread_word,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E148,2,1,0,partial,1
+Qwen/Qwen3-8B,English,E149,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E152,2,1,0,partial,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E152,2,2,0,success,0
+Qwen/Qwen3-8B,English,E153,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E156,2,1,0,partial,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E156,2,2,0,success,0
+Qwen/Qwen3-8B,English,E157,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E160,0,0,0,misread_word,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E160,1,1,0,language_task,1
+Qwen/Qwen3-8B,English,E161,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E164,2,2,0,success,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E164,2,2,0,success,0
+Qwen/Qwen3-8B,English,E165,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E168,2,2,0,success,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E168,2,2,0,success,0
+Qwen/Qwen3-8B,English,E169,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E172,1,0,0,partial,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E172,2,2,0,success,0
+Qwen/Qwen3-8B,English,E173,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E176,2,2,0,success,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E176,2,2,0,success,0
+Qwen/Qwen3-8B,English,E177,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E180,1,1,0,unclear,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E180,2,1,0,partial,1
+Qwen/Qwen3-8B,English,E181,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E184,2,2,0,success,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E184,2,2,0,success,0
+Qwen/Qwen3-8B,English,E185,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E188,2,2,0,success,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E188,2,2,0,success,0
+Qwen/Qwen3-8B,English,E189,2,1,0,partial,1
+Qwen/Qwen3-8B,Arabizi + English,E192,2,1,0,partial,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E192,2,1,0,partial,1
+Qwen/Qwen3-8B,English,E193,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E196,2,2,0,success,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E196,2,1,0,partial,1
+Qwen/Qwen3-8B,English,E197,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E200,1,0,0,misread_word,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E200,2,1,0,partial,1
+Qwen/Qwen3-8B,English,E201,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E204,2,2,0,success,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E204,1,0,0,unclear,1
+Qwen/Qwen3-8B,English,E205,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E208,2,2,0,success,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E208,2,2,0,success,0
+Qwen/Qwen3-8B,English,E209,2,1,0,partial,1
+Qwen/Qwen3-8B,Arabizi + English,E212,1,1,0,unclear,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E212,2,1,0,partial,1
+Qwen/Qwen3-8B,English,E213,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E216,0,0,0,wrong_domain,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E216,0,0,0,misread_word,0
+Qwen/Qwen3-8B,English,E217,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E220,0,0,0,misread_word,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E220,2,1,0,partial,1
+Qwen/Qwen3-8B,English,E221,2,1,0,partial,1
+Qwen/Qwen3-8B,Arabizi + English,E224,0,0,0,garbled_output,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E224,2,1,0,partial,1
+Qwen/Qwen3-8B,English,E225,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E228,0,0,0,other_language,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E228,2,1,0,partial,1
+Qwen/Qwen3-8B,English,E229,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E232,2,2,0,success,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E232,2,2,0,success,0
+Qwen/Qwen3-8B,English,E233,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E236,2,2,0,success,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E236,2,2,0,success,0
+Qwen/Qwen3-8B,English,E237,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E240,0,0,0,misread_word,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E240,1,1,0,language_task,1
+Qwen/Qwen3-8B,English,E241,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E244,1,0,0,misread_word,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E244,2,2,0,success,0
+Qwen/Qwen3-8B,English,E245,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E248,0,0,0,mesh,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E248,1,1,0,language_task,1
+Qwen/Qwen3-8B,English,E249,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E252,2,1,0,partial,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E252,2,2,0,success,0
+Qwen/Qwen3-8B,English,E253,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E256,1,0,0,misread_word,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E256,1,1,0,language_task,1
+Qwen/Qwen3-8B,English,E257,1,0,0,wrong_domain,1
+Qwen/Qwen3-8B,Arabizi + English,E260,1,0,0,unclear,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E260,2,2,0,success,0
+Qwen/Qwen3-8B,English,E261,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E264,0,0,0,mesh,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E264,2,1,0,partial,1
+Qwen/Qwen3-8B,English,E265,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E268,2,2,0,success,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E268,2,2,0,success,0
+Qwen/Qwen3-8B,English,E269,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E272,2,2,0,success,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E272,2,1,0,partial,1
+Qwen/Qwen3-8B,English,E273,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E276,2,1,0,partial,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E276,2,2,0,success,0
+Qwen/Qwen3-8B,English,E277,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E280,0,0,0,unclear,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E280,0,0,0,unclear,1
+Qwen/Qwen3-8B,English,E281,1,1,0,language_task,1
+Qwen/Qwen3-8B,Arabizi + English,E284,0,0,0,unclear,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E284,1,1,0,language_task,1
+Qwen/Qwen3-8B,English,E285,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E288,1,0,0,misread_word,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E288,2,2,0,success,0
+Qwen/Qwen3-8B,English,E289,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E292,0,0,0,misread_word,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E292,2,1,0,partial,1
+Qwen/Qwen3-8B,English,E293,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E296,1,0,0,unclear,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E296,0,0,0,unclear,1
+Qwen/Qwen3-8B,English,E297,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E300,1,0,0,unclear,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E300,0,0,0,misread_word,0
+Qwen/Qwen3-8B,English,E301,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E304,1,1,0,language_task,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E304,2,1,0,partial,1
+Qwen/Qwen3-8B,English,E305,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E308,2,1,0,partial,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E308,2,2,0,success,0
+Qwen/Qwen3-8B,English,E309,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E312,0,0,0,unclear,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E312,1,0,0,unclear,1
+Qwen/Qwen3-8B,English,E313,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E316,1,0,0,unclear,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E316,2,1,0,partial,1
+Qwen/Qwen3-8B,English,E317,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E320,2,2,0,success,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E320,2,2,0,success,0
+Qwen/Qwen3-8B,English,E321,2,1,0,partial,1
+Qwen/Qwen3-8B,Arabizi + English,E324,0,0,0,unclear,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E324,0,0,0,wrong_domain,0
+Qwen/Qwen3-8B,English,E325,2,1,0,partial,1
+Qwen/Qwen3-8B,Arabizi + English,E328,0,0,0,misread_word,0
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E328,2,2,0,success,0
+Qwen/Qwen3-8B,English,E329,2,1,1,success_unsupported,1
+Qwen/Qwen3-8B,Arabizi + English,E332,2,1,0,partial,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E332,2,1,0,partial,1
+Qwen/Qwen3-8B,English,E333,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E336,1,0,0,unclear,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E336,0,0,0,misread_word,0
+Qwen/Qwen3-8B,English,E337,2,2,0,success,0
+Qwen/Qwen3-8B,Arabizi + English,E340,1,0,0,unclear,1
+Qwen/Qwen3-8B,"Arabizi, Arabic script",E340,0,0,0,misread_word,0
