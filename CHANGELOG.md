@@ -12,7 +12,7 @@ Added a fifth model, Qwen3-8B, with every score checked by hand. The main tables
 - **No refusals.** Qwen3-8B gave no flat refusals in any form.
 - **Data:**
   - `data/more_models_scored.csv` gains Qwen3-8B's 255 answers. The hand check changed 34 of them; 31 of those were among the 97 the LLM judge had flagged to check first.
-  - The judge's first-pass scores for Qwen3-8B were not kept, so `data/more_models_llm_first_pass.csv` is unchanged and judge agreement is not reported for this model.
+  - `data/more_models_llm_first_pass.csv` gains the LLM judge's first-pass scores for Qwen3-8B. Judge agreement with the hand check: intent 96% (kappa 0.92), action 95% (kappa 0.91).
 - **README:** "Other models" and "How Nile-Chat talks to customers" gain a Qwen3-8B column. The evaluation setup now says Qwen3-8B was also run with `enable_thinking=False`.
 - **README:** corrected the gloss of Nile-Chat's "بص يا سيدي" from "look, sir" to "look, man".
 

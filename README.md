@@ -248,7 +248,7 @@ Arabizi has no standard spelling, so the gap could belong to one way of writing 
   - ALLaM-7B: intent 95% (kappa 0.91), action 95% (kappa 0.92).
   - Nile-Chat-4B: intent 98% (kappa 0.95), action 95% (kappa 0.92).
   - The hand check changed at least one field in 60, 36 and 22 of their 255 answers (`data/more_models_llm_first_pass.csv`).
-  - Qwen3-8B: the hand check changed 34 of its 255 answers (16 Arabizi, 15 Arabic script, 3 English). 31 of the 34 were among the 97 answers the judge had flagged to check first. Its first-pass scores are not in the repository, so judge agreement is not computed for it; the `changed_in_hand_check` column in `data/more_models_scored.csv` shows which answers changed.
+  - Qwen3-8B: intent 96% (kappa 0.92), action 95% (kappa 0.91). The hand check changed 34 of its 255 answers (16 Arabizi, 15 Arabic script, 3 English); 31 of the 34 were among the 97 answers the judge had flagged to check first.
   - Every score in this repository is the hand-checked one.
 
 To reproduce: `pip install pandas scikit-learn` then `python scripts/self_agreement.py`. This measures one person's consistency, not agreement between different annotators.
@@ -352,7 +352,7 @@ Almost all unsupported actions here are out-of-scope requests that the model ful
 
 - **Few models, one domain, one annotator.** Most results are from Qwen3-4B, with Qwen3-1.7B, Qwen3-8B, ALLaM-7B and Nile-Chat-4B as comparison models. The scores are evidence from this benchmark only, not a general measure of any model's Arabic ability. The first pass was done by an LLM judge and the hand check is by one person. That person's scoring is consistent (blind re-score, intent kappa 0.85), but agreement between different annotators has not been measured.
 - **The scorer could see the condition.** The author wrote the requests and also checked the scores. The form of a request (English, Arabic script, Arabizi) is visible in the answer being scored, so scoring cannot be blind to condition. The blind re-score hid the earlier scores, not the condition, so it shows consistency rather than the absence of bias. A second annotator would address this.
-- **The LLM judge's first pass is not kept for the main run or the script test.** For every later run (follow-ups, spelling variants, Qwen3-1.7B, ALLaM-7B, Nile-Chat-4B) it is kept, and the data show which scores the hand check changed. For Qwen3-8B only the record of which answers changed is kept, not the first-pass scores.
+- **The LLM judge's first pass is not kept for the main run or the script test.** For every later run (follow-ups, spelling variants, Qwen3-1.7B, Qwen3-8B, ALLaM-7B, Nile-Chat-4B) it is kept, and the data show which scores the hand check changed.
 - **Library versions were not recorded for the follow-up runs** (see "Evaluation setup"). Greedy decoding can give slightly different answers under different `transformers` versions. All model answers are saved in `data/`, so the scores can be checked without re-running the models.
 - **No system prompt in the main run.** The model was not told it was a support assistant, which mainly affects the out-of-scope requests. The follow-up runs add a short system prompt, but not a store policy or a defined scope.
 - **Synthetic requests.** All scenarios were written by the author, not collected from real users.
