@@ -57,7 +57,7 @@ Housekeeping. No scores changed.
 - **README:** "Evaluation setup" records the hardware (Colab, T4) and the library versions recovered for the main run.
 - **README:**
   - The model settings for every run are in "Evaluation setup".
-  - New limitations: the scorer could see the condition, and the hand-check record exists only for Qwen3-4B.
+  - New limitations: the scorer could see the condition, and the hand-check record exists only for all except Qwen3-4B.
   - Link to the Hugging Face copy of the data.
   - The update notes moved here.
 
